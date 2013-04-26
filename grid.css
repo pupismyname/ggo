@@ -1,0 +1,110 @@
+body {
+	text-align: center;
+}
+
+#wrapper {
+	width: 863px;
+	text-align: left;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.container {
+	width: 100%;
+	float: left;
+}
+
+#wrapper .space {
+	margin-bottom: 11px;
+}
+
+#wrapper .gap {
+	margin-bottom: 22px;
+}
+
+.box {
+	padding: 0;
+	margin-left: 11px;
+	float: left;
+	list-style-type: none;
+	display: inline;
+}
+
+.first {
+	margin-left: 0;
+}
+
+.type1   { width:  60px; }
+.type2   { width: 131px; }
+.type3   { width: 202px; }
+.type4   { width: 273px; }
+.type5   { width: 344px; }
+.type6   { width: 415px; }
+.type7   { width: 486px; }
+.type8   { width: 557px; }
+.type9   { width: 628px; }
+.type10  { width: 699px; }
+.type11  { width: 770px; }
+.type12  { width: 841px; }
+
+.type1c  { width:  40px; padding: 0 10px; }
+.type2c  { width: 111px; padding: 0 10px; }
+.type3c  { width: 182px; padding: 0 10px; }
+.type4c  { width: 253px; padding: 0 10px; }
+.type5c  { width: 324px; padding: 0 10px; }
+.type6c  { width: 395px; padding: 0 10px; }
+.type7c  { width: 466px; padding: 0 10px; }
+.type8c  { width: 537px; padding: 0 10px; }
+.type9c  { width: 608px; padding: 0 10px; }
+.type10c { width: 679px; padding: 0 10px; }
+.type11c { width: 750px; padding: 0 10px; }
+.type12c { width: 821px; padding: 0 10px; }
+
+.pad1    { margin-left:  82px; }
+.pad2    { margin-left: 153px; }
+.pad3    { margin-left: 224px; }
+.pad4    { margin-left: 295px; }
+.pad5    { margin-left: 366px; }
+.pad6    { margin-left: 437px; }
+.pad7    { margin-left: 508px; }
+.pad8    { margin-left: 579px; }
+.pad9    { margin-left: 650px; }
+.pad10   { margin-left: 721px; }
+.pad11   { margin-left: 792px; }
+
+.pad1f   { margin-left:  71px; }
+.pad2f   { margin-left: 142px; }
+.pad3f   { margin-left: 213px; }
+.pad4f   { margin-left: 284px; }
+.pad5f   { margin-left: 355px; }
+.pad6f   { margin-left: 426px; }
+.pad7f   { margin-left: 497px; }
+.pad8f   { margin-left: 568px; }
+.pad9f   { margin-left: 639px; }
+.pad10   { margin-left: 710px; }
+.pad11f  { margin-left: 781px; }
+
+/* grid debug */
+/* ----------------------------------------------------------------- */
+
+.grid {
+	background-color: #ffe5e5;
+}
+
+.grid #wrapper {
+	background-image: url(images/grid.gif);
+	background-repeat: repeat-y;
+	background-position: top center;
+}
+
+.grid .container {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	background-color: white;
+}
+
+.grid .box {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	background-color: #aaf;
+}
