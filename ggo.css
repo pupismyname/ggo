@@ -28,7 +28,7 @@ ul, p, ol, dl, table {
 
 #content li {
 	list-style-type: disc;
-	margin-left: 1em;
+	margin-left: 1.4em;
 }
 
 #wrapper dd, #wrapper dt {
