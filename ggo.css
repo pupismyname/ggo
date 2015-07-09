@@ -498,10 +498,7 @@ h1 a {
 	font-size: 11px;
 }
 
-#sponsors .friend {
-	text-align: justify;
-}
-
+#sponsors .torch li,
 #sponsors .friend li {
 	list-style-type: none;
 	display: inline;
@@ -510,6 +507,7 @@ h1 a {
 	border: none;
 }
 
+#sponsors .torch li:after,
 #sponsors .friend li:after {
 	content: " | ";
 	color: #e6eef9;
