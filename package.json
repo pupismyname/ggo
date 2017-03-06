@@ -1,0 +1,19 @@
+{
+  "name": "ggo-static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "less": "^2.7.1",
+    "lodash": "^4.16.6",
+    "ncp": "^2.0.0",
+    "pug": "^2.0.0-beta6",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

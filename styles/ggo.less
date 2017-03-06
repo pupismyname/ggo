@@ -1,3 +1,6 @@
+@import (inline) "styles/grid.css";
+@import (inline) "styles/reset-fonts.css";
+
 body {
 	color: #333;
 	font-size: 14px;
@@ -8,36 +11,37 @@ body {
 a {
 	color: #0a5cc2;
 	text-decoration: none;
-}
-
-a:focus, a:hover {
-	color: #d1494b;
+	&:focus,
+	&:hover {
+		color: #d1494b;
+	}
 }
 
 ul, p, ol, dl, table {
 	margin: 0 0 1em 0;
 }
 
-#wrapper ol {
-	margin-left: 8px;
-}
-
-#wrapper ol li {
-	list-style-type: decimal;
+#wrapper {
+	ol {
+		margin-left: 8px;
+		li {
+			list-style-type: decimal;
+		}
+	}
+	dd,
+	dt {
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+		border-width: 1px 0 0 0;
+		border-style: solid;
+		border-color: #e6eef9;
+		padding-top: 5px;
+	}
 }
 
 #content li {
 	list-style-type: disc;
 	margin-left: 1.4em;
-}
-
-#wrapper dd, #wrapper dt {
-	margin-top: 0.25em;
-	margin-bottom: 0.25em;
-	border-width: 1px 0 0 0;
-	border-style: solid;
-	border-color: #e6eef9;
-	padding-top: 5px;
 }
 
 dt {
@@ -100,133 +104,133 @@ th, strong {
 /* ----------------------------------------------------------------- */
 
 .bg12 {
-	background-image: url(images/bg-12.gif);
+	background-image: url(../images/bg-12.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg57 {
-	background-image: url(images/bg-57.gif);
+	background-image: url(../images/bg-57.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg48 {
-	background-image: url(images/bg-48.gif);
+	background-image: url(../images/bg-48.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg66 {
-	background-image: url(images/bg-66.gif);
+	background-image: url(../images/bg-66.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg552b {
-	background-image: url(images/bg-552b.gif);
+	background-image: url(../images/bg-552b.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg444 {
-	background-image: url(images/bg-444.gif);
+	background-image: url(../images/bg-444.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg543 {
-	background-image: url(images/bg-543.gif);
+	background-image: url(../images/bg-543.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bg102b {
-	background-image: url(images/bg-102b.gif);
+	background-image: url(../images/bg-102b.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bgline66 {
-	background-image: url(images/bg-line-75.gif);
+	background-image: url(../images/bg-line-75.gif);
 	background-position: -60px bottom;
 	background-repeat: repeat-y;
 }
 
 .bgline75 {
-	background-image: url(images/bg-line-75.gif);
+	background-image: url(../images/bg-line-75.gif);
 	background-position: center bottom;
 	background-repeat: repeat-y;
 }
 
 .bubble1 {
-	background-image: url(images/bg-bubble1.gif);
+	background-image: url(../images/bg-bubble1.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble2 {
-	background-image: url(images/bg-bubble2.gif);
+	background-image: url(../images/bg-bubble2.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble3 {
-	background-image: url(images/bg-bubble3.gif);
+	background-image: url(../images/bg-bubble3.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble4 {
-	background-image: url(images/bg-bubble4.gif);
+	background-image: url(../images/bg-bubble4.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble5 {
-	background-image: url(images/bg-bubble5.gif);
+	background-image: url(../images/bg-bubble5.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble6 {
-	background-image: url(images/bg-bubble6.gif);
+	background-image: url(../images/bg-bubble6.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble7 {
-	background-image: url(images/bg-bubble7.gif);
+	background-image: url(../images/bg-bubble7.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble8 {
-	background-image: url(images/bg-bubble8.gif);
+	background-image: url(../images/bg-bubble8.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble9 {
-	background-image: url(images/bg-bubble9.gif);
+	background-image: url(../images/bg-bubble9.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble10 {
-	background-image: url(images/bg-bubble10.gif);
+	background-image: url(../images/bg-bubble10.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble11 {
-	background-image: url(images/bg-bubble11.gif);
+	background-image: url(../images/bg-bubble11.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
 
 .bubble12 {
-	background-image: url(images/bg-bubble12.gif);
+	background-image: url(../images/bg-bubble12.gif);
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
@@ -248,7 +252,7 @@ h1 a {
 	display: block;
 	width: 100%;
 	height: 100%;
-	background-image: url(images/ggo.gif);
+	background-image: url(../images/ggo.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
 }
@@ -259,7 +263,7 @@ h1 a {
 	font-size: 18px;
 	height: 40px;
 	line-height: 40px;
-	background-image: url(images/bg-mainmenu.gif);
+	background-image: url(../images/bg-mainmenu.gif);
 	background-repeat: no-repeat;
 	background-position: center top;
 }
@@ -275,14 +279,14 @@ h1 a {
 /* ----------------------------------------------------------------- */
 
 #ggo-home {
-	background-image: url(images/bg-bigbarback.gif);
+	background-image: url(../images/bg-bigbarback.gif);
 	background-repeat: repeat-x;
 	background-position: center 95px;
 	position: relative;
 }
 
 #infobar {
-	background-image: url(images/bg-bigbar.gif);
+	background-image: url(../images/bg-bigbar.gif);
 	background-repeat: no-repeat;
 	background-position: center top;
 }
@@ -323,7 +327,7 @@ h1 a {
 	padding: 7px 0;
 	margin-left: 10px;
 	overflow: hidden;
-	background-image: url(images/s-appbutton.gif);
+	background-image: url(../images/s-appbutton.gif);
 	background-position: left top;
 	background-repeat: no-repeat;
 	text-align: center;
@@ -350,7 +354,7 @@ h1 a {
 /* ----------------------------------------------------------------- */
 
 #types h4 {
-	background-image: url(images/s-typesheaders.jpg);
+	background-image: url(../images/s-typesheaders.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	color: #fff;
@@ -410,7 +414,7 @@ h1 a {
 
 .picstack {
 	height: 358px;
-	background-image: url(images/picstack-placeholder.jpg);
+	background-image: url(../images/picstack-placeholder.jpg);
 	margin-top: -38px;
 	width: 497px;
 	position: relative;
@@ -446,13 +450,13 @@ h1 a {
 	color: #fff;
 }
 
-#sponsors .corporate h4 { background-image: url(images/s-header-corporate.gif); }
-#sponsors .platinum h4  { background-image: url(images/s-header-platinum.gif); }
-#sponsors .gold h4      { background-image: url(images/s-header-gold.gif); }
-#sponsors .silver h4    { background-image: url(images/s-header-silver.gif); }
-#sponsors .bronze h4    { background-image: url(images/s-header-bronze.gif); }
-#sponsors .torch h4     { background-image: url(images/s-header-torch.gif); }
-#sponsors .friend h4    { background-image: url(images/s-header-friend.gif); }
+#sponsors .corporate h4 { background-image: url(../images/s-header-corporate.gif); }
+#sponsors .platinum h4  { background-image: url(../images/s-header-platinum.gif); }
+#sponsors .gold h4      { background-image: url(../images/s-header-gold.gif); }
+#sponsors .silver h4    { background-image: url(../images/s-header-silver.gif); }
+#sponsors .bronze h4    { background-image: url(../images/s-header-bronze.gif); }
+#sponsors .torch h4     { background-image: url(../images/s-header-torch.gif); }
+#sponsors .friend h4    { background-image: url(../images/s-header-friend.gif); }
 
 .corporatetext { color: #2bb435; }
 .platinumtext  { color: #adaba7; }
@@ -526,7 +530,7 @@ h1 a {
 .pagetitle h2 {
 	height: 42px;
 	line-height: 42px;
-	background-image: url(images/s-bigheader.gif);
+	background-image: url(../images/s-bigheader.gif);
 	background-repeat: no-repeat;
 	color: #fff;
 	font-size: 24px;
@@ -564,7 +568,7 @@ img.inline2 {
 }
 
 h3.pagetitle {
-	background-image: url(images/s-header-friend.gif);
+	background-image: url(../images/s-header-friend.gif);
 	color: #fff;
 	font-size: 18px;
 	height: 32px;
