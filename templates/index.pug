@@ -58,7 +58,7 @@ block content
         .box.type4c.first
           p Want to help out? Here's all the information you'll need.
           ul
-            li: a(href="files/Volunteer Packet 2019 Final.pdf") Volunteer Signup Form
+            li: a(href="files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
             li: a(href="files/Rule Book 2019 final.pdf") 2019 Event List and Rules
             li: a(href="files/2017 Golden Games Map.pdf") Event Map
 
@@ -88,9 +88,7 @@ block content
           .box.type12c.first
             p.detail $10,000 or more
             ul
-              li
-                img(src="images/sponsors/DPH_Logo_Small_resized.jpg", alt="Georgia Department of Public Health Breast and Cervical Cancer Program", title="Georgia Department of Public Health Breast and Cervical Cancer Program")
-                |  Georgia Department of Public Health Breast and Cervical Cancer Program
+              +sponsor("Georgia Department of Public Health Breast and Cervical Cancer Program", "", "images/sponsors/DPH_Logo_Small_resized.jpg")
 
       .container.bg66.space
 
@@ -99,24 +97,17 @@ block content
           .box.type6c.first
             p.detail $5000-$9999
             ul
-              li Warner Robins Recreation Department #[span Host Agency]
-              li
-                img(src="images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png", alt="Humana, Inc.", title="Humana, Inc.")
-                |  Humana, Inc.
+              +sponsor("Warner Robins Recreation Department", "Host Agency")
 
         .box.type6.gold
           h4.box.type6c.first Gold Sponsors
           .box.type6c.first
             p.detail $2500-$4999
             ul
-              li The Miles Group #[span Snellville]
-              li First Christian Church #[span Winder]
-              li: a(href="http://www.hhc.org/", target="_new")
-                  img(src="images/sponsors/HHC-new-logo-2016_resized.png", alt="Houston Healthcare", title="Houston Healthcare")
-                  |  Houston Healthcare
-              li
-                img(src="images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png", alt="Aetna", title="Aetna")
-                |  Aetna
+              +sponsor("The Miles Group", "Snellville")
+              +sponsor("First Christian Church", "Winder")
+              +sponsor("Houston Healthcare", "", "images/sponsors/HHC-new-logo-2016_resized.png", "http://www.hhc.org/")
+              +sponsor("Aetna", "", "images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png")
 
       .container.bg66.space
 
@@ -125,23 +116,23 @@ block content
           .box.type6c.first
             p.detail $1000-$2499
             ul
-              li Georgia Department of Public Health
-              li
-                img(src="images/sponsors/WRCVB_Logo_resized.png", alt="Convention and Visitors Bureau", title="Convention and Visitors Bureau")
-                |  Convention and Visitors Bureau #[span City of Warner Robins]
-              li
-                img(src="images/sponsors/Cox_Communications_(logo).svg_resized.png", alt="Cox Communications", title="Cox Communications")
-                |  Cox Communications
-              li Georgia Health Care Association
+              +sponsor("Georgia Department of Public Health")
+              +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
+              +sponsor("Georgia Health Care Association")
+              +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
+              +sponsor("Ryan and Marty Beighley", "The Villages, FL")
 
         .box.type6.bronze
           h4.box.type6c.first Bronze Sponsors
           .box.type6c.first
             p.detail $500-$999
             ul
-              li Comfort Inn and Suites Hwy 247 #[span Warner Robins]
-              li Tom Gill #[span Madison, AL]
-              li Grovania United Methodist Church
+              +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
+              +sponsor("Tom Gill", "Madison, AL")
+              +sponsor("Grovania United Methodist Church")
+              +sponsor("Mike Perry", "Warner Robins")
+              +sponsor("Georgia Hearing Institute", "Warner Robins")
+              +sponsor("Publix Super Markets Charities")
 
       .container.bg66.space
 
@@ -150,30 +141,87 @@ block content
           .box.type6c.first
             p.detail $100-$499
             ul
-              li Jewel Crews #[span Waycross]
-              li Lester Culver #[span Ludowici]
-              li Harry Lowe #[span Waleska]
-              li Art Mathis #[span Moreland]
-              li James & Miriam Novak #[span Bainbridge]
-              li Vicki Pilgrim #[span Auburn]
-              li Annaliese Sager #[span Winter Haven, FL]
-              li Shawn Smith #[span Dacula]
-              li James & Jocille Thwing #[span Warner Robins]
-              li Carol Wadell #[span Rome]
+              +sponsor("Jewel Crews", "Waycross")
+              +sponsor("Lester Culver", "Ludowici")
+              +sponsor("Harry Lowe", "Waleska")
+              +sponsor("Art Mathis", "Moreland")
+              +sponsor("James & Miriam Novak", "Bainbridge")
+              +sponsor("Vicki Pilgrim", "Auburn")
+              +sponsor("Annaliese Sager", "Winter Haven, FL")
+              +sponsor("Shawn Smith", "Dacula")
+              +sponsor("James & Jocille Thwing", "Warner Robins")
+              +sponsor("Carol Wadell", "Rome")
+              +sponsor("Ed Brown", "Colbert")
+              +sponsor("Sue Hesse", "Stone Mountain, In memory of Robert Lloyd")
+              +sponsor("Team Wes Real Estate", "Warner Robins, In memory of Ann Claxton")
+              +sponsor("Marshall Martin", "Lady Lake, FL")
+              +sponsor("Will & Annie Smith", "Carrollton")
+              +sponsor("George Marlow,III", "Lawrenceville")
+              +sponsor("Don Tate", "Bonaire")
+              +sponsor("Joyce White", "Oxford")
 
         .box.type6.friend
           h4.box.type6c.first Friends
           .box.type6c.first
             p.detail $25-$99
             ul
-              li Cantrell Center for PT and Wellness
-              li Gordon Darrah #[span Columbus]
-              li Betty Gray #[span Mableton]
-              li James Hodges #[span Monroe]
-              li Gene Payne #[span Montgomery, AL]
-              li Ahmad Faheem Shabazz #[span Starr, SC]
-              li Robert Jackson #[span Lawrenceville]
-              li Andrew Mason #[span Evans]
-              li Linda Lowery #[span Smyrna]
-              li Edward L Smith #[span Fairburn]
-              li Emily E Tindill #[span Girard]
+              +sponsor("Cantrell Center for PT and Wellness")
+              +sponsor("Gordon Darrah", "Columbus")
+              +sponsor("Betty Gray", "Mableton")
+              +sponsor("James Hodges", "Monroe")
+              +sponsor("Gene Payne", "Montgomery, AL")
+              +sponsor("Ahmad Faheem Shabazz", "Starr, SC")
+              +sponsor("Robert Jackson", "Lawrenceville")
+              +sponsor("Andrew Mason", "Evans")
+              +sponsor("Linda Lowery", "Smyrna")
+              +sponsor("Edward L Smith", "Fairburn")
+              +sponsor("Emily E Tindill", "Girard")
+              +sponsor("Judy & Lloyd Britt", "Warner Robins")
+              +sponsor("John Bunnell", "Dahlonega  ")
+              +sponsor("Lois Clark", "Stockbridge")
+              +sponsor("Neil Coleman", "Jonesboro")
+              +sponsor("Jim Haley", "Sugar Hill")
+              +sponsor("Lee Howington", "Snellville")
+              +sponsor("Lois Maat Roberts", "Statesboro")
+              +sponsor("Kevin Sellers", "Knoxville, TN")
+              +sponsor("Judy Smith", "Atlanta")
+              +sponsor("Steven Townsend", "Lakewood Ranch, FL")
+              +sponsor("Jan Alexuk", "Hinesville")
+              +sponsor("William Bach", "Greer, SC")
+              +sponsor("Ed Balthrop", "Bessemer, AL")
+              +sponsor("Ellen Briggs", "Demorest")
+              +sponsor("Judy Cox", "Carrollton")
+              +sponsor("Richard A Johnson", "Lawrenceville")
+              +sponsor("Randall Neff", "Byron")
+              +sponsor("Gail H Marshall", "Villa Rica")
+              +sponsor("Gladys Mixon", "Rome")
+              +sponsor("Sarah Mofford", "Warner Robins")
+              +sponsor("Thomas Piacentini", "Tucker")
+              +sponsor("B Craig Ray", "Johns Creek")
+              +sponsor("Percy Skinner, Jr", "Warner Robins")
+              +sponsor("Joyce Small", "Ocala, FL")
+              +sponsor("Brian Stockmaster", "Charleston, SC")
+              +sponsor("Jesse Weathers", "Gray")
+              +sponsor("Carolyn & James Wright", "Ellabell")
+              +sponsor("George & Charlotte Zubowicz", "Warm Springs")
+              +sponsor("William Dudley", "Greensboro")
+              +sponsor("Nancy Lewis", "Atlanta")
+              +sponsor("Kenneth Rosskopf", "Decatur")
+              +sponsor("Gary Burgess", "Stone Mountain")
+
+mixin sponsor (name, location, src, link)
+  li
+    if link
+      a(href!=link, target="_new")
+        +sponsor-internal(name, location, src)
+    else
+      +sponsor-internal(name, location, src)
+
+mixin sponsor-internal (name, location, src)
+  if src
+    img(src!=src, alt!=name, title!=name)
+  =name
+  if location
+    |
+    |
+    span=location
