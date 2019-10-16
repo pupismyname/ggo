@@ -1,12 +1,12 @@
 doctype html
 html
   head
-    meta(http-equiv="Content-Type", content="text/html; charset=iso-8859-1")
+    meta(http-equiv="Content-Type" content="text/html; charset=iso-8859-1")
     title Georgia Golden Olympics
       if filename !== 'index'
         |  - #{name}
-    link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700", rel="stylesheet", type="text/css")
-    link(rel="stylesheet", type="text/css", href="styles/ggo.css?v=20170920")
+    link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css")
+    link(rel="stylesheet" type="text/css" href="styles/ggo.css?v=20170920")
   -
     var idAtt = 'ggo-' + type
     var classAtt = 'nogrid ggo' + filename
@@ -29,9 +29,9 @@ html
 
       #footer.container
         .box.type4c
-          p &copy; #{copyright} <a href="index.html">Georgia Golden Olympics</a>
+          p &copy; #{copyright} #[a(href="index.html") Georgia Golden Olympics]
         .box.type5c
-          p Contact GGO Coordinator <a href="mailto:vcpilgrim@gmail.com">Vicki Pilgrim</a> at 770-867-3603
+          p Contact GGO Coordinator #[a href="mailto:vcpilgrim@gmail.com") Vicki Pilgrim] at 770-867-3603
         .box.type3c.last
           p Design by <a href="http://www.pupismyname.com/">John Brooks</a>
 
