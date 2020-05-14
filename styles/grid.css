@@ -2,11 +2,16 @@ body {
 	text-align: center;
 }
 
-#wrapper {
+.wrapper {
 	width: 863px;
 	text-align: left;
 	margin: 0 auto;
-	overflow: hidden;
+}
+
+.wrapper::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .container {
@@ -14,11 +19,11 @@ body {
 	float: left;
 }
 
-#wrapper .space {
+.container.space {
 	margin-bottom: 11px;
 }
 
-#wrapper .gap {
+.container.gap {
 	margin-bottom: 22px;
 }
 

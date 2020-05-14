@@ -2,211 +2,166 @@ extends partials/layout.pug
 
 block content
   #content.container.space
-
     #infobar.container.space
-      .box.type5
-        .container.maininfo
-          h2.box.type5c.first September 25-28, 2019
-          h3.box.type5c.first Warner Robins, GA
-          p.box.type2.first
-            a#appbutton(href="files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") #[span 2019] Results
-            //- a#appbutton(href="files/2019 GGO Registration Form.pdf") #[span 2019] Registration
-          .box.type3c
+      .wrapper
+        .box.type5
+          .container.maininfo
+            h2.box.type5c.first September 23-26, 2020
+            h3.box.type5c.first Warner Robins, GA
+            p.box.type2.first
+              a#appbutton(href="files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") #[span 2019] Results
+              //- a#appbutton(href="files/2019 GGO Registration Form.pdf") #[span 2019] Registration
+            .box.type3c
+              ul
+                li: a(href="files/Rule Book 2019 final.pdf") 2019 Event List and Rules
+                li: a(href="files/Feb 2019 Newsletter.pdf") February 2019 Newsletter
+                li: a(href="files/2017 Golden Games Map.pdf") Event Map
+                li: a(href="files/2018 OFFICIAL RESULTS WEBSITE 10-25-18.pdf") 2018 Results
+          .container.lowerinfo
+            .box.type5c.first
+              p The 2020 Georgia Golden Olympics will be held September 23-26, 2020 in Warner Robins, GA.
+              p The Pickleball Event will be held September 24-26, 2020 in Griffin, GA at the Spalding County Pickleball Complex at Wyomia Tyus Olympic Park.
+              p Swimming events will be held September 25, 2020 in Jonesboro, GA at the Steve Lundquist Aquatic Center.
+              p 2020 is a qualifying year for the 2021 National Games in Fort Lauderdale, FL.
+              p Thank you for joining us for fun, fellowship, and competition.
+              //- p Returning competitors can #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online].
+        .box.type7
+          .container
+            #picfade.box.type7.first
+              img#defaultpic(src="images/stack1.jpg" alt="" title="")
+            .social
+              .box.type7c.first
+                p #[a(href="http://www.nsga.com/") #[img.inline(src="images/nsga.gif" alt="NSGA Logo" title="National Senior Games Association")] #[img.inline(src="images/nsg19.png" alt="2017 NSG Logo" title="2017 National Senior Games")]]
+                p The 2021 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for November 5-18, 2021 in Fort Lauderdale, FL.
+                p.detail Follow Georgia Golden Olympics on #[a(href="http://twitter.com/gagoldolympics" target="_new") #[img(src="images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="http://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="images/icon-facebook.png" alt="Facebook" title="Facebook")]]
+
+    #types.container.gap.bg444
+      .wrapper
+        .box.type4.participate
+          h4.box.type4c.first
+            a(href="participate.html") Participate
+          .box.type4c.first
+            p Are you ready to compete? We have events for every fitness level.
             ul
+              li: a(href="files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") 2019 Results
               li: a(href="files/Rule Book 2019 final.pdf") 2019 Event List and Rules
               li: a(href="files/Feb 2019 Newsletter.pdf") February 2019 Newsletter
               li: a(href="files/2017 Golden Games Map.pdf") Event Map
-              li: a(href="files/2018 OFFICIAL RESULTS WEBSITE 10-25-18.pdf") 2018 Results
-        .container.lowerinfo
-          .box.type5c.first
-            p The 2019 Georgia Golden Olympics was held September 25-28, 2019 in Warner Robins, GA.
-            p The Pickleball Event was held October 1-3, 2019 in Griffin, GA at the Spalding County Pickleball Complex at Wyomia Tyus Olympic Park.
-            p 2019 is not a qualifying year for the National Senior Games. 2020 will be the qualifying games for the 2021 National Games in Fort Lauderdale, FL.
-            p Thank you for joining us for fun, fellowship, and competition.
-            p Returning competitors can #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online].
-      .box.type7
+              li: a(href="files/Team Roster Word.pdf") Team Roster
+              li Cycling Routes: #[a(href="files/5K and 10K Cycling Route10.pdf") 5K & 10K], #[a(href="files/20K Cycling Route-10.pdf") 20K], #[a(href="files/40K Cycling10.pdf") 40K]
+
+        .box.type4.volunteer
+          h4.box.type4c.first
+            a(href="volunteer.html") Volunteer
+          .box.type4c.first
+            p Want to help out? Here's all the information you'll need.
+            ul
+              li: a(href="files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
+              li: a(href="files/Rule Book 2019 final.pdf") 2019 Event List and Rules
+              li: a(href="files/2017 Golden Games Map.pdf") Event Map
+
+        .box.type4.sponsor
+          h4.box.type4c.first
+            a(href="sponsor.html") Sponsor
+          .box.type4c.first
+            p These events could not happen without the help of our generous sponsors.
+            ul
+              li: a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!
+              li: a(href="files/ggofundbro.pdf") Sponsorship Brochure
+              li: a(href="sponsor.html") Become a Sponsor!
+
+      .box.type12c
         .container
-          #picfade.box.type7.first
-            img#defaultpic(src="images/stack1.jpg" alt="" title="")
-          .social
-            .box.type7c.first
-              p.detail Follow Georgia Golden Olympics on #[a(href="http://twitter.com/gagoldolympics" target="_new") #[img(src="images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="http://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="images/icon-facebook.png" alt="Facebook" title="Facebook")]]
-      .container
-        .box.type7c
-          p #[a(href="http://www.nsga.com/") #[img.inline(src="images/nsga.gif" alt="NSGA Logo" title="National Senior Games Association")] #[img.inline(src="images/nsg19.png" alt="2017 NSG Logo" title="2017 National Senior Games")]]
-          p The 2019 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for June 14-25, 2019 in Albuquerque, NM.
-
-    #types.container.gap.bg444
-
-      .box.type4.participate
-        h4.box.type4c.first
-          a(href="participate.html") Participate
-        .box.type4c.first
-          p Are you ready to compete? We have events for every fitness level.
-          ul
-            li: a(href="files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") 2019 Results
-            li: a(href="files/Rule Book 2019 final.pdf") 2019 Event List and Rules
-            li: a(href="files/Feb 2019 Newsletter.pdf") February 2019 Newsletter
-            li: a(href="files/2017 Golden Games Map.pdf") Event Map
-            li: a(href="files/Team Roster Word.pdf") Team Roster
-            li Cycling Routes: #[a(href="files/5K and 10K Cycling Route10.pdf") 5K & 10K], #[a(href="files/20K Cycling Route-10.pdf") 20K], #[a(href="files/40K Cycling10.pdf") 40K]
-
-      .box.type4.volunteer
-        h4.box.type4c.first
-          a(href="volunteer.html") Volunteer
-        .box.type4c.first
-          p Want to help out? Here's all the information you'll need.
-          ul
-            li: a(href="files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
-            li: a(href="files/Rule Book 2019 final.pdf") 2019 Event List and Rules
-            li: a(href="files/2017 Golden Games Map.pdf") Event Map
-
-      .box.type4.sponsor
-        h4.box.type4c.first
-          a(href="sponsor.html") Sponsor
-        .box.type4c.first
-          p These events could not happen without the help of our generous sponsors.
-          ul
-            li: a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!
-            li: a(href="files/ggofundbro.pdf") Sponsorship Brochure
-            li: a(href="sponsor.html") Become a Sponsor!
-
-    .box.type12c
-      .container
-        include partials/reader
+          include partials/reader
 
     #sponsors
-      .container.pagetitle.space
-        h2.box.type12c 2019 Sponsors
-        p Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
+      .wrapper
+        .container.pagetitle.space
+          h2.box.type12c 2019 Sponsors
+          p Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
 
-      .container.bg12.space
+        .container.bg12.space
 
-        .box.type12.corporate
-          h4.box.type12c.first Corporate Sponsors
-          .box.type12c.first
-            p.detail $10,000 or more
-            ul
-              +sponsor("Georgia Department of Public Health Breast and Cervical Cancer Program", "", "images/sponsors/DPH_Logo_Small_resized.jpg")
+          .box.type12.corporate
+            h4.box.type12c.first Corporate Sponsors
+            .box.type12c.first
+              p.detail $10,000 or more
+              ul
+                +sponsor("Georgia Department of Public Health Breast and Cervical Cancer Program", "", "images/sponsors/DPH_Logo_Small_resized.jpg")
 
-      .container.bg66.space
+        .container.bg66.space
 
-        .box.type6.platinum
-          h4.box.type6c.first Platinum Sponsors
-          .box.type6c.first
-            p.detail $5000-$9999
-            ul
-              +sponsor("Warner Robins Recreation Department", "Host Agency")
+          .box.type6.platinum
+            h4.box.type6c.first Platinum Sponsors
+            .box.type6c.first
+              p.detail $5000-$9999
+              ul
+                +sponsor("Warner Robins Recreation Department", "Host Agency")
 
-        .box.type6.gold
-          h4.box.type6c.first Gold Sponsors
-          .box.type6c.first
-            p.detail $2500-$4999
-            ul
-              +sponsor("The Miles Group", "Snellville")
-              +sponsor("First Christian Church", "Winder")
-              +sponsor("Houston Healthcare", "", "images/sponsors/HHC-new-logo-2016_resized.png", "http://www.hhc.org/")
-              +sponsor("Aetna", "", "images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png")
+          .box.type6.gold
+            h4.box.type6c.first Gold Sponsors
+            .box.type6c.first
+              p.detail $2500-$4999
+              ul
+                +sponsor("The Miles Group", "Snellville")
+                +sponsor("First Christian Church", "Winder")
+                +sponsor("Houston Healthcare", "", "images/sponsors/HHC-new-logo-2016_resized.png", "http://www.hhc.org/")
+                +sponsor("Aetna", "", "images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png")
 
-      .container.bg66.space
+        .container.bg66.space
 
-        .box.type6.silver
-          h4.box.type6c.first Silver Sponsors
-          .box.type6c.first
-            p.detail $1000-$2499
-            ul
-              +sponsor("Georgia Department of Public Health")
-              +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
-              +sponsor("Georgia Health Care Association")
-              +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
-              +sponsor("Ryan and Marty Beighley", "The Villages, FL")
+          .box.type6.silver
+            h4.box.type6c.first Silver Sponsors
+            .box.type6c.first
+              p.detail $1000-$2499
+              ul
+                +sponsor("Georgia Department of Public Health")
+                +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
+                +sponsor("Georgia Health Care Association")
+                +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
+                +sponsor("Ryan and Marty Beighley", "The Villages, FL")
 
-        .box.type6.bronze
-          h4.box.type6c.first Bronze Sponsors
-          .box.type6c.first
-            p.detail $500-$999
-            ul
-              +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
-              +sponsor("Tom Gill", "Madison, AL")
-              +sponsor("Grovania United Methodist Church")
-              +sponsor("Mike Perry", "Warner Robins")
-              +sponsor("Georgia Hearing Institute", "Warner Robins")
-              +sponsor("Publix Super Markets Charities")
+          .box.type6.bronze
+            h4.box.type6c.first Bronze Sponsors
+            .box.type6c.first
+              p.detail $500-$999
+              ul
+                +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
+                +sponsor("Tom Gill", "Madison, AL")
+                +sponsor("Grovania United Methodist Church")
+                +sponsor("Georgia Hearing Institute", "Warner Robins")
+                +sponsor("Publix Super Markets Charities")
+                +sponsor("Marshall Martin", "Lady Lake, FL")
 
-      .container.bg66.space
+        .container.bg66.space
 
-        .box.type6.torch
-          h4.box.type6c.first Torch Club
-          .box.type6c.first
-            p.detail $100-$499
-            ul
-              +sponsor("Jewel Crews", "Waycross")
-              +sponsor("Lester Culver", "Ludowici")
-              +sponsor("Harry Lowe", "Waleska")
-              +sponsor("Art Mathis", "Moreland")
-              +sponsor("James & Miriam Novak", "Bainbridge")
-              +sponsor("Vicki Pilgrim", "Auburn")
-              +sponsor("Annaliese Sager", "Winter Haven, FL")
-              +sponsor("Shawn Smith", "Dacula")
-              +sponsor("James & Jocille Thwing", "Warner Robins")
-              +sponsor("Carol Wadell", "Rome")
-              +sponsor("Ed Brown", "Colbert")
-              +sponsor("Sue Hesse", "Stone Mountain, In memory of Robert Lloyd")
-              +sponsor("Team Wes Real Estate", "Warner Robins, In memory of Ann Claxton")
-              +sponsor("Marshall Martin", "Lady Lake, FL")
-              +sponsor("Will & Annie Smith", "Carrollton")
-              +sponsor("George Marlow,III", "Lawrenceville")
-              +sponsor("Don Tate", "Bonaire")
-              +sponsor("Joyce White", "Oxford")
+          .box.type6.torch
+            h4.box.type6c.first Torch Club
+            .box.type6c.first
+              p.detail $100-$499
+              ul
+                +sponsor("Jewel Crews", "Waycross")
+                +sponsor("Lester Culver", "Ludowici")
+                +sponsor("Harry Lowe", "Waleska")
+                +sponsor("James & Miriam Novak", "Bainbridge")
+                +sponsor("Shawn Smith", "Dacula")
+                +sponsor("James & Jocille Thwing", "Warner Robins")
+                +sponsor("Sue Hesse", "Stone Mountain, In memory of Robert Lloyd")
+                +sponsor("Robert & Faye Buckham", "Woodstock")
+                +sponsor("Rebecca & James Hamilton", "Byron")
+                +sponsor("Lois Maat Roberts", "Statesboro")
+                +sponsor("Bonnie Romines", "Warner Robins")
+                +sponsor("Kenneth Rosskopf", "Decatur")
 
-        .box.type6.friend
-          h4.box.type6c.first Friends
-          .box.type6c.first
-            p.detail $25-$99
-            ul
-              +sponsor("Cantrell Center for PT and Wellness")
-              +sponsor("Gordon Darrah", "Columbus")
-              +sponsor("Betty Gray", "Mableton")
-              +sponsor("James Hodges", "Monroe")
-              +sponsor("Gene Payne", "Montgomery, AL")
-              +sponsor("Ahmad Faheem Shabazz", "Starr, SC")
-              +sponsor("Robert Jackson", "Lawrenceville")
-              +sponsor("Andrew Mason", "Evans")
-              +sponsor("Linda Lowery", "Smyrna")
-              +sponsor("Edward L Smith", "Fairburn")
-              +sponsor("Emily E Tindill", "Girard")
-              +sponsor("Judy & Lloyd Britt", "Warner Robins")
-              +sponsor("John Bunnell", "Dahlonega  ")
-              +sponsor("Lois Clark", "Stockbridge")
-              +sponsor("Neil Coleman", "Jonesboro")
-              +sponsor("Jim Haley", "Sugar Hill")
-              +sponsor("Lee Howington", "Snellville")
-              +sponsor("Lois Maat Roberts", "Statesboro")
-              +sponsor("Kevin Sellers", "Knoxville, TN")
-              +sponsor("Judy Smith", "Atlanta")
-              +sponsor("Steven Townsend", "Lakewood Ranch, FL")
-              +sponsor("Jan Alexuk", "Hinesville")
-              +sponsor("William Bach", "Greer, SC")
-              +sponsor("Ed Balthrop", "Bessemer, AL")
-              +sponsor("Ellen Briggs", "Demorest")
-              +sponsor("Judy Cox", "Carrollton")
-              +sponsor("Richard A Johnson", "Lawrenceville")
-              +sponsor("Randall Neff", "Byron")
-              +sponsor("Gail H Marshall", "Villa Rica")
-              +sponsor("Gladys Mixon", "Rome")
-              +sponsor("Sarah Mofford", "Warner Robins")
-              +sponsor("Thomas Piacentini", "Tucker")
-              +sponsor("B Craig Ray", "Johns Creek")
-              +sponsor("Percy Skinner, Jr", "Warner Robins")
-              +sponsor("Joyce Small", "Ocala, FL")
-              +sponsor("Brian Stockmaster", "Charleston, SC")
-              +sponsor("Jesse Weathers", "Gray")
-              +sponsor("Carolyn & James Wright", "Ellabell")
-              +sponsor("George & Charlotte Zubowicz", "Warm Springs")
-              +sponsor("William Dudley", "Greensboro")
-              +sponsor("Nancy Lewis", "Atlanta")
-              +sponsor("Kenneth Rosskopf", "Decatur")
-              +sponsor("Gary Burgess", "Stone Mountain")
+          .box.type6.friend
+            h4.box.type6c.first Friends
+            .box.type6c.first
+              p.detail $25-$99
+              ul
+                +sponsor("Betty Gray", "Mableton")
+                +sponsor("John Bunnell", "Dahlonega")
+                +sponsor("Alan & Judy Johnson", "Lawrenceville")
+                +sponsor("LL Howard & Christi Collier", "Colorado Springs, CO, In memory of Jan Collier")
 
 mixin sponsor (name, location, src, link)
   li
