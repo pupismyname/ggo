@@ -4,18 +4,22 @@ Georgia Golden Olympics
 
 https://georgiagoldenolympics.org/
 
-Code and design by John Brooks
-
 11ty, Pug, Gulp, Less
 
-- **build**: `npm run build`
+## Build
+```
+npm run build
+```
+builds to `_site`
 
-  builds to `_site`
+## Dev
+```
+npm run dev
+```
+spins up http://localhost:8081 and watches for changes
 
-- **dev**: `npm run dev`
-
-  spins up http://localhost:8081 and watches for changes
-
-- **clean**: `npm run clean`
-
-  removes 11ty and less build folders, automatically run before `dev` and `build`
+## Clean
+```
+npm run clean
+```
+removes 11ty and less build folders, automatically run before `dev` and `build`
