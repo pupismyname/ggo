@@ -6,7 +6,7 @@ html
       if filename !== 'index'
         |  - #{name}
     link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css")
-    link(rel="stylesheet" type="text/css" href="styles/ggo.css?v=20200513")
+    link(rel="stylesheet" type="text/css" href="css/ggo.css?v=20200513")
   -
     var idAtt = 'ggo-' + type
     var classAtt = 'nogrid ggo' + filename
@@ -14,16 +14,16 @@ html
     #header.container
       .wrapper
         h1.box.type3c
-          a(href="index.html") Georgia Golden Olympics
+          a(href="/") Georgia Golden Olympics
         ul#mainmenu.box.type8.pad1
           li.box.type2.participate.first
-            a(href="participate.html") Participate
+            a(href="/participate") Participate
           li.box.type2.volunteer
-            a(href="volunteer.html") Volunteer
+            a(href="/volunteer") Volunteer
           li.box.type2.sponsor
-            a(href="sponsor.html") Sponsor
+            a(href="/sponsor") Sponsor
           li.box.type2.about
-            a(href="about.html") About GGO
+            a(href="/about") About GGO
 
     #notice.container.space
       .wrapper
@@ -46,12 +46,12 @@ html
     #footer.container
       .wrapper
         .box.type4c
-          p &copy; #{copyright} #[a(href="index.html") Georgia Golden Olympics]
+          p &copy; #{copyright} #[a(href="/") Georgia Golden Olympics]
         .box.type5c
-          p Contact GGO Coordinator #[a href="mailto:vcpilgrim@gmail.com") Vicki Pilgrim] at 770-867-3603
+          p Contact GGO Coordinator #[a(href="mailto:vcpilgrim@gmail.com") Vicki Pilgrim] at 770-867-3603
         .box.type3c.last
-          p Design by <a href="http://www.pupismyname.com/">John Brooks</a>
+          p Design by #[a(href="http://www.pupismyname.com/") John Brooks]
 
-    script(src="jquery/jquery-1.2.3.min.js")
-    script(src="jquery/jquery.easing.1.3.js")
-    script(src="ggo.js")
+    script(src="js/jquery/jquery-1.2.3.min.js")
+    script(src="js/jquery/jquery.easing.1.3.js")
+    script(src="js/ggo.js")

@@ -1,4 +1,4 @@
-extends partials/layout.pug
+extends /layout.pug
 
 block content
   #content.container.space
@@ -38,7 +38,7 @@ block content
       .wrapper
         .box.type4.participate
           h4.box.type4c.first
-            a(href="participate.html") Participate
+            a(href="/participate") Participate
           .box.type4c.first
             p Are you ready to compete? We have events for every fitness level.
             ul
@@ -51,7 +51,7 @@ block content
 
         .box.type4.volunteer
           h4.box.type4c.first
-            a(href="volunteer.html") Volunteer
+            a(href="/volunteer") Volunteer
           .box.type4c.first
             p Want to help out? Here's all the information you'll need.
             ul
@@ -61,17 +61,17 @@ block content
 
         .box.type4.sponsor
           h4.box.type4c.first
-            a(href="sponsor.html") Sponsor
+            a(href="/sponsor") Sponsor
           .box.type4c.first
             p These events could not happen without the help of our generous sponsors.
             ul
               li: a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!
               li: a(href="files/ggofundbro.pdf") Sponsorship Brochure
-              li: a(href="sponsor.html") Become a Sponsor!
+              li: a(href="/sponsor") Become a Sponsor!
 
       .box.type12c
         .container
-          include partials/reader
+          include /reader
 
     #sponsors
       .wrapper

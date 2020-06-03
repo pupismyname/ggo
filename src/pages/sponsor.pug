@@ -1,4 +1,4 @@
-extends partials/layout.pug
+extends /layout.pug
 
 block content
   #content.container.space
@@ -34,7 +34,7 @@ block content
             tr
               th.friendtext Friend
               td $25 - $99
-          p Benefits offered at each level are detailed in the <a href="files/ggofundbro.pdf">Sponsorship Brochure</a>.
+          p Benefits offered at each level are detailed in the #[a(href="files/ggofundbro.pdf") Sponsorship Brochure].
         .box.type5c
           h3 Become a Sponsor
           p
@@ -43,4 +43,4 @@ block content
           ul: li: a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Donate Online
           p You can also print and fill out the following form:
           ul: li: a(href="files/ggofundbro.pdf") Sponsorship Brochure
-          p.detail PDF forms require <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe Reader</a>
+          include /reader
