@@ -1,19 +1,28 @@
 {
-  "name": "ggo-static",
+  "name": "ggo",
   "version": "1.0.0",
-  "description": "",
+  "description": "GGO ===",
   "main": "index.js",
-  "dependencies": {
-    "less": "^2.7.3",
-    "lodash": "^4.17.15",
-    "ncp": "^2.0.0",
-    "pug": "^2.0.4",
-    "rimraf": "^2.7.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp clean; gulp build; npx @11ty/eleventy",
+    "dev": "gulp clean; gulp build; gulp watch & npx @11ty/eleventy --serve",
+    "clean": "gulp clean"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pupismyname/ggo.git"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pupismyname/ggo/issues"
+  },
+  "homepage": "https://github.com/pupismyname/ggo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  }
 }
