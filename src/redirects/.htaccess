@@ -1,0 +1,4 @@
+Redirect 301 /about.html /about/
+Redirect 301 /participate.html /participate/
+Redirect 301 /sponsor.html /sponsor/
+Redirect 301 /volunteer.html /volunteer/

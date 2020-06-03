@@ -239,30 +239,15 @@ th, strong {
 /* header */
 /* ----------------------------------------------------------------- */
 
-#header {
-	height: 95px;
-	overflow: hidden;
-}
-
-h1 {
-	height: 95px;
-}
-
 h1 a {
-	text-indent: -5000px;
 	display: block;
-	width: 100%;
-	height: 100%;
-	background-image: url(../images/ggo.gif);
-	background-repeat: no-repeat;
-	background-position: center center;
+	margin-top: 10px;
 }
 
 #mainmenu a {
 	display: block;
 	text-align: center;
 	font-size: 18px;
-	height: 40px;
 	line-height: 40px;
 	background-image: url(../images/bg-mainmenu.gif);
 	background-repeat: no-repeat;
@@ -413,25 +398,28 @@ h1 a {
 /* photo stack */
 /* ----------------------------------------------------------------- */
 
-.picstack {
-	height: 358px;
-	background-image: url(../images/picstack-placeholder.jpg);
-	margin-top: -38px;
-	width: 497px;
-	position: relative;
-	z-index: 1;
-}
-
 #picfade {
 	position: relative;
 	margin-top: -35px;
 	height: 370px;
+	z-index: 1;
 }
 
 #picfade img {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 0;
+	opacity: 0;
+	&.pic-previous {
+		z-index: 1;
+		opacity: 1;
+	}
+	&.pic-active {
+		z-index: 2;
+		opacity: 1;
+		transition: opacity 1000ms ease-in-out;
+	}
 }
 
 /* sponsors */
@@ -499,7 +487,7 @@ h1 a {
 }
 
 #sponsors li span {
-	color: #a0a0a0;
+	color: #767676;
 	font-size: 11px;
 }
 
@@ -586,7 +574,7 @@ h3.pagetitle {
 }
 
 .notice-box {
-  margin: 20px 0 24px;
+  margin: 10px 0 24px;
   padding: 20px 20px 10px;
   border-radius: 5px;
   border: 3px solid #5082ef;
@@ -599,10 +587,13 @@ h3.pagetitle {
 
 #footer {
 	font-size: 11px;
-	color: #a0a0a0;
-	border-top: 1px solid #eee;
-	padding-top: 22px;
+	color: #767676;
 	margin: 22px 0 88px;
+
+	.wrapper {
+		border-top: 1px solid #eee;
+		padding-top: 22px;
+	}
 }
 
 #footer .last {

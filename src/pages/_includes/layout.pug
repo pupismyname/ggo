@@ -1,57 +1,60 @@
 doctype html
-html
+html(lang="en")
   head
     meta(http-equiv="Content-Type" content="text/html; charset=iso-8859-1")
     title Georgia Golden Olympics
       if filename !== 'index'
         |  - #{name}
     link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css")
-    link(rel="stylesheet" type="text/css" href="css/ggo.css?v=20200513")
+    -
+      // new random number every build to bust cache
+      // effective but not efficient
+      var rand = Math.floor(Math.random() * Math.pow(10, 16));
+    link(rel="stylesheet" type="text/css" href=`/css/ggo.css?v=${rand}`)
   -
     var idAtt = 'ggo-' + type
     var classAtt = 'nogrid ggo' + filename
   body(id=idAtt, class=classAtt)
-    #header.container
+    #header.container(role="banner")
       .wrapper
         h1.box.type3c
-          a(href="/") Georgia Golden Olympics
-        ul#mainmenu.box.type8.pad1
+          a(href="/"): img(src="/images/ggo.gif" alt="Georgia Golden Olympics" title="Home")
+        ul#mainmenu.box.type8.pad1(role="nav")
           li.box.type2.participate.first
-            a(href="/participate") Participate
+            a(href="/participate/") Participate
           li.box.type2.volunteer
-            a(href="/volunteer") Volunteer
+            a(href="/volunteer/") Volunteer
           li.box.type2.sponsor
-            a(href="/sponsor") Sponsor
+            a(href="/sponsor/") Sponsor
           li.box.type2.about
-            a(href="/about") About GGO
+            a(href="/about/") About GGO
 
-    #notice.container.space
+    div(role="main")
+
+      #notice.container.space
+        .wrapper
+          .box.type12c
+            .container
+              .notice-box
+                p Hello Georgia Golden Olympics Athletes,
+                p Sadly, we are informing you that #[strong the 2020 Georgia Golden Olympics have been cancelled].
+                p The Board and Planning Committee Committee came to this very difficult decision after much discussion and by carefully considering a number of key factors:
+                ul
+                  li The number one reason: the safety of our athletes, local organizers, volunteers and sponsors.
+                  li Guidelines presented by CDC, state, and local governments.
+                  li Availability of some sports venues.
+                  li Possible reduction in key Event Directors/Managers available to plan, implement, and manage the games.
+                p We are truly sorry that the games will not be held this year. We appreciate your support of the Georgia Golden Olympics in years past and hope that you will plan to attend in 2021. These are very difficult times with tough decisions. Thank you for understanding.
+                p Athletes that were planning to compete in Georgia in order to qualify for the National Senior Games scheduled for November 2021 may still do so by attending an event in another state that is considered an "open" state or through the adjusted qualification process established by The National Senior Games Association (NSGA). For more information on the NSGA process, please go the National Senior Games Association website: #[a(href="http://www.nsga.com/") nsga.com]
+
+      block content
+
+    #footer.container(role="contentinfo")
       .wrapper
-        .box.type12c
-          .container
-            .notice-box
-              p Hello Georgia Golden Olympics Athletes,
-              p Sadly, we are informing you that #[strong the 2020 Georgia Golden Olympics have been cancelled].
-              p The Board and Planning Committee Committee came to this very difficult decision after much discussion and by carefully considering a number of key factors:
-              ul
-                li The number one reason: the safety of our athletes, local organizers, volunteers and sponsors.
-                li Guidelines presented by CDC, state, and local governments.
-                li Availability of some sports venues.
-                li Possible reduction in key Event Directors/Managers available to plan, implement, and manage the games.
-              p We are truly sorry that the games will not be held this year. We appreciate your support of the Georgia Golden Olympics in years past and hope that you will plan to attend in 2021. These are very difficult times with tough decisions. Thank you for understanding.
-              p Athletes that were planning to compete in Georgia in order to qualify for the National Senior Games scheduled for November 2021 may still do so by attending an event in another state that is considered an "open" state or through the adjusted qualification process established by The National Senior Games Association (NSGA). For more information on the NSGA process, please go the National Senior Games Association website: #[a(href="http://www.nsga.com/") nsga.com]
-
-    block content
-
-    #footer.container
-      .wrapper
-        .box.type4c
-          p &copy; #{copyright} #[a(href="/") Georgia Golden Olympics]
-        .box.type5c
+        .box.type6c
+          p &copy; #{copyright} #[a(href="https://georgiagoldenolympics.org/") Georgia Golden Olympics]
+        .box.type6c.last
           p Contact GGO Coordinator #[a(href="mailto:vcpilgrim@gmail.com") Vicki Pilgrim] at 770-867-3603
-        .box.type3c.last
-          p Design by #[a(href="http://www.pupismyname.com/") John Brooks]
 
-    script(src="js/jquery/jquery-1.2.3.min.js")
-    script(src="js/jquery/jquery.easing.1.3.js")
-    script(src="js/ggo.js")
+    script(src="/js/jquery-3.5.1.min.js")
+    script(src=`/js/ggo.js?v=${rand}`)
