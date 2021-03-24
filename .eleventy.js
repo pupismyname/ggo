@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
     'src/images': '/images',
     'src/js': '/js',
     'src/less-build': '/css',
+    'src/.htaccess': '/',
   });
   eleventyConfig.addWatchTarget('src/redirects');
   eleventyConfig.addWatchTarget('src/files/');
