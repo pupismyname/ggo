@@ -6,7 +6,7 @@ block content
       .wrapper
         .box.type5
           .container.maininfo
-            h2.box.type5c.first September 25-28, 2019
+            h2.box.type5c.first September 22-25, 2021
             h3.box.type5c.first Warner Robins, GA
             p.box.type2.first
               a#appbutton(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") #[span 2019] Results
@@ -19,10 +19,10 @@ block content
                 li: a(href="/files/2018 OFFICIAL RESULTS WEBSITE 10-25-18.pdf") 2018 Results
           .container.lowerinfo
             .box.type5c.first
-              p The 2019 Georgia Golden Olympics were held September 25-28, 2019 in Warner Robins, GA.
-              p The Pickleball Event was held October 1-3, 2019 in Griffin, GA at the Spalding County Pickleball Complex at Wyomia Tyus Olympic Park.
-              p 2019 was not a qualifying year for the National Senior Games. 2020 would have been a qualifying games for the 2021 National Games in Fort Lauderdale, FL, but the 2020 games have been cancelled.
-              p Thank you for joining us for fun, fellowship, and competition.
+              p The Georgia Golden Olympics dates are set for September 22-25, 2021. We know everyone is eager to compete, renew friendships and have fun, so plan to join us in September. Warner Robins, GA and surrounding areas will again be the hosts for the games.  Pickleball will be he in Griffin, GA at the Spalding County Pickleball Complex at Wyomia Tyus Olympic Park and swimming will be held at the Steve Lundquist Aquatics Center in Jonesboro, GA.
+              p Due to the pandemic, we still await confirmation of a few venues. If we are unable to obtain venues, some events may not be offered. This information will be released as soon as available.
+              p Registration is scheduled to open on May 1. If you have competed in the Georgia event in prior years, you may register online from this website. If not, please print the form from the website and mail with age verification to the address listed in the form.
+              p Thank you for joining us for fun, fellowship, and competition!
               //- p Returning competitors can #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online].
         .box.type7
           .container
@@ -34,8 +34,20 @@ block content
               img(src="/images/stack5.jpg" alt="" title="")
             .social
               .box.type7c.first
-                p #[a(href="http://www.nsga.com/") #[img.inline(src="/images/nsga.gif" alt="NSGA Logo" title="National Senior Games Association")] #[img.inline(src="/images/nsg19.png" alt="2017 NSG Logo" title="2017 National Senior Games")]]
-                p The 2021 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for November 5-18, 2021 in Fort Lauderdale, FL.
+                p
+                  a(href="http://www.nsga.com/")
+                    img.inline(
+                      src="/images/NSGA-Proud-Member-Logo.png"
+                      height="102"
+                      alt="NSGA Proud Partner" title="NSGA Proud Partner")
+                  a(href="http://www.nsga.com/")
+                    img.inline(
+                      src="/images/2022NSGLogo_PostageStamp-2x.png"
+                      srcset="/images/2022NSGLogo_PostageStamp-2x.png 2x"
+                      height="102"
+                      alt="2017 NSG Logo"
+                      title="2017 National Senior Games")
+                p The 2021 state games will be qualifying games for the 2022 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for May 10-23, 2022 in Ft. Lauderdale, FL.
                 p.detail Follow Georgia Golden Olympics on #[a(href="http://twitter.com/gagoldolympics" target="_new") #[img(src="/images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="http://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="/images/icon-facebook.png" alt="Facebook" title="Facebook")]]
 
     #types.container.gap.bg444
@@ -73,15 +85,19 @@ block content
               li: a(href="/files/ggofundbro.pdf") Sponsorship Brochure
               li: a(href="/sponsor/") Become a Sponsor!
 
-      .box.type12c
-        .container
-          include /reader
+    .container
+      .wrapper
+        .box.type12c
+          .container.gap
+            include /reader
 
     #sponsors
       .wrapper
         .container.pagetitle.space
           h2.box.type12c 2019 Sponsors
-          p Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
+        .container.gap
+          .box.type12c
+            h5 Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
 
         .container.bg12.space
 
@@ -90,7 +106,6 @@ block content
             .box.type12c.first
               p.detail $10,000 or more
               ul
-                +sponsor("Georgia Department of Public Health Breast and Cervical Cancer Program", "", "images/sponsors/DPH_Logo_Small_resized.jpg")
 
         .container.bg66.space
 
@@ -99,7 +114,7 @@ block content
             .box.type6c.first
               p.detail $5000-$9999
               ul
-                +sponsor("Warner Robins Recreation Department", "Host Agency")
+                +sponsor(" Warner Robins Parks & Recreation Department", "Host Agency", "images/sponsors/WRPR-High-Res-2x.png")
 
           .box.type6.gold
             h4.box.type6c.first Gold Sponsors
@@ -118,7 +133,6 @@ block content
             .box.type6c.first
               p.detail $1000-$2499
               ul
-                +sponsor("Georgia Department of Public Health")
                 +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
                 +sponsor("Georgia Health Care Association")
                 +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
@@ -132,7 +146,6 @@ block content
                 +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
                 +sponsor("Tom Gill", "Madison, AL")
                 +sponsor("Grovania United Methodist Church")
-                +sponsor("Georgia Hearing Institute", "Warner Robins")
                 +sponsor("Publix Super Markets Charities")
                 +sponsor("Marshall Martin", "Lady Lake, FL")
 
@@ -155,6 +168,8 @@ block content
                 +sponsor("Lois Maat Roberts", "Statesboro")
                 +sponsor("Bonnie Romines", "Warner Robins")
                 +sponsor("Kenneth Rosskopf", "Decatur")
+                +sponsor("Annaliese Sager", "Winter Haven, FL")
+                +sponsor("Don Tate", "Bonaire")
 
           .box.type6.friend
             h4.box.type6c.first Friends
@@ -165,6 +180,8 @@ block content
                 +sponsor("John Bunnell", "Dahlonega")
                 +sponsor("Alan & Judy Johnson", "Lawrenceville")
                 +sponsor("LL Howard & Christi Collier", "Colorado Springs, CO, In memory of Jan Collier")
+                +sponsor("Brian Stockmaster", "Charleston, SC")
+                +sponsor("Gordon Darrah", "Columbus")
 
 mixin sponsor (name, location, src, link)
   li
