@@ -1,5 +1,10 @@
 extends /layout.pug
 
+block append variables
+  -
+    page = 'home';
+    title = 'Home';
+
 block content
   #content.container.space
     #infobar.container.space
@@ -9,21 +14,20 @@ block content
             h2.box.type5c.first September 22-25, 2021
             h3.box.type5c.first Warner Robins, GA
             p.box.type2.first
-              a#appbutton(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") #[span 2019] Results
-              //- a#appbutton(href="/files/2019 GGO Registration Form.pdf") #[span 2019] Registration
+              //- a#appbutton(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") #[span 2019] Results
+              a#appbutton(href="/files/2021 Registration.pdf") #[span 2021] Registration
             .box.type3c
               ul
-                li: a(href="/files/Rule Book 2019 final.pdf") 2019 Event List and Rules
-                li: a(href="/files/Feb 2019 Newsletter.pdf") February 2019 Newsletter
+                li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
+                li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
                 li: a(href="/files/2017 Golden Games Map.pdf") Event Map
-                li: a(href="/files/2018 OFFICIAL RESULTS WEBSITE 10-25-18.pdf") 2018 Results
+                li: a(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") 2019 Results
           .container.lowerinfo
             .box.type5c.first
-              p The Georgia Golden Olympics dates are set for September 22-25, 2021. We know everyone is eager to compete, renew friendships and have fun, so plan to join us in September. Warner Robins, GA and surrounding areas will again be the hosts for the games.  Pickleball will be he in Griffin, GA at the Spalding County Pickleball Complex at Wyomia Tyus Olympic Park and swimming will be held at the Steve Lundquist Aquatics Center in Jonesboro, GA.
-              p Due to the pandemic, we still await confirmation of a few venues. If we are unable to obtain venues, some events may not be offered. This information will be released as soon as available.
-              p Registration is scheduled to open on May 1. If you have competed in the Georgia event in prior years, you may register online from this website. If not, please print the form from the website and mail with age verification to the address listed in the form.
+              p The Georgia Golden Olympics dates are set for September 22-25, 2021. We know everyone is eager to compete, renew friendships and have fun, so plan to join us in September. Warner Robins, GA and surrounding areas will again be the hosts for the games. Swimming will be held at the Steve Lundquist Aquatics Center in Jonesboro, GA.
+              p #[strong Registration is open!]
+              p If you have competed in the Georgia event in prior years, you may #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online]. If not, please print the form from the website and mail with age verification to the address listed in the form.
               p Thank you for joining us for fun, fellowship, and competition!
-              //- p Returning competitors can #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online].
         .box.type7
           .container
             #picfade.box.type7.first
@@ -45,8 +49,8 @@ block content
                       src="/images/2022NSGLogo_PostageStamp-2x.png"
                       srcset="/images/2022NSGLogo_PostageStamp-2x.png 2x"
                       height="102"
-                      alt="2017 NSG Logo"
-                      title="2017 National Senior Games")
+                      alt="2021 NSG Logo"
+                      title="2021 National Senior Games")
                 p The 2021 state games will be qualifying games for the 2022 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for May 10-23, 2022 in Ft. Lauderdale, FL.
                 p.detail Follow Georgia Golden Olympics on #[a(href="http://twitter.com/gagoldolympics" target="_new") #[img(src="/images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="http://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="/images/icon-facebook.png" alt="Facebook" title="Facebook")]]
 
@@ -58,9 +62,10 @@ block content
           .box.type4c.first
             p Are you ready to compete? We have events for every fitness level.
             ul
-              li: a(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") 2019 Results
-              li: a(href="/files/Rule Book 2019 final.pdf") 2019 Event List and Rules
-              li: a(href="/files/Feb 2019 Newsletter.pdf") February 2019 Newsletter
+              li: a(href="/files/2021 Registration.pdf") 2021 Registration Form
+              li: a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") 2021 Online Registration
+              li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
+              li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
               li: a(href="/files/2017 Golden Games Map.pdf") Event Map
               li: a(href="/files/Team Roster Word.pdf") Team Roster
               li Cycling Routes: #[a(href="/files/5K and 10K Cycling Route10.pdf") 5K & 10K], #[a(href="/files/20K Cycling Route-10.pdf") 20K], #[a(href="/files/40K Cycling10.pdf") 40K]
@@ -72,7 +77,7 @@ block content
             p Want to help out? Here's all the information you'll need.
             ul
               li: a(href="/files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
-              li: a(href="/files/Rule Book 2019 final.pdf") 2019 Event List and Rules
+              li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
               li: a(href="/files/2017 Golden Games Map.pdf") Event Map
 
         .box.type4.sponsor
@@ -94,7 +99,7 @@ block content
     #sponsors
       .wrapper
         .container.pagetitle.space
-          h2.box.type12c 2019 Sponsors
+          h2.box.type12c 2021 Sponsors
         .container.gap
           .box.type12c
             h5 Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
@@ -147,7 +152,6 @@ block content
                 +sponsor("Tom Gill", "Madison, AL")
                 +sponsor("Grovania United Methodist Church")
                 +sponsor("Publix Super Markets Charities")
-                +sponsor("Marshall Martin", "Lady Lake, FL")
 
         .container.bg66.space
 
@@ -157,29 +161,27 @@ block content
               p.detail $100-$499
               ul
                 +sponsor("Jewel Crews", "Waycross")
-                +sponsor("Lester Culver", "Ludowici")
-                +sponsor("Harry Lowe", "Waleska")
+                +sponsor("Linda Lowery", "Smyrna")
+                +sponsor("Gladys Mixon", "Rome")
                 +sponsor("James & Miriam Novak", "Bainbridge")
+                +sponsor("Allison & Wes Sawyers", "Warner Robins")
                 +sponsor("Shawn Smith", "Dacula")
                 +sponsor("James & Jocille Thwing", "Warner Robins")
-                +sponsor("Sue Hesse", "Stone Mountain, In memory of Robert Lloyd")
                 +sponsor("Robert & Faye Buckham", "Woodstock")
-                +sponsor("Rebecca & James Hamilton", "Byron")
                 +sponsor("Lois Maat Roberts", "Statesboro")
-                +sponsor("Bonnie Romines", "Warner Robins")
-                +sponsor("Kenneth Rosskopf", "Decatur")
-                +sponsor("Annaliese Sager", "Winter Haven, FL")
-                +sponsor("Don Tate", "Bonaire")
+                +sponsor("George & Charlotte Zubowicz", "Warm Springs")
 
           .box.type6.friend
             h4.box.type6c.first Friends
             .box.type6c.first
               p.detail $25-$99
               ul
-                +sponsor("Betty Gray", "Mableton")
+                +sponsor("Jan & Nicolas Alexuk", "Hinesville")
                 +sponsor("John Bunnell", "Dahlonega")
-                +sponsor("Alan & Judy Johnson", "Lawrenceville")
-                +sponsor("LL Howard & Christi Collier", "Colorado Springs, CO, In memory of Jan Collier")
+                +sponsor("Robert Jackson", "Lawrenceville")
+                +sponsor("Linda Lowery", "Smyrna")
+                +sponsor("Martin Marshall", "Lady Lake, FL")
+                +sponsor("Mr. & Mrs. Terry Moyer", "Warner Robins")
                 +sponsor("Brian Stockmaster", "Charleston, SC")
                 +sponsor("Gordon Darrah", "Columbus")
 
