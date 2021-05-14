@@ -23,6 +23,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "gulp": "^4.0.2",
-    "less": "^4.1.1"
+    "less": "^4.1.1",
+    "purecss": "^2.0.6"
   }
 }

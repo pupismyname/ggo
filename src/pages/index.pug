@@ -6,184 +6,157 @@ block append variables
     title = 'Home';
 
 block content
-  #content.container.space
-    #infobar.container.space
-      .wrapper
-        .box.type5
-          .container.maininfo
-            h2.box.type5c.first September 22-25, 2021
-            h3.box.type5c.first Warner Robins, GA
-            p.box.type2.first
+  .section
+    .container
+      .pure-g
+        .pure-u-1.pure-u-md-5-12
+          .pure-u-1.pure-u-md-1-2.u-c
+            h2 September 22-25, 2021 #[br] Warner Robins, GA
+            p
               //- a#appbutton(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") #[span 2019] Results
               a#appbutton(href="/files/2021 Registration.pdf") #[span 2021] Registration
-            .box.type3c
-              ul
-                li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
-                li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
-                li: a(href="/files/2017 Golden Games Map.pdf") Event Map
-                li: a(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") 2019 Results
-          .container.lowerinfo
-            .box.type5c.first
-              p The Georgia Golden Olympics dates are set for September 22-25, 2021. We know everyone is eager to compete, renew friendships and have fun, so plan to join us in September. Warner Robins, GA and surrounding areas will again be the hosts for the games. Swimming will be held at the Steve Lundquist Aquatics Center in Jonesboro, GA.
-              p #[strong Registration is open!]
-              p If you have competed in the Georgia event in prior years, you may #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online]. If not, please print the form from the website and mail with age verification to the address listed in the form.
-              p Thank you for joining us for fun, fellowship, and competition!
-        .box.type7
-          .container
-            #picfade.box.type7.first
-              img.pic-active(src="/images/stack1.jpg" alt="" title="")
-              img(src="/images/stack2.jpg" alt="" title="")
-              img(src="/images/stack3.jpg" alt="" title="")
-              img(src="/images/stack4.jpg" alt="" title="")
-              img(src="/images/stack5.jpg" alt="" title="")
-            .social
-              .box.type7c.first
-                p
-                  a(href="http://www.nsga.com/")
-                    img.inline(
-                      src="/images/NSGA-Proud-Member-Logo.png"
-                      height="102"
-                      alt="NSGA Proud Partner" title="NSGA Proud Partner")
-                  a(href="http://www.nsga.com/")
-                    img.inline(
-                      src="/images/2022NSGLogo_PostageStamp-2x.png"
-                      srcset="/images/2022NSGLogo_PostageStamp-2x.png 2x"
-                      height="102"
-                      alt="2021 NSG Logo"
-                      title="2021 National Senior Games")
-                p The 2021 state games will be qualifying games for the 2022 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for May 10-23, 2022 in Ft. Lauderdale, FL.
-                p.detail Follow Georgia Golden Olympics on #[a(href="http://twitter.com/gagoldolympics" target="_new") #[img(src="/images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="http://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="/images/icon-facebook.png" alt="Facebook" title="Facebook")]]
-
-    #types.container.gap.bg444
-      .wrapper
-        .box.type4.participate
-          h4.box.type4c.first
-            a(href="/participate/") Participate
-          .box.type4c.first
-            p Are you ready to compete? We have events for every fitness level.
+          .pure-u-1.pure-u-md-1-2.u-c
             ul
-              li: a(href="/files/2021 Registration.pdf") 2021 Registration Form
-              li: a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") 2021 Online Registration
               li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
               li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
               li: a(href="/files/2017 Golden Games Map.pdf") Event Map
-              li: a(href="/files/Team Roster Word.pdf") Team Roster
-              li Cycling Routes: #[a(href="/files/5K and 10K Cycling Route10.pdf") 5K & 10K], #[a(href="/files/20K Cycling Route-10.pdf") 20K], #[a(href="/files/40K Cycling10.pdf") 40K]
+              li: a(href="/files/2019 Georgia Golden Olympics Results Report 11-13-19.pdf") 2019 Results
+          .pure-u-1.u-c
+            p The Georgia Golden Olympics dates are set for September 22-25, 2021. We know everyone is eager to compete, renew friendships and have fun, so plan to join us in September. Warner Robins, GA and surrounding areas will again be the hosts for the games. Swimming will be held at the Steve Lundquist Aquatics Center in Jonesboro, GA.
+            p #[strong Registration is open!]
+            p If you have competed in the Georgia event in prior years, you may #[a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online]. If not, please print the form from the website and mail with age verification to the address listed in the form.
+            p Thank you for joining us for fun, fellowship, and competition!
+        .pure-u-1.pure-u-md-7-12.u-c
+          #picfade
+            img.pic-active(src="/images/stack1.jpg" alt="" title="")
+            img(src="/images/stack2.jpg" alt="" title="")
+            img(src="/images/stack3.jpg" alt="" title="")
+            img(src="/images/stack4.jpg" alt="" title="")
+            img(src="/images/stack5.jpg" alt="" title="")
+          p
+            a(href="http://www.nsga.com/")
+              img.inline(
+                src="/images/NSGA-Proud-Member-Logo.png"
+                height="102"
+                alt="NSGA Proud Partner" title="NSGA Proud Partner")
+            a(href="http://www.nsga.com/")
+              img.inline(
+                src="/images/2022NSGLogo_PostageStamp-2x.png"
+                srcset="/images/2022NSGLogo_PostageStamp-2x.png 2x"
+                height="102"
+                alt="2021 NSG Logo"
+                title="2021 National Senior Games")
+          p The 2021 state games will be qualifying games for the 2022 #[a(href="http://www.nsga.com/" target="_blank") National Senior Games] are scheduled for May 10-23, 2022 in Ft. Lauderdale, FL.
+          p.detail Follow Georgia Golden Olympics on #[a(href="http://twitter.com/gagoldolympics" target="_new") #[img(src="/images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="http://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="/images/icon-facebook.png" alt="Facebook" title="Facebook")]]
 
-        .box.type4.volunteer
-          h4.box.type4c.first
-            a(href="/volunteer/") Volunteer
-          .box.type4c.first
-            p Want to help out? Here's all the information you'll need.
-            ul
-              li: a(href="/files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
-              li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
-              li: a(href="/files/2017 Golden Games Map.pdf") Event Map
-
-        .box.type4.sponsor
-          h4.box.type4c.first
-            a(href="/sponsor/") Sponsor
-          .box.type4c.first
-            p These events could not happen without the help of our generous sponsors.
-            ul
-              li: a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!
-              li: a(href="/files/ggofundbro.pdf") Sponsorship Brochure
-              li: a(href="/sponsor/") Become a Sponsor!
-
+  .section
     .container
-      .wrapper
-        .box.type12c
-          .container.gap
-            include /reader
+      .pure-u-1.pure-u-md-1-3.u-c.participate
+        h3
+          a(href="/participate/") Participate
+        p Are you ready to compete? We have events for every fitness level.
+        ul
+          li: a(href="/files/2021 Registration.pdf") 2021 Registration Form
+          li: a(href="http://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") 2021 Online Registration
+          li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
+          li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
+          li: a(href="/files/2017 Golden Games Map.pdf") Event Map
+          li: a(href="/files/Team Roster Word.pdf") Team Roster
+          li Cycling Routes: #[a(href="/files/5K and 10K Cycling Route10.pdf") 5K & 10K], #[a(href="/files/20K Cycling Route-10.pdf") 20K], #[a(href="/files/40K Cycling10.pdf") 40K]
 
-    #sponsors
-      .wrapper
-        .container.pagetitle.space
-          h2.box.type12c 2021 Sponsors
-        .container.gap
-          .box.type12c
-            h5 Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
+      .pure-u-1.pure-u-md-1-3.u-c.volunteer
+        h3
+          a(href="/volunteer/") Volunteer
+        p Want to help out? Here's all the information you'll need.
+        ul
+          li: a(href="/files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
+          li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
+          li: a(href="/files/2017 Golden Games Map.pdf") Event Map
 
-        .container.bg12.space
+      .pure-u-1.pure-u-md-1-3.u-c.sponsor
+        h3
+          a(href="/sponsor/") Sponsor
+        p These events could not happen without the help of our generous sponsors.
+        ul
+          li: a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!
+          li: a(href="/files/ggofundbro.pdf") Sponsorship Brochure
+          li: a(href="/sponsor/") Become a Sponsor!
 
-          .box.type12.corporate
-            h4.box.type12c.first Corporate Sponsors
-            .box.type12c.first
-              p.detail $10,000 or more
-              ul
+      .pure-u-1.u-c
+        include /reader
 
-        .container.bg66.space
+  .section
+    .container
+      .pure-g
+        .pure-u-1.u-c
+          h2 2021 Sponsors
+          p Want to be a sponsor? #[a(href="http://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
 
-          .box.type6.platinum
-            h4.box.type6c.first Platinum Sponsors
-            .box.type6c.first
-              p.detail $5000-$9999
-              ul
-                +sponsor(" Warner Robins Parks & Recreation Department", "Host Agency", "images/sponsors/WRPR-High-Res-2x.png")
+        .pure-u-1.u-c.sponsor-corporate
+          h3 Corporate Sponsors
+          p.detail $10,000 or more
+          ul
 
-          .box.type6.gold
-            h4.box.type6c.first Gold Sponsors
-            .box.type6c.first
-              p.detail $2500-$4999
-              ul
-                +sponsor("The Miles Group", "Snellville")
-                +sponsor("First Christian Church", "Winder")
-                +sponsor("Houston Healthcare", "", "images/sponsors/HHC-new-logo-2016_resized.png", "http://www.hhc.org/")
-                +sponsor("Aetna", "", "images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png")
+        .pure-u-1.pure-u-md-1-2.u-c.sponsor-platinum
+          h3 Platinum Sponsors
+          p.detail $5000-$9999
+          ul
+            +sponsor(" Warner Robins Parks & Recreation Department", "Host Agency", "images/sponsors/WRPR-High-Res-2x.png")
 
-        .container.bg66.space
+        .pure-u-1.pure-u-md-1-2.u-c.sponsor-gold
+          h3 Gold Sponsors
+          p.detail $2500-$4999
+          ul
+            +sponsor("The Miles Group", "Snellville")
+            +sponsor("First Christian Church", "Winder")
+            +sponsor("Houston Healthcare", "", "images/sponsors/HHC-new-logo-2016_resized.png", "http://www.hhc.org/")
+            +sponsor("Aetna", "", "images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png")
 
-          .box.type6.silver
-            h4.box.type6c.first Silver Sponsors
-            .box.type6c.first
-              p.detail $1000-$2499
-              ul
-                +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
-                +sponsor("Georgia Health Care Association")
-                +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
-                +sponsor("Ryan and Marty Beighley", "The Villages, FL")
+        .pure-u-1.pure-u-md-1-2.sponsor-silver
+          h3 Silver Sponsors
+          p.detail $1000-$2499
+          ul
+            +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
+            +sponsor("Georgia Health Care Association")
+            +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
+            +sponsor("Ryan and Marty Beighley", "The Villages, FL")
 
-          .box.type6.bronze
-            h4.box.type6c.first Bronze Sponsors
-            .box.type6c.first
-              p.detail $500-$999
-              ul
-                +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
-                +sponsor("Tom Gill", "Madison, AL")
-                +sponsor("Grovania United Methodist Church")
-                +sponsor("Publix Super Markets Charities")
+        .pure-u-1.pure-u-md-1-2.sponsor-bronze
+          h3 Bronze Sponsors
+          p.detail $500-$999
+          ul
+            +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
+            +sponsor("Tom Gill", "Madison, AL")
+            +sponsor("Grovania United Methodist Church")
+            +sponsor("Publix Super Markets Charities")
 
-        .container.bg66.space
+        .pure-u-1.pure-u-md-1-2.sponsor-torch
+          h3 Torch Club
+          p.detail $100-$499
+          ul
+            +sponsor("Jewel Crews", "Waycross")
+            +sponsor("Linda Lowery", "Smyrna")
+            +sponsor("Gladys Mixon", "Rome")
+            +sponsor("James & Miriam Novak", "Bainbridge")
+            +sponsor("Allison & Wes Sawyers", "Warner Robins")
+            +sponsor("Shawn Smith", "Dacula")
+            +sponsor("James & Jocille Thwing", "Warner Robins")
+            +sponsor("Robert & Faye Buckham", "Woodstock")
+            +sponsor("Lois Maat Roberts", "Statesboro")
+            +sponsor("George & Charlotte Zubowicz", "Warm Springs")
 
-          .box.type6.torch
-            h4.box.type6c.first Torch Club
-            .box.type6c.first
-              p.detail $100-$499
-              ul
-                +sponsor("Jewel Crews", "Waycross")
-                +sponsor("Linda Lowery", "Smyrna")
-                +sponsor("Gladys Mixon", "Rome")
-                +sponsor("James & Miriam Novak", "Bainbridge")
-                +sponsor("Allison & Wes Sawyers", "Warner Robins")
-                +sponsor("Shawn Smith", "Dacula")
-                +sponsor("James & Jocille Thwing", "Warner Robins")
-                +sponsor("Robert & Faye Buckham", "Woodstock")
-                +sponsor("Lois Maat Roberts", "Statesboro")
-                +sponsor("George & Charlotte Zubowicz", "Warm Springs")
-
-          .box.type6.friend
-            h4.box.type6c.first Friends
-            .box.type6c.first
-              p.detail $25-$99
-              ul
-                +sponsor("Jan & Nicolas Alexuk", "Hinesville")
-                +sponsor("John Bunnell", "Dahlonega")
-                +sponsor("Robert Jackson", "Lawrenceville")
-                +sponsor("Linda Lowery", "Smyrna")
-                +sponsor("Martin Marshall", "Lady Lake, FL")
-                +sponsor("Mr. & Mrs. Terry Moyer", "Warner Robins")
-                +sponsor("Brian Stockmaster", "Charleston, SC")
-                +sponsor("Gordon Darrah", "Columbus")
+        .pure-u-1.pure-u-md-1-2.sponsor-friend
+          h3 Friends
+          p.detail $25-$99
+          ul
+            +sponsor("Jan & Nicolas Alexuk", "Hinesville")
+            +sponsor("John Bunnell", "Dahlonega")
+            +sponsor("Robert Jackson", "Lawrenceville")
+            +sponsor("Linda Lowery", "Smyrna")
+            +sponsor("Martin Marshall", "Lady Lake, FL")
+            +sponsor("Mr. & Mrs. Terry Moyer", "Warner Robins")
+            +sponsor("Brian Stockmaster", "Charleston, SC")
+            +sponsor("Gordon Darrah", "Columbus")
 
 mixin sponsor (name, location, src, link)
   li
@@ -195,7 +168,7 @@ mixin sponsor (name, location, src, link)
 
 mixin sponsor-internal (name, location, src)
   if src
-    img(src!=src, alt!=name, title!=name)
+    img.sponsor-img(src!=src, alt!=name, title!=name)
   =name
   if location
     |

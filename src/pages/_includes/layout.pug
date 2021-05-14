@@ -7,6 +7,7 @@ doctype html
 html(lang="en")
   head
     meta(http-equiv="Content-Type" content="text/html; charset=iso-8859-1")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Georgia Golden Olympics
       if page !== 'home'
         |  - #{title}
@@ -16,47 +17,31 @@ html(lang="en")
       // effective but not efficient
       var rand = Math.floor(Math.random() * Math.pow(10, 16));
     link(rel="stylesheet" type="text/css" href=`/css/ggo.css?v=${rand}`)
+
   body(class=`ggo-${page}`)
-    #header.container(role="banner")
-      .wrapper
-        h1.box.type3c
-          a(href="/"): img(src="/images/ggo.gif" alt="Georgia Golden Olympics" title="Home")
-        ul#mainmenu.box.type8.pad1(role="nav")
-          li.box.type2.participate.first
-            a(href="/participate/") Participate
-          li.box.type2.volunteer
-            a(href="/volunteer/") Volunteer
-          li.box.type2.sponsor
-            a(href="/sponsor/") Sponsor
-          li.box.type2.about
-            a(href="/about/") About GGO
+    .section(role="banner")
+      .container
+        .pure-g
+          .pure-u-1.pure-u-md-1-4.pure-u-lg-1-3.u-c
+            h1
+              a(href="/"): img(src="/images/ggo.gif" alt="Georgia Golden Olympics" title="Home")
+          .pure-u-1.pure-u-md-3-4.pure-u-lg-2-3
+            ul.pure-u-1.nav(role="nav")
+              li.pure-u-1.pure-u-md-1-4.nav-li.u-c
+                a.nav-item.nav-.participate(href="/participate/") Participate
+              li.pure-u-1.pure-u-md-1-4.nav-li.u-c
+                a.nav-item.nav-.volunteer(href="/volunteer/") Volunteer
+              li.pure-u-1.pure-u-md-1-4.nav-li.u-c
+                a.nav-item.nav-.sponsor(href="/sponsor/") Sponsor
+              li.pure-u-1.pure-u-md-1-4.nav-li.u-c
+                a.nav-item.nav-.about(href="/about/") About GGO
 
-    div(role="main")
+    block content
 
-      //- #notice.container.space
-      //-   .wrapper
-      //-     .box.type12c
-      //-       .container
-      //-         .notice-box
-      //-           p Hello Georgia Golden Olympics Athletes,
-      //-           p Sadly, we are informing you that #[strong the 2020 Georgia Golden Olympics have been cancelled].
-      //-           p The Board and Planning Committee Committee came to this very difficult decision after much discussion and by carefully considering a number of key factors:
-      //-           ul
-      //-             li The number one reason: the safety of our athletes, local organizers, volunteers and sponsors.
-      //-             li Guidelines presented by CDC, state, and local governments.
-      //-             li Availability of some sports venues.
-      //-             li Possible reduction in key Event Directors/Managers available to plan, implement, and manage the games.
-      //-           p We are truly sorry that the games will not be held this year. We appreciate your support of the Georgia Golden Olympics in years past and hope that you will plan to attend in 2021. These are very difficult times with tough decisions. Thank you for understanding.
-      //-           p Athletes that were planning to compete in Georgia in order to qualify for the National Senior Games scheduled for November 2021 may still do so by attending an event in another state that is considered an "open" state or through the adjusted qualification process established by The National Senior Games Association (NSGA). For more information on the NSGA process, please go the National Senior Games Association website: #[a(href="http://www.nsga.com/") nsga.com]
-
-      block content
-
-    #footer.container(role="contentinfo")
-      .wrapper
-        .box.type6c
-          p &copy; #{copyright} #[a(href="https://georgiagoldenolympics.org/") Georgia Golden Olympics]
-        .box.type6c.last
-          p Contact GGO Coordinator #[a(href="mailto:vcpilgrim@gmail.com") Vicki Pilgrim] at 770-867-3603
-
-    script(src="/js/jquery-3.5.1.min.js")
-    script(src=`/js/ggo.js?v=${rand}`)
+    .section(role="contentinfo")
+      .container
+        .pure-g
+          .pure-u-1.pure-u-md-1-2
+            p &copy; #{copyright} #[a(href="https://georgiagoldenolympics.org/") Georgia Golden Olympics]
+          .pure-u-1.pure-u-md-1-2
+            p Contact GGO Coordinator #[a(href="mailto:vcpilgrim@gmail.com") Vicki Pilgrim] at 770-867-3603
