@@ -9,20 +9,16 @@ module.exports = function(eleventyConfig) {
     'src/js': '/js',
     'src/.htaccess': '/',
   });
-  eleventyConfig.addWatchTarget('src/redirects');
-  eleventyConfig.addWatchTarget('src/files/');
-  eleventyConfig.addWatchTarget('src/images/');
-  eleventyConfig.addWatchTarget('src/js/');
+  eleventyConfig.addWatchTarget('./src/redirects');
+  eleventyConfig.addWatchTarget('./src/files/');
+  eleventyConfig.addWatchTarget('./src/images/');
+  eleventyConfig.addWatchTarget('./src/js/');
+  eleventyConfig.addWatchTarget("./src/less/");
 
   // build less - see `src/content/_less.liquid`
   eleventyConfig.addTransform('less', async (content, outputPath) => {
-    let output;
     if (outputPath.endsWith('.css')) {
-      await less.render(content)
-        .then((result) => {
-          output = result.css;
-        });
-      return output;
+      return await less.render(content).then(result => result.css);
     }
     return content;
   });

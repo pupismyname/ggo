@@ -1,20 +1,22 @@
+block variables
+  -
+    var page;
+    var title;
+
 doctype html
 html(lang="en")
   head
     meta(http-equiv="Content-Type" content="text/html; charset=iso-8859-1")
     title Georgia Golden Olympics
-      if filename !== 'index'
-        |  - #{name}
+      if page !== 'home'
+        |  - #{title}
     link(href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css")
     -
       // new random number every build to bust cache
       // effective but not efficient
       var rand = Math.floor(Math.random() * Math.pow(10, 16));
     link(rel="stylesheet" type="text/css" href=`/css/ggo.css?v=${rand}`)
-  -
-    var idAtt = 'ggo-' + type
-    var classAtt = 'nogrid ggo' + filename
-  body(id=idAtt, class=classAtt)
+  body(class=`ggo-${page}`)
     #header.container(role="banner")
       .wrapper
         h1.box.type3c
