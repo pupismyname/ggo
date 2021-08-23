@@ -74,7 +74,7 @@ block content
           .box.type4c.first
             p Want to help out? Here's all the information you'll need.
             ul
-              li: a(href="/files/Volunteer Packet 2019 Final-1.pdf") Volunteer Signup Form
+              li: a(href="/files/volunteer form final 7-3-21.pdf") Volunteer Signup Form
               li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
 
         .box.type4.sponsor
@@ -149,6 +149,10 @@ block content
                 +sponsor("Tom Gill", "Madison, AL")
                 +sponsor("Grovania United Methodist Church")
                 +sponsor("Publix Super Markets Charities")
+                +sponsor("Joyce White", "Oxford")
+                +sponsor("John Brooks", "Omaha, NE")
+                +sponsor("Harry Lowe", "Waleska")
+                +sponsor("Ookla", "Seattle, WA", "images/sponsors/ookla-logo.png", "https://www.ookla.com/")
 
         .container.bg66.space
 
@@ -167,6 +171,12 @@ block content
                 +sponsor("Robert & Faye Buckham", "Woodstock")
                 +sponsor("Lois Maat Roberts", "Statesboro")
                 +sponsor("George & Charlotte Zubowicz", "Warm Springs")
+                +sponsor("Lester Culver", "Ludowici")
+                +sponsor("George W. Marlow, III", "Lawrenceville")
+                +sponsor("Carol Waddell", "Rome")
+                +sponsor("Randall Neff", "Byron")
+                +sponsor("Ruth Bruhns", "Roswell")
+                +sponsor("Jerry Peterson", "Atlanta")
 
           .box.type6.friend
             h4.box.type6c.first Friends
@@ -176,11 +186,36 @@ block content
                 +sponsor("Jan & Nicolas Alexuk", "Hinesville")
                 +sponsor("John Bunnell", "Dahlonega")
                 +sponsor("Robert Jackson", "Lawrenceville")
-                +sponsor("Linda Lowery", "Smyrna")
                 +sponsor("Martin Marshall", "Lady Lake, FL")
                 +sponsor("Mr. & Mrs. Terry Moyer", "Warner Robins")
                 +sponsor("Brian Stockmaster", "Charleston, SC")
                 +sponsor("Gordon Darrah", "Columbus")
+                +sponsor("Charles Baldwyn", "Satillo")
+                +sponsor("June Biama", "Dunwoody")
+                +sponsor("Jerry Brinegar", "Athens")
+                +sponsor("Ed & Karen Brown", "Colbert")
+                +sponsor("Michael Scott Harper", "Marietta")
+                +sponsor("John B Stanley", "McIntyre")
+                +sponsor("David Jones", "Stone Mountain")
+                +sponsor("Andrew Mason", "Evans")
+                +sponsor("Roscoe Googe", "Marietta")
+                +sponsor("Neil Coleman", "Evans")
+                +sponsor("Richard Cook", "Macon")
+                +sponsor("Ahmad Shabazz", "Starr, SC")
+                +sponsor("Ellen Briggs", "Demorest")
+                +sponsor("Charles Corbett", "Loganville")
+                +sponsor("William & Tamara Costanza", "Alpharetta")
+                +sponsor("Bill Dudley", "Greensboro")
+                +sponsor("Mary Ealer", "Warner Robins")
+                +sponsor("Thomas Forcella", "Savannah")
+                +sponsor("Allan & Judy Johnson", "Lawrenceville")
+                +sponsor("Andrew Lucarelli", "Daufuskie Island, SC")
+                +sponsor("Thomas McCann", "Peachtree City")
+                +sponsor("Vincent Marchionna", "St Simons")
+                +sponsor("Toni Pomerene", "Athens")
+                +sponsor("Alex Raducanu", "Daufuskie Island, SC")
+                +sponsor("William D Smith", "Fitzgerald")
+                +sponsor("Calvin Ward", "Danielsville")
 
 mixin sponsor (name, location, src, link)
   li
@@ -195,6 +230,7 @@ mixin sponsor-internal (name, location, src)
     img(src!=src, alt!=name, title!=name)
   =name
   if location
+    span.comma ,
     |
     |
     span=location
