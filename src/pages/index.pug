@@ -14,19 +14,19 @@ block content
             h2.box.type5c.first Sep 27 – Oct 1, 2022
             h3.box.type5c.first Warner Robins, GA
             p.box.type2.first
-              a#appbutton(href="/files/2021 results report corrected 11-12-21.pdf") #[span 2021] Results
-              //- a#appbutton(href="/files/2021 Registration.pdf") #[span 2021] Registration
+              //- a#appbutton(href="/files/2021 results report corrected 11-12-21.pdf") #[span 2021] Results
+              a#appbutton(href="/files/2022 Registration.pdf") #[span 2022] Registration
             .box.type3c
               ul
+                li: a(href="/files/Rule Book 2022.pdf") 2022 Event List and Rules
                 li: a(href="/files/2022flyer 1.pdf") 2022 Flyer
-                li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
-                li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
+                li: a(href="/files/2021 results report corrected 11-12-21.pdf") 2021 Results
           .container.lowerinfo
             .box.type5c.first
               p The 2022 Georgia Golden Olympics is scheduled for September 27 – October 1, 2022 in Warner Robins, GA and surrounding areas. Swimming will be hosted by the Jonesboro Parks and Recreation Department and will be held at the Steve Lundquist Aquatics Center in Jonesboro, GA.
               p The 2022 state games are qualifying games for the 2023 #[a(href="https://www.nsga.com/" target="_blank") National Senior Games], scheduled for July 7 – 18, 2023, in the City of Champions, Pittsburgh PA.
-              //- p #[strong Registration is open!]
-              //- p If you have competed in the Georgia event in prior years, you may #[a(href="https://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online]. If not, please print the form from the website and mail with age verification to the address listed in the form.
+              p #[strong Registration is open!]
+              p If you have competed in the Georgia event in prior years, you may #[a(href="https://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") register online]. If not, please print the form from the website and mail with age verification to the address listed in the form.
               p Thank you for joining us for fun, fellowship, and competition!
         .box.type7
           .container
@@ -50,7 +50,7 @@ block content
                       srcset="/images/NSG-Logo-2023@2x.png 2x"
                       alt="2023 NSG Logo"
                       title="2023 National Senior Games")
-                p.detail Follow Georgia Golden Olympics on #[a(href="https://twitter.com/gagoldolympics" target="_new") #[img(src="/images/icon-twitter.png" alt="Twitter" title="Twitter")]] and #[a(href="https://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="/images/icon-facebook.png" alt="Facebook" title="Facebook")]]
+                p.detail Follow Georgia Golden Olympics#[br]#[a(href="https://twitter.com/gagoldolympics" target="_new") #[img(src="/images/icon-twitter.png" alt="Twitter" title="Twitter")]] #[a(href="https://www.facebook.com/pages/Georgia-Golden-Olympics/200148176686061" target="_new") #[img(src="/images/icon-facebook.png" alt="Facebook" title="Facebook")]]
 
     #types.container.gap.bg444
       .wrapper
@@ -60,14 +60,13 @@ block content
           .box.type4c.first
             p Are you ready to compete? We have events for every fitness level.
             ul
+              li: a(href="/files/2022 Registration.pdf") 2022 Registration
+              li: a(href="https://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") 2022 Online Registration
+              li: a(href="/files/Rule Book 2022.pdf") 2022 Event List and Rules
               li: a(href="/files/2022flyer 1.pdf") 2022 Flyer
-              li: a(href="/files/2021 results report corrected 11-12-21.pdf") 2021 Results
-              //- li: a(href="/files/2021 Registration.pdf") 2021 Registration Form
-              //- li: a(href="https://ggoregistration.org/forms/ggoregistrationform1/ggoregistrationform1.php") 2021 Online Registration
-              li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
-              li: a(href="/files/schedule 2021 5-3-21.pdf") 2021 Event Schedule
               //- li: a(href="/files/Team Roster Word.pdf") Team Roster
               li Cycling Routes: #[a(href="/files/5K and 10K Cycling Route10.pdf") 5K & 10K], #[a(href="/files/20K Cycling Route-10.pdf") 20K], #[a(href="/files/40K Cycling10.pdf") 40K]
+              li: a(href="/files/2021 results report corrected 11-12-21.pdf") 2021 Results
 
         .box.type4.volunteer
           h4.box.type4c.first
@@ -76,7 +75,7 @@ block content
             p Want to help out? Here's all the information you'll need.
             ul
               li: a(href="/files/volunteer form final 7-3-21.pdf") Volunteer Signup Form
-              li: a(href="/files/Rule Book -2021.pdf") 2021 Event List and Rules
+              li: a(href="/files/Rule Book 2022.pdf") 2022 Event List and Rules
 
         .box.type4.sponsor
           h4.box.type4c.first
@@ -117,7 +116,7 @@ block content
             .box.type6c.first
               p.detail $5000 – $9999
               ul
-                +sponsor(" Warner Robins Parks & Recreation Department", "Host Agency", "images/sponsors/WRPR-High-Res-2x.png")
+                +sponsor("Warner Robins Parks & Recreation Department", "Host Agency", "images/sponsors/WRPR-High-Res-2x.png")
 
           .box.type6.gold
             h4.box.type6c.first Gold Sponsors
@@ -127,7 +126,6 @@ block content
                 +sponsor("The Miles Group", "Snellville")
                 +sponsor("First Christian Church", "Winder")
                 +sponsor("Houston Healthcare", "", "images/sponsors/HHC-new-logo-2016_resized.png", "https://www.hhc.org/")
-                +sponsor("Aetna", "", "images/sponsors/Aetna_Logo_ss_Violet_RGB_Coated_resized.png")
 
         .container.bg66.space
 
@@ -136,10 +134,7 @@ block content
             .box.type6c.first
               p.detail $1000 – $2499
               ul
-                +sponsor("Cox Communications", "", "images/sponsors/Cox_Communications_(logo).svg_resized.png")
                 +sponsor("Georgia Health Care Association")
-                +sponsor("Humana, Inc.", "", "images/sponsors/hum_reg_lrg_4cp_pos_wht-resized.png")
-                +sponsor("Ryan and Marty Beighley", "The Villages, FL")
 
           .box.type6.bronze
             h4.box.type6c.first Bronze Sponsors
@@ -149,11 +144,6 @@ block content
                 +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
                 +sponsor("Tom Gill", "Madison, AL")
                 +sponsor("Grovania United Methodist Church")
-                +sponsor("Publix Super Markets Charities")
-                +sponsor("Joyce White", "Oxford")
-                +sponsor("John Brooks", "Omaha, NE")
-                +sponsor("Harry Lowe", "Waleska")
-                +sponsor("Ookla", "Seattle, WA", "images/sponsors/ookla-logo.png", "https://www.ookla.com/")
 
         .container.bg66.space
 
@@ -164,65 +154,28 @@ block content
               ul
                 +sponsor("Jewel Crews", "Waycross")
                 +sponsor("Linda Lowery", "Smyrna")
-                +sponsor("Gladys Mixon", "Rome")
-                +sponsor("James & Miriam Novak", "Bainbridge")
                 +sponsor("Allison & Wes Sawyers", "Warner Robins")
-                +sponsor("Shawn Smith", "Dacula")
-                +sponsor("James & Jocille Thwing", "Warner Robins")
                 +sponsor("Robert & Faye Buckham", "Woodstock")
                 +sponsor("Lois Maat Roberts", "Statesboro")
                 +sponsor("George & Charlotte Zubowicz", "Warm Springs")
-                +sponsor("Lester Culver", "Ludowici")
-                +sponsor("George W. Marlow, III", "Lawrenceville")
                 +sponsor("Carol Waddell", "Rome")
-                +sponsor("Randall Neff", "Byron")
-                +sponsor("Ruth Bruhns", "Roswell")
-                +sponsor("Jerry Peterson", "Atlanta")
-                +sponsor("Rick Abbott", "Jackson")
-                +sponsor("Sandra Jean Foster", "East Point")
-                +sponsor("Don Tate", "Bonaire")
-                +sponsor("Mike Morrissey", "Birmingham. AL")
+                +sponsor("Denise & David Linn", "Nashville, TN")
+                +sponsor("Bonnie Romines", "Warner Robins")
+                +sponsor("Peggy & Terry Moyer", "Warner Robins")
+                +sponsor("Martin Marshall", "Lady Lake, FL")
 
           .box.type6.friend
             h4.box.type6c.first Friends
             .box.type6c.first
               p.detail $25 – $99
               ul
-                +sponsor("Jan & Nicolas Alexuk", "Hinesville")
-                +sponsor("John Bunnell", "Dahlonega")
                 +sponsor("Robert Jackson", "Lawrenceville")
-                +sponsor("Martin Marshall", "Lady Lake, FL")
-                +sponsor("Mr. & Mrs. Terry Moyer", "Warner Robins")
-                +sponsor("Brian Stockmaster", "Charleston, SC")
                 +sponsor("Gordon Darrah", "Columbus")
-                +sponsor("Charles Baldwyn", "Satillo")
-                +sponsor("June Biama", "Dunwoody")
-                +sponsor("Jerry Brinegar", "Athens")
-                +sponsor("Ed & Karen Brown", "Colbert")
-                +sponsor("Michael Scott Harper", "Marietta")
-                +sponsor("John B Stanley", "McIntyre")
-                +sponsor("David Jones", "Stone Mountain")
-                +sponsor("Andrew Mason", "Evans")
-                +sponsor("Roscoe Googe", "Marietta")
-                +sponsor("Neil Coleman", "Evans")
-                +sponsor("Richard Cook", "Macon")
-                +sponsor("Ahmad Shabazz", "Starr, SC")
-                +sponsor("Ellen Briggs", "Demorest")
-                +sponsor("Charles Corbett", "Loganville")
-                +sponsor("William & Tamara Costanza", "Alpharetta")
-                +sponsor("Bill Dudley", "Greensboro")
-                +sponsor("Mary Ealer", "Warner Robins")
-                +sponsor("Thomas Forcella", "Savannah")
-                +sponsor("Allan & Judy Johnson", "Lawrenceville")
-                +sponsor("Andrew Lucarelli", "Daufuskie Island, SC")
-                +sponsor("Thomas McCann", "Peachtree City")
+                +sponsor("Charles Baldwyn", "Satillo, MS")
+                +sponsor("Cathy Broom", "Roswell")
                 +sponsor("Vincent Marchionna", "St Simons")
-                +sponsor("Toni Pomerene", "Athens")
-                +sponsor("Alex Raducanu", "Daufuskie Island, SC")
-                +sponsor("William D Smith", "Fitzgerald")
-                +sponsor("Calvin Ward", "Danielsville")
+                +sponsor("James Hodges", "Monroe")
                 +sponsor("B & W Recreation Center", "Warner Robins")
-                +sponsor("Dick's Sporting Goods", "Athens")
 
 mixin sponsor (name, location, src, link)
   li
