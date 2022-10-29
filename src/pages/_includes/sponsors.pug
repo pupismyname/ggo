@@ -1,0 +1,138 @@
+mixin sponsor (name, location, src, link)
+  li
+    if link
+      a(href!=link, target="_new")
+        +sponsor-internal(name, location, src)
+    else
+      +sponsor-internal(name, location, src)
+
+mixin sponsor-internal (name, location, src)
+  if src
+    img(src!=src, alt!=name, title!=name)
+  =name
+  if location
+    span.comma ,
+    |
+    |
+    span=location
+
+#sponsors
+  .wrapper
+    .container.pagetitle.space
+      h2.box.type12c 2022 Sponsors
+    .container.gap
+      .box.type12c
+        h5 Want to be a sponsor? #[a(href="https://www.ggoregistration.org/forms/ggodonation/ggodonation.php") Make a donation online!]
+
+    .container.bg12.space
+
+      .box.type12.corporate
+        h4.box.type12c.first Corporate Sponsors
+        .box.type12c.first
+          p.detail $10,000 or more
+          ul
+
+    .container.bg66.space
+
+      .box.type6.platinum
+        h4.box.type6c.first Platinum Sponsors
+        .box.type6c.first
+          p.detail $5000 – $9999
+          ul
+            +sponsor("Warner Robins Parks & Recreation Department", "Host Agency", "/images/sponsors/WRPR-High-Res-2x.png")
+
+      .box.type6.gold
+        h4.box.type6c.first Gold Sponsors
+        .box.type6c.first
+          p.detail $2500 – $4999
+          ul
+            +sponsor("The Miles Group", "Snellville")
+            +sponsor("First Christian Church", "Winder")
+            +sponsor("Houston Healthcare", "", "/images/sponsors/HHC-new-logo-2016_resized.png", "https://www.hhc.org/")
+
+    .container.bg66.space
+
+      .box.type6.silver
+        h4.box.type6c.first Silver Sponsors
+        .box.type6c.first
+          p.detail $1000 – $2499
+          ul
+            +sponsor("Georgia Health Care Association")
+            +sponsor("Tori & David Stivers (In memory of Pinkie Henry)", "Peachtree City")
+
+      .box.type6.bronze
+        h4.box.type6c.first Bronze Sponsors
+        .box.type6c.first
+          p.detail $500 – $999
+          ul
+            +sponsor("Comfort Inn and Suites Hwy 247", "Warner Robins")
+            +sponsor("Tom Gill", "Madison, AL")
+            +sponsor("Grovania United Methodist Church")
+            +sponsor("Ookla", "Seattle, WA", "/images/sponsors/ookla-logo.png", "https://www.ookla.com/")
+
+    .container.bg66.space
+
+      .box.type6.torch
+        h4.box.type6c.first Torch Club
+        .box.type6c.first
+          p.detail $100 – $499
+          ul
+            +sponsor("Jewel Crews", "Waycross")
+            +sponsor("Linda Lowery", "Smyrna")
+            +sponsor("Allison & Wes Sawyers", "Warner Robins")
+            +sponsor("Robert & Faye Buckham", "Woodstock")
+            +sponsor("Lois Maat Roberts", "Statesboro")
+            +sponsor("George & Charlotte Zubowicz", "Warm Springs")
+            +sponsor("Carol Waddell", "Rome")
+            +sponsor("Denise & David Linn", "Nashville, TN")
+            +sponsor("Bonnie Romines", "Warner Robins")
+            +sponsor("Peggy & Terry Moyer", "Warner Robins")
+            +sponsor("Marshall Martin", "Lady Lake, FL")
+            +sponsor("Marty Barrow-Beighley", "The Villages, FL")
+            +sponsor("Ryan Beighley", "The Villages, FL")
+            +sponsor("Jerry Brinegar", "Athens")
+            +sponsor("Gladys Mixon", "Rome")
+            +sponsor("George W Marlowe, III", "Lawrenceville")
+            +sponsor("Don Tate", "Bonaire")
+            +sponsor("Rebecca Hamilton", "Byron")
+            +sponsor("Jon Ducote", "Smyrna")
+            +sponsor("Atlanta Promo - A GroupAtlanta Company", "Roswell")
+
+      .box.type6.friend
+        h4.box.type6c.first Friends
+        .box.type6c.first
+          p.detail $25 – $99
+          ul
+            +sponsor("Robert Jackson", "Lawrenceville")
+            +sponsor("Gordon Darrah", "Columbus")
+            +sponsor("Charles Baldwyn", "Satillo, MS")
+            +sponsor("Cathy Broom", "Roswell")
+            +sponsor("Vincent Marchionna", "St Simons")
+            +sponsor("James Hodges", "Monroe")
+            +sponsor("B & W Recreation Center", "Warner Robins")
+            +sponsor("Ellen Briggs", "Demorest")
+            +sponsor("William Astary", "Tybee Island")
+            +sponsor("Weiland A Henry, III", "Seale, AL")
+            +sponsor("Richard Cook", "Macon")
+            +sponsor("Allan Johnson", " Lawrenceville")
+            +sponsor("Andrew Lucarelli", "Daufuskie Island, SC")
+            +sponsor("Leon Ryan", "Birmingham, AL")
+            +sponsor("Mary Ealer", "Warner Robins")
+            +sponsor("Neil Coleman", "Evans")
+            +sponsor("Alan Griswold", "Warner Robins")
+            +sponsor("Michael Simpson", "Baton Rouge, LA")
+            +sponsor("Laura Huggins", "Meansville")
+            +sponsor("David Jones", "St. Mountain")
+            +sponsor("Richard Blakely", "Snellville")
+            +sponsor("B Craig Ray", "Johns Creek")
+            +sponsor("Cook Holliday", "Monroe")
+            +sponsor("Nancy Lewis", "Greensboro")
+            +sponsor("Anne L Foster", "Riverdale")
+            +sponsor("Ann Carter", "Aiken, SC")
+            +sponsor("Pamela Pesto", "Savannah")
+            +sponsor("Alex Raducanu", "Daufuskie Island, SC")
+            +sponsor("Ed & Karen Brown", "Colbert")
+            +sponsor("Will Costanza", "Alpharetta")
+            +sponsor("Toni Pomerene", "Athens")
+            +sponsor("Ray \"Korky\" Greco", "Covington")
+            +sponsor("William \"Bill\" Bonbrake", "Macon")
