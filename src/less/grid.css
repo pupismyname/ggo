@@ -3,15 +3,15 @@ body {
 }
 
 .wrapper {
-	width: 863px;
+	width: 86.3rem;
 	text-align: left;
 	margin: 0 auto;
 }
 
 .wrapper::after {
-  content: "";
-  clear: both;
-  display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 .container {
@@ -20,16 +20,16 @@ body {
 }
 
 .container.space {
-	margin-bottom: 11px;
+	margin-bottom: 1.1rem;
 }
 
 .container.gap {
-	margin-bottom: 22px;
+	margin-bottom: 2.2rem;
 }
 
 .box {
 	padding: 0;
-	margin-left: 11px;
+	margin-left: 1.1rem;
 	float: left;
 	list-style-type: none;
 	display: inline;
@@ -39,55 +39,55 @@ body {
 	margin-left: 0;
 }
 
-.type1   { width:  60px; }
-.type2   { width: 131px; }
-.type3   { width: 202px; }
-.type4   { width: 273px; }
-.type5   { width: 344px; }
-.type6   { width: 415px; }
-.type7   { width: 486px; }
-.type8   { width: 557px; }
-.type9   { width: 628px; }
-.type10  { width: 699px; }
-.type11  { width: 770px; }
-.type12  { width: 841px; }
+.type1   { width:  6.0rem; }
+.type2   { width: 13.1rem; }
+.type3   { width: 20.2rem; }
+.type4   { width: 27.3rem; }
+.type5   { width: 34.4rem; }
+.type6   { width: 41.5rem; }
+.type7   { width: 48.6rem; }
+.type8   { width: 55.7rem; }
+.type9   { width: 62.8rem; }
+.type10  { width: 69.9rem; }
+.type11  { width: 77.0rem; }
+.type12  { width: 84.1rem; }
 
-.type1c  { width:  40px; padding: 0 10px; }
-.type2c  { width: 111px; padding: 0 10px; }
-.type3c  { width: 182px; padding: 0 10px; }
-.type4c  { width: 253px; padding: 0 10px; }
-.type5c  { width: 324px; padding: 0 10px; }
-.type6c  { width: 395px; padding: 0 10px; }
-.type7c  { width: 466px; padding: 0 10px; }
-.type8c  { width: 537px; padding: 0 10px; }
-.type9c  { width: 608px; padding: 0 10px; }
-.type10c { width: 679px; padding: 0 10px; }
-.type11c { width: 750px; padding: 0 10px; }
-.type12c { width: 821px; padding: 0 10px; }
+.type1c  { width:  4.0rem; padding: 0 1.0rem; }
+.type2c  { width: 11.1rem; padding: 0 1.0rem; }
+.type3c  { width: 18.2rem; padding: 0 1.0rem; }
+.type4c  { width: 25.3rem; padding: 0 1.0rem; }
+.type5c  { width: 32.4rem; padding: 0 1.0rem; }
+.type6c  { width: 39.5rem; padding: 0 1.0rem; }
+.type7c  { width: 46.6rem; padding: 0 1.0rem; }
+.type8c  { width: 53.7rem; padding: 0 1.0rem; }
+.type9c  { width: 60.8rem; padding: 0 1.0rem; }
+.type10c { width: 67.9rem; padding: 0 1.0rem; }
+.type11c { width: 75.0rem; padding: 0 1.0rem; }
+.type12c { width: 82.1rem; padding: 0 1.0rem; }
 
-.pad1    { margin-left:  82px; }
-.pad2    { margin-left: 153px; }
-.pad3    { margin-left: 224px; }
-.pad4    { margin-left: 295px; }
-.pad5    { margin-left: 366px; }
-.pad6    { margin-left: 437px; }
-.pad7    { margin-left: 508px; }
-.pad8    { margin-left: 579px; }
-.pad9    { margin-left: 650px; }
-.pad10   { margin-left: 721px; }
-.pad11   { margin-left: 792px; }
+.pad1    { margin-left:  8.2rem; }
+.pad2    { margin-left: 15.3rem; }
+.pad3    { margin-left: 22.4rem; }
+.pad4    { margin-left: 29.5rem; }
+.pad5    { margin-left: 36.6rem; }
+.pad6    { margin-left: 43.7rem; }
+.pad7    { margin-left: 50.8rem; }
+.pad8    { margin-left: 57.9rem; }
+.pad9    { margin-left: 65.0rem; }
+.pad10   { margin-left: 72.1rem; }
+.pad11   { margin-left: 79.2rem; }
 
-.pad1f   { margin-left:  71px; }
-.pad2f   { margin-left: 142px; }
-.pad3f   { margin-left: 213px; }
-.pad4f   { margin-left: 284px; }
-.pad5f   { margin-left: 355px; }
-.pad6f   { margin-left: 426px; }
-.pad7f   { margin-left: 497px; }
-.pad8f   { margin-left: 568px; }
-.pad9f   { margin-left: 639px; }
-.pad10   { margin-left: 710px; }
-.pad11f  { margin-left: 781px; }
+.pad1f   { margin-left:  7.1rem; }
+.pad2f   { margin-left: 14.2rem; }
+.pad3f   { margin-left: 21.3rem; }
+.pad4f   { margin-left: 28.4rem; }
+.pad5f   { margin-left: 35.5rem; }
+.pad6f   { margin-left: 42.6rem; }
+.pad7f   { margin-left: 49.7rem; }
+.pad8f   { margin-left: 56.8rem; }
+.pad9f   { margin-left: 63.9rem; }
+.pad10   { margin-left: 71.0rem; }
+.pad11f  { margin-left: 78.1rem; }
 
 /* grid debug */
 /* ----------------------------------------------------------------- */
