@@ -1,0 +1,10 @@
+extends /layout.pug
+
+block content
+  #content.container.space.events-page
+    .wrapper
+      .container
+        .box.type12c.first
+          unless title == "Events"
+            p.breadcrumbs #[a(href="/events") Events] / #[a(href=page.url)=title]
+          !=content

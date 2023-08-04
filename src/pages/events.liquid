@@ -1,0 +1,18 @@
+---
+layout: layout-events.pug
+title: "Events"
+---
+<h2>{{title}}</h2>
+<ul>
+  {%- for event in collections.event %}
+    {% comment %} {{event | debug}} {% endcomment %}
+    <li>
+      <a href="{{event.page.url}}">
+        {%- if event.data.title %}
+          {{event.data.title}}
+        {%- else %}
+          {{event.page.fileSlug}}
+        {%- endif %}
+    </li>
+  {%- endfor %}
+</ul>

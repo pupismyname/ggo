@@ -23,6 +23,11 @@ module.exports = function(eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addFilter('debug', async (param) => {
+    console.log(param);
+    return param;
+  });
+
   return {
     dir: {
       input: 'src/pages',
