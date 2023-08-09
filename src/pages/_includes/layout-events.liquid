@@ -1,10 +1,10 @@
-extends /layout-pug.pug
+---
+layout: layout.liquid
+title: "Events"
+---
 
-block content
-  #content.container.space.events-page
-    .wrapper
-      .container
-        .box.type12c.first
-          unless title == "Events"
-            p.breadcrumbs #[a(href="/events") Events] / #[a(href=page.url)=title]
-          !=content
+{%- unless title == "Events" %}
+  <p class="breadcrumbs"><a href="/events/">Events</a> / <a href="{{page.url}}">{{ title }}</a>
+{%- endunless %}
+
+{{ content }}

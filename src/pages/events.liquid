@@ -2,7 +2,8 @@
 layout: layout-events.liquid
 title: "Events"
 ---
-<h2>{{title}}</h2>
+
+<h2 class="bg-shiny">{{title}}</h2>
 <ul>
   {%- for event in collections.event %}
     {% comment %} {{event | debug}} {% endcomment %}
