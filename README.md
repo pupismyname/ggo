@@ -4,7 +4,7 @@ Georgia Golden Olympics
 
 https://georgiagoldenolympics.org/
 
-Static site generated with 11ty, Pug, Gulp, Less, Liquid
+Static site generated with 11ty, Liquid, Less, Liquid
 Outputs HTML, CSS, jQuery
 
 

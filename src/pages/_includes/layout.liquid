@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Georgia Golden Olympics {%- if title != 'Home' %} - {{title}}{% endif -%}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/ggo.css">
+  </head>
+  <body>
+    <div class="site">
+      <header class="fg">
+        <div class="fg-sm-5 fg-md-4 fg-xl-6">
+          <h1><a href="/"><img src="/images/ggo.gif" alt="Georgia Golden Olympics"></a></h1>
+        </div>
+        <div class="fg-sm-7 fg-md-8 fg-lg-7 fg-xl-6">
+          <nav>
+            <ul>
+              <li><a href="/participate/">Participate</a></li>
+              <li><a href="/volunteer/">Volunteer</a></li>
+              <li><a href="/sponsor/">Sponsor</a></li>
+              <li><a href="/about/">About GGO</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+      <footer class="fg">
+        <div class="fg-md-7">
+          <p>Contact GGO Coordinator <a href="mailto:vcpilgrim@gmail.com">Vicki Pilgrim</a> at 770-867-3603</p>
+        </div>
+        <div class="fg-md-5 right-md">
+          <p>&copy; {{ "now" | date: "%Y" }} <a href="https://georgiagoldenolympics.org/">Georgia Golden Olympics</a></p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

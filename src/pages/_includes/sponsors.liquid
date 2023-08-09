@@ -1,0 +1,46 @@
+<div class="fg sponsors">
+  <div class="fg-12">
+    <h2 class="bg-shiny">2023 Sponsors</h2>
+    <p>Want to be a sponsor? <a href="https://www.georgiagoldolympics.com/forms/donations/ggodonation.php">Make a donation online!</a></p>
+  </div>
+  {% for category in sponsors.categories -%}
+    {% assign classes = "fg-12" -%}
+    {% if category.level != 1 -%}
+      {% assign classes = classes | append: " fg-md-6" -%}
+    {% endif -%}
+    <div class="{{ classes }} sponsor-list sponsors-{{ category.slug }}">
+      <h4 class="sponsor-bg bg-{{ category.slug }} bg-shiny">{{category.title}}</h4>
+      <h5>{{ category.amount }}</h5>
+      <ul>
+      {% for sponsor in category.sponsors -%}
+        <li>
+
+          {% if sponsor.url -%}
+            <a href="{{sponsor.url}}">
+          {% endif -%}
+          {% if sponsor.img -%}
+            <img class="sponsor-img" src="{{sponsor.img}}" alt="{{sponsor.name}}">
+          {% endif -%}
+          {% if sponsor.url -%}
+            </a>
+          {% endif -%}
+
+          {% if sponsor.url -%}
+            <a href="{{sponsor.url}}">
+          {%- endif -%}
+          <span class="sponsor-name">{{sponsor.name}}</span>
+          {%- if sponsor.url -%}
+            </a>
+          {%- endif -%}
+
+          {%- if sponsor.location -%}
+            <span class="sponsor-separator"> - </span>
+            <span class="sponsor-location">{{sponsor.location}}</span>
+          {% endif -%}
+
+        </li>
+      {% endfor -%}
+      </ul>
+    </div>
+  {% endfor -%}
+</div>
