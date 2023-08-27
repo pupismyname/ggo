@@ -3,17 +3,24 @@ layout: layout-events.liquid
 title: "Events"
 ---
 
-<h2 class="bg-shiny">{{title}}</h2>
-<ul>
-  {%- for event in collections.event %}
-    {% comment %} {{event | debug}} {% endcomment %}
-    <li>
-      <a href="{{event.page.url}}">
-        {%- if event.data.title %}
-          {{event.data.title}}
-        {%- else %}
-          {{event.page.fileSlug}}
-        {%- endif %}
-    </li>
-  {%- endfor %}
-</ul>
+<div class="fg section">
+  <div class="fg-12">
+    <h2 class="bg-shiny">{{title}}</h2>
+  </div>
+  <div class="fg-12">
+    <ul>
+      {%- for event in collections.event %}
+        {% comment %} {{event | debug}} {% endcomment %}
+        <li>
+          <a href="{{event.page.url}}">
+            {%- if event.data.title %}
+              {{event.data.title}}
+            {%- else %}
+              {{event.page.fileSlug}}
+            {%- endif %}
+          </a>
+        </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</div>

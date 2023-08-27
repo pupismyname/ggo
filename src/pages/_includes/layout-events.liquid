@@ -3,8 +3,22 @@ layout: layout.liquid
 title: "Events"
 ---
 
-{%- unless title == "Events" %}
-  <p class="breadcrumbs"><a href="/events/">Events</a> / <a href="{{page.url}}">{{ title }}</a>
-{%- endunless %}
-
-{{ content }}
+<div class="fg section">
+  <div class="fg-12">
+    <h2 class="bg-shiny">Events</h2>
+  </div>
+  <div class="fg-12">
+    {%- unless title == "Events" %}
+      <p class="breadcrumbs"><a href="/events/">Events</a> / <a href="{{page.url}}">{{ title }}</a></p>
+    {%- endunless %}
+  </div>
+  <div class="fg-12">
+    {{ content }}
+  </div>
+  <div class="fg-12">
+    {%- unless title == "Events" %}
+      <hr>
+      <p class="breadcrumbs"><a href="/events/">Events</a> / <a href="{{page.url}}">{{ title }}</a></p>
+    {%- endunless %}
+  </div>
+</div>
