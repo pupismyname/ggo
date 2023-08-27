@@ -96,15 +96,33 @@ h1, h2, h3, h4, h5, h6, li {
 }
 
 .section {
-  border-top: 1px solid @mid;
-  padding-top: 0.75em;
-  margin-top: 0.75em;
+  margin: 5rem 0;
+  main &:first-child {
+    margin-top: 0;
+  }
 }
 
 hr {
   height: 1px;
   background: @mid;
   border: none;
+  margin: 3rem 0;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 0.2rem 0;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: @subdued-light;
 }
 
 // adapted from https://moderncss.dev/solutions-to-replace-the-12-column-grid/
@@ -113,6 +131,8 @@ hr {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+  row-gap: 0;
+  column-gap: 1rem;
   & > * {
     flex: 0 1 100%; // same as .fg-12
     align-content: flex-start;
