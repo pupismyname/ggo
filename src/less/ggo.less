@@ -91,8 +91,10 @@ h1, h2, h3, h4, h5, h6, li {
 
 .site {
   max-width: @breakpoint-xxl;
-  padding: 1rem;
+  padding: 2rem 1rem;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
@@ -118,11 +120,41 @@ th {
   text-align: left;
 }
 
-th, td {
+th, td,
+dt, dd {
   padding: 0.2rem 0;
   border-width: 1px 0;
   border-style: solid;
   border-color: @subdued-light;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid @subdued-light;
+}
+
+dt {
+  font-weight: 600;
+  padding-right: 1rem;
+}
+
+dt, dd {
+  flex: 1 0 max-content;
+  border-top: none;
+}
+
+dd {
+  text-align: right;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.h-card {
+  text-align: left;
+  border: 1px solid @subdued-light;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 // adapted from https://moderncss.dev/solutions-to-replace-the-12-column-grid/
@@ -286,7 +318,7 @@ nav {
   &:before {
     background-color: @subdued-friends;
     border: 1px solid @friends;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
   }
   &:after {
     mix-blend-mode: overlay;
@@ -297,7 +329,7 @@ nav {
       transparent (unit(@breakpoint-xxl / 60 * @shiny-stop-3, px)),
       @shiny-lowlight (unit(@breakpoint-xxl / 60 * @shiny-stop-4, px))
     );
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
   }
 }
 .bg-shiny-cover {
@@ -365,7 +397,6 @@ header {
   h1 {
     margin: 0;
   }
-  margin: 1rem 0;
 }
 
 footer {
