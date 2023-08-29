@@ -5,8 +5,12 @@
   </div>
   {% for category in sponsors.categories -%}
     {% assign classes = "fg-12" -%}
-    {% if category.level != 1 -%}
+    {% if category.level < 3 -%}
       {% assign classes = classes | append: " fg-md-6" -%}
+    {% elsif category.level < 6 -%}
+      {% assign classes = classes | append: " fg-md-4" -%}
+    {% else -%}
+      {% assign classes = classes | append: " fg-md-6 sponsors-wrap" -%}
     {% endif -%}
     <div class="{{ classes }} sponsor-list sponsors-{{ category.slug }}">
       <h4 class="sponsor-bg bg-{{ category.slug }} bg-shiny">{{category.title}}</h4>
