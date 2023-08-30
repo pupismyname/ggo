@@ -82,7 +82,21 @@ a:hover, a:active, a:focus {
   color: @hover;
 }
 
-h1, h2, h3, h4, h5, h6, li {
+// make the logo link box snug to the image
+header h1 a,
+header h1 img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  & > a {
+    text-decoration: none;
+  }
+}
+
+// don't underline links in headers or list items if the link is the only element
+li {
   & > a:first-child:last-child,
   & > strong > a:first-child:last-child {
     text-decoration: none;
@@ -231,6 +245,9 @@ dd {
 // @media @mq-lg  { body { box-shadow: inset 0 0 0 5px fade(yellow, 50%); &:before { content: 'lg';  position: absolute; top: 0; left: 0; } } }
 // @media @mq-xl  { body { box-shadow: inset 0 0 0 5px fade(orange, 50%); &:before { content: 'xl';  position: absolute; top: 0; left: 0; } } }
 // @media @mq-xxl { body { box-shadow: inset 0 0 0 5px fade(red, 50%);    &:before { content: 'xxl'; position: absolute; top: 0; left: 0; } } }
+.wrap-reverse {
+  flex-flow: wrap-reverse;
+}
 
 .right { text-align: right; margin-inline: auto 0; }
 .left { text-align: left; margin-inline: 0 auto; }
@@ -241,6 +258,17 @@ dd {
 @media @mq-lg  { .right-lg  { .right; } .left-lg  { .left; } .center-lg  { .center; } }
 @media @mq-xl  { .right-xl  { .right; } .left-xl  { .left; } .center-xl  { .center; } }
 @media @mq-xxl { .right-xxl { .right; } .left-xxl { .left; } .center-xxl { .center; } }
+
+.sidebar {
+  border-top: 1px solid @subdued-light;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+.sidebar-sm  { .sidebar; @media @mq-sm  { border-top: none; padding-top: 0; margin-top: 0; }}
+.sidebar-md  { .sidebar; @media @mq-md  { border-top: none; padding-top: 0; margin-top: 0; }}
+.sidebar-lg  { .sidebar; @media @mq-lg  { border-top: none; padding-top: 0; margin-top: 0; }}
+.sidebar-xl  { .sidebar; @media @mq-xl  { border-top: none; padding-top: 0; margin-top: 0; }}
+.sidebar-xxl { .sidebar; @media @mq-xxl { border-top: none; padding-top: 0; margin-top: 0; }}
 
 nav {
   ul, li {
@@ -297,19 +325,22 @@ nav {
 }
 
 .sponsors-wrap {
-  ul {
-    column-count: 2;
-  }
-  li {
-    margin: 0;
-    padding: 0.2rem 0;
+  @media @mq-xl {
+    ul {
+      column-count: 2;
+    }
+    li {
+      margin: 0;
+      padding: 0.2rem 0;
+    }
   }
   .sponsor-location {
     white-space: nowrap;
   }
 }
 
-.sponsor-separator {
+.sponsor-separator,
+.separator {
   color: @mid;
 }
 

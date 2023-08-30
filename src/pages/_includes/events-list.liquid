@@ -1,0 +1,13 @@
+<ul>
+  {%- for event in events %}
+    <li>
+      <a href="{{event.page.url}}">
+        {%- if event.data.title %}
+          {{event.data.title}}
+        {%- else %}
+          {{event.page.fileSlug}}
+        {%- endif %}
+      </a>
+    </li>
+  {%- endfor %}
+</ul>

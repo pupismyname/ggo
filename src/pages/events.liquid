@@ -1,5 +1,5 @@
 ---
-layout: layout-events.liquid
+layout: layout.liquid
 title: "Events"
 ---
 
@@ -8,19 +8,6 @@ title: "Events"
     <h2 class="bg-shiny">{{title}}</h2>
   </div>
   <div class="fg-12">
-    <ul>
-      {%- for event in collections.event %}
-        {% comment %} {{event | debug}} {% endcomment %}
-        <li>
-          <a href="{{event.page.url}}">
-            {%- if event.data.title %}
-              {{event.data.title}}
-            {%- else %}
-              {{event.page.fileSlug}}
-            {%- endif %}
-          </a>
-        </li>
-      {%- endfor %}
-    </ul>
+    {%- render "events-list.liquid", events: collections.event %}
   </div>
 </div>
