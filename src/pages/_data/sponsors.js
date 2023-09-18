@@ -119,6 +119,7 @@ module.exports = {
         { name: "Alan Griswold", location: "Warner Robins", },
         { name: "Steven Hancock", location: "Statesboro", },
         { name: "Ned Sanders", location: "Warner Robins", },
+        { name: "Frank F Faulk", location: "Marietta", },
       ],
     },
   ],

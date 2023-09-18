@@ -21,7 +21,7 @@ title: "Home"
           <li><strong><a href="https://www.georgiagoldolympics.com/forms/ggoregistrationform1.php">2023 Online Registration</a></strong></li>
           <li><a href="/files/Rule Book 2023-final.pdf">2023 Event List & Rules</a></li>
           <li><a href="/files/Flyer1-2023.pdf">2023 Flyer</a></li>
-          {% comment %} <li><a href="/files/GGO2022results 3-27-23.pdf">2022 Results</a></li> {% endcomment %}
+          <li><a href="/files/GGO2022results 3-27-23.pdf">2022 Results</a></li>
         </ul>
       </div>
 
@@ -39,7 +39,7 @@ title: "Home"
     <p><strong>Registration is open!</strong></p>
     <p><strong>If you have competed in the Georgia event in prior years, you may <a href="https://www.georgiagoldolympics.com/forms/ggoregistrationform1.php">register online</a>. If not, please print the form from the website and mail with age verification to the address listed in the form.</strong></p>
     <p>The 2022 Georgia Golden Olympics took place September 27 – October 1, 2022 in Warner Robins, GA and surrounding areas. Swimming was hosted by the Jonesboro Parks and Recreation Department and was held at the Steve Lundquist Aquatics Center in Jonesboro, GA.</p>
-    <p>The 2022 state games are qualifying games for the 2023 <a href="https://www.nsga.com/" target="_blank">National Senior Games</a>, scheduled for July 7–18, 2023, in the City of Champions, Pittsburgh PA.</p>
+    <p>The 2022 state games were qualifying games for the 2023 <a href="https://www.nsga.com/" target="_blank">National Senior Games</a>, which took place July 7–18, 2023, in the City of Champions, Pittsburgh PA.</p>
     <p>Thank you for joining us for fun, fellowship, and competition!</p>
   </div>
 
@@ -54,7 +54,10 @@ title: "Home"
         <img src="/images/NSG-Logo-2023@1x.png" srcset="/images/NSG-Logo-2023@2x.png 2x" alt="2023 NSG Logo" title="2023 National Senior Games">
       </a>
     </p>
-    <p>The 2023 <a href="https://www.nsga.com/" target="_blank">National Senior Games</a> is scheduled for July 7–18, 2023, in the City of Champions, Pittsburgh PA. Registration is open for these games. The 2022 Georgia Golden Olympics were a qualifying games for the 2023 National Senior Games.</p>
+    <p>
+      {%- render "ngsa.liquid" %}
+    </p>
+    <hr>
     <p>
       Follow Georgia Golden Olympics<br>
       <a href="https://twitter.com/gagoldolympics" target="_new"><img src="/images/icon-twitter.png" alt="Twitter" title="Twitter"></a>
