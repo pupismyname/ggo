@@ -1,3 +1,27 @@
+{% comment %}
+
+  include this file like this:
+  ```
+  {%- render "sponsors.liquid", years: sponsors %}
+  ```
+
+  optionally, you can ask for a specific year, like this:
+  ```
+  {%- render "sponsors.liquid", years: sponsors, year: 2023 %}
+  ```
+  If the specific year requested is not found, the first year in sponsors.yml will be used.
+
+{% endcomment %}
+
+
+{% for event in years -%}
+  {% if event.year == year -%}
+    {% assign sponsors = event -%}
+  {% endif -%}
+{% endfor -%}
+{% unless sponsors -%}
+  {% assign sponsors = years[0] -%}
+{% endunless -%}
 <div class="fg section sponsors">
   <div class="fg-12">
     <h2 class="bg-shiny">2023 Sponsors</h2>
@@ -16,34 +40,36 @@
       <h4 class="sponsor-bg bg-{{ category.slug }} bg-shiny">{{category.title}}</h4>
       <h5>{{ category.amount }}</h5>
       <ul>
-      {% for sponsor in category.sponsors -%}
-        <li>
+        {% for sponsor in sponsors.sponsors -%}
+          {% if sponsor.level == category.slug or sponsor.level == category.level -%}
+            <li>
 
-          {% if sponsor.url -%}
-            <a href="{{sponsor.url}}">
-          {% endif -%}
-          {% if sponsor.img -%}
-            <img class="sponsor-img" src="{{sponsor.img}}" alt="{{sponsor.name}}">
-          {% endif -%}
-          {% if sponsor.url -%}
-            </a>
-          {% endif -%}
+              {% if sponsor.url -%}
+                <a href="{{sponsor.url}}">
+              {% endif -%}
+              {% if sponsor.img -%}
+                <img class="sponsor-img" src="{{sponsor.img}}" alt="{{sponsor.name}}">
+              {% endif -%}
+              {% if sponsor.url -%}
+                </a>
+              {% endif -%}
 
-          {% if sponsor.url -%}
-            <a href="{{sponsor.url}}">
-          {%- endif -%}
-          <span class="sponsor-name">{{sponsor.name}}</span>
-          {%- if sponsor.url -%}
-            </a>
-          {%- endif -%}
+              {% if sponsor.url -%}
+                <a href="{{sponsor.url}}">
+              {%- endif -%}
+              <span class="sponsor-name">{{sponsor.name}}</span>
+              {%- if sponsor.url -%}
+                </a>
+              {%- endif -%}
 
-          {%- if sponsor.location -%}
-            <span class="sponsor-separator"> - </span>
-            <span class="sponsor-location">{{sponsor.location}}</span>
+              {%- if sponsor.location -%}
+                <span class="sponsor-separator"> - </span>
+                <span class="sponsor-location">{{sponsor.location}}</span>
+              {% endif -%}
+
+            </li>
           {% endif -%}
-
-        </li>
-      {% endfor -%}
+        {% endfor -%}
       </ul>
     </div>
   {% endfor -%}

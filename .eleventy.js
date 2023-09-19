@@ -1,3 +1,5 @@
+const yaml = require('js-yaml');
+
 module.exports = function(eleventyConfig) {
 
   eleventyConfig.setServerOptions({
@@ -19,6 +21,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/redirects');
   eleventyConfig.addWatchTarget('./src/files/');
   eleventyConfig.addWatchTarget('./src/images/');
+
+  eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents));
 
   eleventyConfig.addFilter('debug', async (param) => {
     console.log(param);
