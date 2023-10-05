@@ -49,6 +49,13 @@
 @subdued-bronze:    mix(@bronze,    #fff, 33%);
 @subdued-torch:     mix(@torch,     #fff, 33%);
 @subdued-friends:   mix(@friends,   #fff, 33%);
+@more-subdued-corporate: mix(@corporate, #fff, 16%);
+@more-subdued-platinum:  mix(@platinum,  #fff, 16%);
+@more-subdued-gold:      mix(@gold,      #fff, 16%);
+@more-subdued-silver:    mix(@silver,    #fff, 16%);
+@more-subdued-bronze:    mix(@bronze,    #fff, 16%);
+@more-subdued-torch:     mix(@torch,     #fff, 16%);
+@more-subdued-friends:   mix(@friends,   #fff, 16%);
 
 @shiny-highlight: fade(#fff, 50%);
 @shiny-lowlight:  fade(#000, 50%);
@@ -398,14 +405,22 @@ nav {
 .color-torch     { color: @torch; }
 .color-friends   { color: @friends; }
 
-.bg-shiny.bg-corporate:before { border-color: @corporate; background-color: @subdued-corporate; }
-.bg-shiny.bg-platinum:before  { border-color: @platinum;  background-color: @subdued-platinum; }
-.bg-shiny.bg-gold:before      { border-color: @gold;      background-color: @subdued-gold; }
-.bg-shiny.bg-silver:before    { border-color: @silver;    background-color: @subdued-silver; }
-.bg-shiny.bg-bronze:before    { border-color: @bronze;    background-color: @subdued-bronze; }
-.bg-shiny.bg-torch:before     { border-color: @torch;     background-color: @subdued-torch; }
-.bg-shiny.bg-friends:before   { border-color: @friends;   background-color: @subdued-friends; }
+.bg-shiny.bg-corporate:before { border-color: @corporate;     background-color: @subdued-corporate; }
+.bg-shiny.bg-platinum:before  { border-color: @platinum;      background-color: @subdued-platinum; }
+.bg-shiny.bg-gold:before      { border-color: @gold;          background-color: @subdued-gold; }
+.bg-shiny.bg-silver:before    { border-color: @silver;        background-color: @subdued-silver; }
+.bg-shiny.bg-bronze:before    { border-color: @bronze;        background-color: @subdued-bronze; }
+.bg-shiny.bg-torch:before     { border-color: @torch;         background-color: @subdued-torch; }
+.bg-shiny.bg-friends:before   { border-color: @friends;       background-color: @subdued-friends; }
+.bg-shiny.bg-corporate-subdued:before { border-color: @subdued-corporate;     background-color: @more-subdued-corporate; }
+.bg-shiny.bg-platinum-subdued:before  { border-color: @subdued-platinum;      background-color: @more-subdued-platinum; }
+.bg-shiny.bg-gold-subdued:before      { border-color: @subdued-gold;          background-color: @more-subdued-gold; }
+.bg-shiny.bg-silver-subdued:before    { border-color: @subdued-silver;        background-color: @more-subdued-silver; }
+.bg-shiny.bg-bronze-subdued:before    { border-color: @subdued-bronze;        background-color: @more-subdued-bronze; }
+.bg-shiny.bg-torch-subdued:before     { border-color: @subdued-torch;         background-color: @more-subdued-torch; }
+.bg-shiny.bg-friends-subdued:before   { border-color: @subdued-friends;       background-color: @more-subdued-friends; }
 
+.bg-shiny.bg-subdued:before   { border-color: @subdued-light; background-color: @light; }
 .hero {
   padding: 1rem;
   h2, h3 {
