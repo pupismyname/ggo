@@ -42,13 +42,13 @@
 @bronze:      #cb9254;
 @torch:       #e4686a;
 @friends:     #1679f3;
-@subdued-corporate: mix(@corporate, #fff, 33%);
-@subdued-platinum:  mix(@platinum,  #fff, 33%);
-@subdued-gold:      mix(@gold,      #fff, 33%);
-@subdued-silver:    mix(@silver,    #fff, 33%);
-@subdued-bronze:    mix(@bronze,    #fff, 33%);
-@subdued-torch:     mix(@torch,     #fff, 33%);
-@subdued-friends:   mix(@friends,   #fff, 33%);
+@subdued-corporate:      mix(@corporate, #fff, 33%);
+@subdued-platinum:       mix(@platinum,  #fff, 33%);
+@subdued-gold:           mix(@gold,      #fff, 33%);
+@subdued-silver:         mix(@silver,    #fff, 33%);
+@subdued-bronze:         mix(@bronze,    #fff, 33%);
+@subdued-torch:          mix(@torch,     #fff, 33%);
+@subdued-friends:        mix(@friends,   #fff, 33%);
 @more-subdued-corporate: mix(@corporate, #fff, 16%);
 @more-subdued-platinum:  mix(@platinum,  #fff, 16%);
 @more-subdued-gold:      mix(@gold,      #fff, 16%);
@@ -97,6 +97,9 @@ header h1 img {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  &:not(:first-child) {
+    margin-top: 2em;
+  }
   & > a {
     text-decoration: none;
   }
@@ -120,7 +123,7 @@ li {
 }
 
 .section {
-  margin: 4rem 0;
+  margin: 3rem 0;
   main &:first-child {
     margin-top: 0;
   }
@@ -219,16 +222,16 @@ dd {
   .fg-sm-11 { .fg-11; } .fg-sm-12 { .fg-12; }
 }
 @media @mq-md {
-  .fg-md-0  { .fg-0;  } .fg-md-1  { .fg-1; } .fg-md-2 { .fg-2; }
-  .fg-md-3  { .fg-3;  } .fg-md-4  { .fg-4; } .fg-md-5 { .fg-5; }
-  .fg-md-6  { .fg-6;  } .fg-md-7  { .fg-7; } .fg-md-8 { .fg-8; }
+  .fg-md-0  { .fg-0;  } .fg-md-1  { .fg-1;  } .fg-md-2 { .fg-2; }
+  .fg-md-3  { .fg-3;  } .fg-md-4  { .fg-4;  } .fg-md-5 { .fg-5; }
+  .fg-md-6  { .fg-6;  } .fg-md-7  { .fg-7;  } .fg-md-8 { .fg-8; }
   .fg-md-9  { .fg-9;  } .fg-md-10 { .fg-10; }
   .fg-md-11 { .fg-11; } .fg-md-12 { .fg-12; }
 }
 @media @mq-lg {
-  .fg-lg-0  { .fg-0;  } .fg-lg-1  { .fg-1; } .fg-lg-2 { .fg-2; }
-  .fg-lg-3  { .fg-3;  } .fg-lg-4  { .fg-4; } .fg-lg-5 { .fg-5; }
-  .fg-lg-6  { .fg-6;  } .fg-lg-7  { .fg-7; } .fg-lg-8 { .fg-8; }
+  .fg-lg-0  { .fg-0;  } .fg-lg-1  { .fg-1;  } .fg-lg-2 { .fg-2; }
+  .fg-lg-3  { .fg-3;  } .fg-lg-4  { .fg-4;  } .fg-lg-5 { .fg-5; }
+  .fg-lg-6  { .fg-6;  } .fg-lg-7  { .fg-7;  } .fg-lg-8 { .fg-8; }
   .fg-lg-9  { .fg-9;  } .fg-lg-10 { .fg-10; }
   .fg-lg-11 { .fg-11; } .fg-lg-12 { .fg-12; }
 }
@@ -405,22 +408,24 @@ nav {
 .color-torch     { color: @torch; }
 .color-friends   { color: @friends; }
 
-.bg-shiny.bg-corporate:before { border-color: @corporate;     background-color: @subdued-corporate; }
-.bg-shiny.bg-platinum:before  { border-color: @platinum;      background-color: @subdued-platinum; }
-.bg-shiny.bg-gold:before      { border-color: @gold;          background-color: @subdued-gold; }
-.bg-shiny.bg-silver:before    { border-color: @silver;        background-color: @subdued-silver; }
-.bg-shiny.bg-bronze:before    { border-color: @bronze;        background-color: @subdued-bronze; }
-.bg-shiny.bg-torch:before     { border-color: @torch;         background-color: @subdued-torch; }
-.bg-shiny.bg-friends:before   { border-color: @friends;       background-color: @subdued-friends; }
-.bg-shiny.bg-corporate-subdued:before { border-color: @subdued-corporate;     background-color: @more-subdued-corporate; }
-.bg-shiny.bg-platinum-subdued:before  { border-color: @subdued-platinum;      background-color: @more-subdued-platinum; }
-.bg-shiny.bg-gold-subdued:before      { border-color: @subdued-gold;          background-color: @more-subdued-gold; }
-.bg-shiny.bg-silver-subdued:before    { border-color: @subdued-silver;        background-color: @more-subdued-silver; }
-.bg-shiny.bg-bronze-subdued:before    { border-color: @subdued-bronze;        background-color: @more-subdued-bronze; }
-.bg-shiny.bg-torch-subdued:before     { border-color: @subdued-torch;         background-color: @more-subdued-torch; }
-.bg-shiny.bg-friends-subdued:before   { border-color: @subdued-friends;       background-color: @more-subdued-friends; }
-
 .bg-shiny.bg-subdued:before   { border-color: @subdued-light; background-color: @light; }
+
+.bg-shiny.bg-corporate:before { border-color: @corporate; background-color: @subdued-corporate; }
+.bg-shiny.bg-platinum:before  { border-color: @platinum;  background-color: @subdued-platinum; }
+.bg-shiny.bg-gold:before      { border-color: @gold;      background-color: @subdued-gold; }
+.bg-shiny.bg-silver:before    { border-color: @silver;    background-color: @subdued-silver; }
+.bg-shiny.bg-bronze:before    { border-color: @bronze;    background-color: @subdued-bronze; }
+.bg-shiny.bg-torch:before     { border-color: @torch;     background-color: @subdued-torch; }
+.bg-shiny.bg-friends:before   { border-color: @friends;   background-color: @subdued-friends; }
+
+.bg-shiny.bg-corporate-subdued:before { border-color: @subdued-corporate; background-color: @more-subdued-corporate; }
+.bg-shiny.bg-platinum-subdued:before  { border-color: @subdued-platinum;  background-color: @more-subdued-platinum; }
+.bg-shiny.bg-gold-subdued:before      { border-color: @subdued-gold;      background-color: @more-subdued-gold; }
+.bg-shiny.bg-silver-subdued:before    { border-color: @subdued-silver;    background-color: @more-subdued-silver; }
+.bg-shiny.bg-bronze-subdued:before    { border-color: @subdued-bronze;    background-color: @more-subdued-bronze; }
+.bg-shiny.bg-torch-subdued:before     { border-color: @subdued-torch;     background-color: @more-subdued-torch; }
+.bg-shiny.bg-friends-subdued:before   { border-color: @subdued-friends;   background-color: @more-subdued-friends; }
+
 .hero {
   padding: 1rem;
   h2, h3 {
