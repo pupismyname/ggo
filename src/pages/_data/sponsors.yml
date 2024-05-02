@@ -20,6 +20,131 @@
 
 # begin year
 -
+  year: 2024
+  categories:
+    -
+      title: Corporate Sponsors
+      level: 1
+      amount: $10,000 or more
+      slug: corporate
+    -
+      title: Platinum Sponsors
+      level: 2,
+      amount: $5000 – $9999
+      slug: platinum
+    -
+      title: Gold Sponsors
+      level: 3
+      amount: $2500 – $4999
+      slug: gold
+    -
+      title: Silver Sponsors
+      level: 4
+      amount: $1000 – $2499
+      slug: silver
+    -
+      title: Bronze Sponsors
+      level: 5
+      amount: $500 – $999
+      slug: bronze
+    -
+      title: Torch Club
+      level: 6
+      amount: $100 – $499
+      slug: torch
+    -
+      title: Friends
+      level: 7
+      amount: $25 – $99
+      slug: friends
+  sponsors:
+    -
+      name: Warner Robins Parks & Recreation Department
+      level: platinum
+      location: Host Agency
+      img: /images/sponsors/WRPR-High-Res-2x.png
+    -
+      name: Senior Medicare Patrol (SMP)
+      level: gold
+      location: AdviseWell, Inc
+      img: /images/sponsors/smp-senior-medical-patrol.png
+    -
+      name: The Miles Group
+      level: gold
+      location: Loganville
+    -
+      name: Houston Healthcare
+      level: silver
+      img: /images/sponsors/HHC-new-logo-2016_resized.png
+      url: https://www.hhc.org/
+    -
+      name: EPIC Health Advisors
+      level: silver
+      location: Gray
+      img: /images/sponsors/epic-health-logo_resized.png
+      url: https://epichealthadvisors.com/
+    -
+      name: Georgia Health Care Association
+      level: silver
+    -
+      name: Comfort Inn and Suites Hwy 247
+      level: bronze
+      location: Warner Robins
+    -
+      name: Tom Gill
+      level: bronze
+      location: Madison, AL
+    -
+      name: Grovania United Methodist Church
+      level: bronze
+    -
+      name: LaQuinta Inn & Suites
+      level: bronze
+      location: Warner Robins
+    -
+      name: Robert & Faye Buckham
+      level: torch
+      location: Woodstock
+    -
+      name: Jewel Crews
+      level: torch
+      location: Waycross
+    -
+      name: Lester Culver
+      level: torch
+      location: Ludowici
+    -
+      name: Rebecca Hamilton
+      level: torch
+      location: Byron
+    -
+      name: Nancy Lewis
+      level: torch
+      location: Greensboro
+    -
+      name: Gladys Mixon
+      level: torch
+      location: Rome
+    -
+      name: George & Charlotte Zubowicz
+      level: torch
+      location: Warm Springs
+    -
+      name: Robert Jackson
+      level: friends
+      location: Hoschton
+    -
+      name: Allan & Judy Johnson
+      level: friends
+      location: Lawrenceville
+    -
+      name: Vincent Marchionna
+      level: friends
+      location: St. Simons
+# end year
+
+# begin year
+-
   year: 2023
   categories:
     -

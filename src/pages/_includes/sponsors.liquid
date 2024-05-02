@@ -1,18 +1,14 @@
 {% comment %}
 
-  include this file like this:
-  ```
-  {%- render "sponsors.liquid", years: sponsors %}
-  ```
+  Output the sponsors data at the top of sponsors.yml like this:
+    {%- render "sponsors.liquid", years: sponsors %}
 
-  optionally, you can ask for a specific year, like this:
-  ```
-  {%- render "sponsors.liquid", years: sponsors, year: 2023 %}
-  ```
-  If the specific year requested is not found, the first year in sponsors.yml will be used.
+  Optionally, you can output a specific year like this:
+    {%- render "sponsors.liquid", years: sponsors, year: 2023 %}
+
+  If a requested year is not found, the default will be used.
 
 {% endcomment %}
-
 
 {% for event in years -%}
   {% if event.year == year -%}
@@ -24,7 +20,7 @@
 {% endunless -%}
 <div class="fg section sponsors">
   <div class="fg-12">
-    <h2 class="bg-shiny">2023 Sponsors</h2>
+    <h2 class="bg-shiny">{{ sponsors.year }} Sponsors</h2>
     <p>Want to be a sponsor? <a href="https://www.georgiagoldolympics.com/forms/donations/ggodonation.php">Make a donation online!</a></p>
   </div>
   {% for category in sponsors.categories -%}
