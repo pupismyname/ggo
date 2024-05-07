@@ -11,34 +11,13 @@ title: "Sponsor"
     <h3>Levels of Contribution</h3>
     <p>The Georgia Golden Olympics, (Georgia Golden Games, Inc.) is actively seeking long-range funding and support in order to improve the quality and quantity of events and services, and to increase participation through expanded promotion of the event. There are several levels of contribution with increasing benefits at each level. These contribution levels are as follow:</p>
     <table>
-      <tr>
-        <th class="color-corporate">Corporate Sponsorship</th>
-        <td>$10,000 or more</td>
-      </tr>
-      <tr>
-        <th class="color-platinum">Platinum</th>
-        <td>$5000 – $9999</td>
-      </tr>
-      <tr>
-        <th class="color-gold">Gold</th>
-        <td>$2500 – $4999</td>
-      </tr>
-      <tr>
-        <th class="color-silver">Silver</th>
-        <td>$1000 – $2499</td>
-      </tr>
-      <tr>
-        <th class="color-bronze">Bronze</th>
-        <td>$500 – $999</td>
-      </tr>
-      <tr>
-        <th class="color-torch">Torch Club</th>
-        <td>$100 – $499</td>
-      </tr>
-      <tr>
-        <th class="color-friends">Friends</th>
-        <td>$25 – $99</td>
-      </tr>
+      {% for slug in sponsors.order -%}
+        {% assign category = sponsors.categories[slug] -%}
+        <tr>
+          <th class="color-{{ slug }}">{{ category.title }}</th>
+          <td>{{ category.amount }}</td>
+        </tr>
+      {% endfor -%}
     </table>
     <p>Vendors must complete an <a href="/files/ggofundbro-2024.pdf">information form</a> and contribute at the Bronze level or higher.</p>
     <p>Benefits offered at each level are detailed in the <a href="/files/ggofundbro-2024.pdf">Sponsorship Brochure</a>.</p>
@@ -58,4 +37,4 @@ title: "Sponsor"
   </div>
 </div>
 
-{%- render "sponsors.liquid", years: sponsors %}
+{%- render "sponsors.liquid", sponsors: sponsors %}

@@ -1,72 +1,65 @@
 {% comment %}
 
-  Output the sponsors data at the top of sponsors.yml like this:
-    {%- render "sponsors.liquid", years: sponsors %}
+Sponsors are stored in Notion in the Sponsorships table:
+https://www.notion.so/718fe32638324c308e83ce3e9e881735?v=96f3538ef9954c0abed345bda5db7f5e
 
-  Optionally, you can output a specific year like this:
-    {%- render "sponsors.liquid", years: sponsors, year: 2023 %}
+More information is on the GGO page:
+https://www.notion.so/GGO-43af25afc3e4420c8b88aa087a2767c8
 
-  If a requested year is not found, the default will be used.
+To move to a new year of sponsors on the website, change `year` in `src/pages/_data/sponsors.js`.
 
 {% endcomment %}
 
-{% for event in years -%}
-  {% if event.year == year -%}
-    {% assign sponsors = event -%}
-  {% endif -%}
-{% endfor -%}
-{% unless sponsors -%}
-  {% assign sponsors = years[0] -%}
-{% endunless -%}
 <div class="fg section sponsors">
   <div class="fg-12">
     <h2 class="bg-shiny">{{ sponsors.year }} Sponsors</h2>
     <p>Want to be a sponsor? <a href="https://www.georgiagoldolympics.com/forms/donations/ggodonation.php">Make a donation online!</a></p>
   </div>
-  {% for category in sponsors.categories -%}
-    {% assign classes = "fg-12" -%}
+  {% for slug in sponsors.order -%}
+    {% assign category = sponsors.categories[slug] -%}
     {% if category.level < 3 -%}
-      {% assign classes = classes | append: " fg-lg-6" -%}
+      {% assign classes = "fg-12 fg-lg-6" -%}
     {% elsif category.level < 6 -%}
-      {% assign classes = classes | append: " fg-lg-4" -%}
+      {% assign classes = "fg-12 fg-lg-4" -%}
     {% else -%}
-      {% assign classes = classes | append: " fg-lg-6 sponsors-wrap" -%}
+      {% assign classes = "fg-12 fg-lg-6 sponsors-wrap" -%}
     {% endif -%}
-    <div class="{{ classes }} sponsor-list sponsors-{{ category.slug }}">
-      <h4 class="sponsor-bg bg-{{ category.slug }} bg-shiny">{{category.title}}</h4>
+
+    <div class="{{ classes }} sponsor-list sponsors-{{ slug }}">
+      <h4 class="sponsor-bg bg-{{ slug }} bg-shiny">{{category.title}}</h4>
       <h5>{{ category.amount }}</h5>
       <ul>
-        {% for sponsor in sponsors.sponsors -%}
-          {% if sponsor.level == category.slug or sponsor.level == category.level -%}
-            <li>
+        {% for sponsor in category.sponsors -%}
+          <li>
 
-              {% if sponsor.url -%}
-                <a href="{{sponsor.url}}">
-              {% endif -%}
-              {% if sponsor.img -%}
-                <img class="sponsor-img" src="{{sponsor.img}}" alt="{{sponsor.name}}">
-              {% endif -%}
-              {% if sponsor.url -%}
-                </a>
-              {% endif -%}
+            {% if sponsor.url and sponsor.image -%}
+              <a href="{{sponsor.url}}">
+            {% endif -%}
+            {% if sponsor.image -%}
+              <img class="sponsor-img" src="{{sponsor.image}}" alt="{{sponsor.name}}">
+            {% endif -%}
+            {% if sponsor.url and sponsor.image -%}
+              </a>
+            {% endif -%}
 
-              {% if sponsor.url -%}
-                <a href="{{sponsor.url}}">
-              {%- endif -%}
-              <span class="sponsor-name">{{sponsor.name}}</span>
-              {%- if sponsor.url -%}
-                </a>
-              {%- endif -%}
+            {% if sponsor.url -%}
+              <a href="{{sponsor.url}}">
+            {%- endif -%}
+            <span class="sponsor-name">{{sponsor.name}}</span>
+            {%- if sponsor.url -%}
+              </a>
+            {%- endif -%}
 
-              {%- if sponsor.location -%}
-                <span class="sponsor-separator"> - </span>
-                <span class="sponsor-location">{{sponsor.location}}</span>
-              {% endif -%}
+            {%- if sponsor.location -%}
+              <span class="sponsor-separator"> - </span>
+              <span class="sponsor-location">{{sponsor.location}}</span>
+            {% endif -%}
 
-            </li>
-          {% endif -%}
+          </li>
         {% endfor -%}
       </ul>
     </div>
+
   {% endfor -%}
+
 </div>
