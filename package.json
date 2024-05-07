@@ -17,7 +17,7 @@
     "build": "npm run clean; npm run build:css; npx @11ty/eleventy",
     "build:css": "node -e 'require(\"./src/lib/build-styles.js\")();'",
     "clean": "rm -r ./_site",
-    "dev": "npm run clean; npm run build:css; concurrently --kill-others-on-fail \"npm run watch\" \"npx @11ty/eleventy --serve --incremental\"",
+    "dev": "npm run clean; npm run build:css; concurrently --kill-others-on-fail \"npm run watch\" \"npx @11ty/eleventy --serve --incremental --quiet\"",
     "watch": "npm-watch"
   },
   "repository": {
@@ -31,14 +31,17 @@
     "url": "https://github.com/pupismyname/ggo/issues"
   },
   "homepage": "https://github.com/pupismyname/ggo#readme",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^2.0.0",
+    "@notionhq/client": "^2.2.15",
     "concurrently": "^8.2.1",
     "cssnano": "^6.0.1",
+    "dotenv": "^16.4.5",
     "js-yaml": "^4.1.0",
     "less": "^4.1.1",
     "npm-watch": "^0.11.0",
     "postcss": "^8.4.28",
-    "postcss-import": "^15.1.0"
+    "postcss-import": "^15.1.0",
+    "slugify": "^1.6.6"
   }
 }

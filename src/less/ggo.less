@@ -81,6 +81,10 @@ body {
 body { box-sizing: border-box; }
 body * { box-sizing: inherit; }
 
+a {
+  text-decoration-color: @mid;
+}
+
 a:link, a:visited {
   color: @link;
 }
@@ -99,17 +103,6 @@ header h1 img {
 h1, h2, h3, h4, h5, h6 {
   &:not(:first-child) {
     margin-top: 2em;
-  }
-  & > a {
-    text-decoration: none;
-  }
-}
-
-// don't underline links in headers or list items if the link is the only element
-li {
-  & > a:first-child:last-child,
-  & > strong > a:first-child:last-child {
-    text-decoration: none;
   }
 }
 
@@ -296,6 +289,9 @@ nav {
     row-gap: 1rem;
     column-gap: 2rem;
     font-size: 1.1rem;
+  }
+  a {
+    text-decoration: none;
   }
   a:link, a:visited {
     border-bottom: 1px solid @hover;
