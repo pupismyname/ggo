@@ -17,9 +17,9 @@ To move to a new year of sponsors on the website, change `year` in `src/pages/_d
   </div>
   {% for slug in sponsors.order -%}
     {% assign category = sponsors.categories[slug] -%}
-    {% if category.level < 3 -%}
+    {% if forloop.index < 3 -%}
       {% assign classes = "fg-12 fg-lg-6" -%}
-    {% elsif category.level < 6 -%}
+    {% elsif forloop.index < 6 -%}
       {% assign classes = "fg-12 fg-lg-4" -%}
     {% else -%}
       {% assign classes = "fg-12 fg-lg-6 sponsors-wrap" -%}
