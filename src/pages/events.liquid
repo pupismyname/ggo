@@ -5,9 +5,9 @@ title: "Events"
 
 <div class="fg section">
   <div class="fg-12">
-    <h2 class="bg-shiny">{{title}}</h2>
+    <h2 class="bg-shiny"><a href="{{ page.permalink }}">{{ title }}</a></h2>
   </div>
   <div class="fg-12">
-    {%- render "events-list.liquid", events: collections.event %}
+    {%- render "events-list.liquid", events: events, currentPage: page.url %}
   </div>
 </div>

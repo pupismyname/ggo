@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Georgia Golden Olympics {%- if title != 'Home' %} - {{title}}{% endif -%}</title>
+    <title>Georgia Golden Olympics {%- if title != 'Home' %} - {{ title }}{% endif -%}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="/css/ggo.min.css?v={{ cacheBusters.styles }}">
@@ -16,10 +16,10 @@
         <div class="fg-sm-7 fg-md-8 fg-lg-7 fg-xl-6">
           <nav>
             <ul>
-              <li><a href="/participate/">Participate</a></li>
-              <li><a href="/volunteer/">Volunteer</a></li>
-              <li><a href="/sponsor/">Sponsor</a></li>
-              <li><a href="/about/">About GGO</a></li>
+              <li><a href="/participate/"{% if page.url == "/participate/" %} aria-current="page"{% endif %}>Participate</a></li>
+              <li><a href="/volunteer/"{% if page.url == "/volunteer/" %} aria-current="page"{% endif %}>Volunteer</a></li>
+              <li><a href="/sponsor/"{% if page.url == "/sponsor/" %} aria-current="page"{% endif %}>Sponsor</a></li>
+              <li><a href="/about/"{% if page.url == "/about/" %} aria-current="page"{% endif %}>About GGO</a></li>
             </ul>
           </nav>
         </div>

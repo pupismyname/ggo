@@ -274,7 +274,11 @@ dd {
 .sidebar-xl  { .sidebar; @media @mq-xl  { border-top: none; padding-top: 0; margin-top: 0; }}
 .sidebar-xxl { .sidebar; @media @mq-xxl { border-top: none; padding-top: 0; margin-top: 0; }}
 
-nav {
+[aria-current="page"] {
+  font-weight: bold;
+}
+
+header nav {
   ul, li {
     list-style-type: none;
     margin: 0;

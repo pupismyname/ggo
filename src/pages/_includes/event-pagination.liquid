@@ -1,0 +1,18 @@
+{%- for event in events %}
+  {%- if event.permalink == page.url %}
+    {%- assign prevEvent = forloop.index0 | minus: 1 %}
+    {%- assign nextEvent = forloop.index0 | plus: 1 %}
+    <p>
+      {%- unless forloop.first %}
+        Previous Event: <a href="{{ events[prevEvent].permalink }}">{{ events[prevEvent].title }}</a>
+      {%- endunless %}
+      {%- unless forloop.first or forloop.last %}
+        <br>
+      {%- endunless %}
+      {%- unless forloop.last %}
+        Next Event: <a href="{{ events[nextEvent].permalink }}">{{ events[nextEvent].title }}</a>
+      {%- endunless %}
+    </p>
+    {%- break %}
+  {%- endif %}
+{%- endfor %}
