@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Georgia Golden Olympics",
   "type": "module",
+  "engines": {
+    "npm": ">=10.9.2",
+    "node": ">=22.13.1"
+  },
   "main": "index.js",
   "watch": {
     "build:css": {
