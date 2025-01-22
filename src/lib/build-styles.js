@@ -1,13 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-const atImport = require('postcss-import');
-const cssnano = require('cssnano');
-const less = require('less');
-const postcss = require('postcss');
+import fs from 'fs';
+import path from 'path';
+import atImport from 'postcss-import';
+import cssnano from 'cssnano';
+import less from 'less';
+import postcss from 'postcss';
 
 // Build the css and its map, write them to the 11ty output folder
 
-module.exports = async () => {
+export default async () => {
   const start = Date.now();
   console.log('Processing styles');
   const srcFile = 'src/less/ggo.less';

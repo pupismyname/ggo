@@ -1,13 +1,11 @@
-<ul>
-  {%- for event in events %}
-    <li>
-      <a href="{{event.page.url}}">
-        {%- if event.data.title %}
-          {{event.data.title}}
-        {%- else %}
-          {{event.page.fileSlug}}
-        {%- endif %}
-      </a>
-    </li>
-  {%- endfor %}
-</ul>
+<nav>
+  <ul>
+    {%- for event in events %}
+      <li>
+        <a href="{{ event.permalink }}"{% if currentPage == event.permalink %} aria-current="page"{% endif %}>
+          {{ event.title }}
+        </a>
+      </li>
+    {%- endfor %}
+  </ul>
+</nav>

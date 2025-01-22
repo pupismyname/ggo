@@ -26,33 +26,33 @@ To move to a new year of sponsors on the website, change `year` in `src/pages/_d
     {% endif -%}
 
     <div class="{{ classes }} sponsor-list sponsors-{{ slug }}">
-      <h4 class="sponsor-bg bg-{{ slug }} bg-shiny">{{category.title}}</h4>
+      <h4 class="sponsor-bg bg-{{ slug }} bg-shiny">{{ category.title }}</h4>
       <h5>{{ category.amount }}</h5>
       <ul>
         {% for sponsor in category.sponsors -%}
           <li>
 
             {% if sponsor.url and sponsor.image -%}
-              <a href="{{sponsor.url}}">
+              <a href="{{ sponsor.url }}">
             {% endif -%}
             {% if sponsor.image -%}
-              <img class="sponsor-img" src="{{sponsor.image}}" alt="{{sponsor.name}}">
+              <img class="sponsor-img" src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
             {% endif -%}
             {% if sponsor.url and sponsor.image -%}
               </a>
             {% endif -%}
 
             {% if sponsor.url -%}
-              <a href="{{sponsor.url}}">
+              <a href="{{ sponsor.url }}">
             {%- endif -%}
-            <span class="sponsor-name">{{sponsor.name}}</span>
+            <span class="sponsor-name">{{ sponsor.name }}</span>
             {%- if sponsor.url -%}
               </a>
             {%- endif -%}
 
             {%- if sponsor.location -%}
               <span class="sponsor-separator"> - </span>
-              <span class="sponsor-location">{{sponsor.location}}</span>
+              <span class="sponsor-location">{{ sponsor.location }}</span>
             {% endif -%}
 
           </li>
