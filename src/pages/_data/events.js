@@ -29,7 +29,6 @@ export default async () => {
     const eventPages = Object.keys(eventsParsed).map((title) => {
       const slug = slugify(title);
       const permalink = `/events/${slug}/`;
-      console.log(eventsParsed[title]);
       const content = md.render(eventsParsed[title]);
       const eventPage = {
         title,
