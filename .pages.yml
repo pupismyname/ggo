@@ -1,0 +1,46 @@
+media:
+  - name: Images
+    input: src/images
+    output: /images
+  - name: Files
+    input: src/files
+    output: /files
+content:
+  - name: events
+    label: Events
+    type: collection
+    path: src/pages/events
+    view:
+      fields: [ title, published, date, updated ]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: date
+        label: Date Published
+        type: date
+      - name: updated
+        label: Last Updated
+        type: date
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+      - name: body
+        label: Body
+        type: rich-text
+  - name: site
+    label: Site settings
+    path: src/_data/site.json
+    type: file
+    fields:
+      - name: title
+        label: Georgia Golden Olympics
+        type: string
+      - name: description
+        label: The Georgia Golden Olympics is a statewide event for adults 50 years of age or older.
+        type: string
+      - name: url
+        label: Website URL
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
