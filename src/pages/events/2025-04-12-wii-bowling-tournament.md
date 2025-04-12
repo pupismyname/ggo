@@ -2,7 +2,7 @@
 title: Wii Bowling Tournament
 published: true
 ---
-### Number of Competitors:
+### Number of Competitors
 
 Limited to 48  
 (See Page 6: Age/Category)
