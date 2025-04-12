@@ -6,8 +6,8 @@ media:
     input: src/files
     output: /files
 content:
-  - name: events
-    label: Events
+  - name: event-rules
+    label: Event Rules
     type: collection
     path: src/pages/events
     view:
