@@ -16,9 +16,6 @@ content:
       - name: title
         label: Title
         type: string
-      - name: date
-        label: Date Published
-        type: date
       - name: updated
         label: Last Updated
         type: date
