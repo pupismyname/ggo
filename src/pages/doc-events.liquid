@@ -6,7 +6,9 @@ pagination:
   size: 1
 eleventyComputed:
   title: "{{ doc.title }}"
-permalink: "{{ doc.permalink }}/"
+permalinkOld: "{{ doc.permalink }}/"
+permalink: false
+
 ---
 
 {{ doc.content }}
