@@ -1,10 +1,10 @@
 media:
   - name: Images
     input: src/images
-    output: /images
+    output: src/images
   - name: Files
     input: src/files
-    output: /files
+    output: src/files
 content:
   - name: event-rules
     label: Event Rules
