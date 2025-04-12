@@ -6,7 +6,8 @@ published: true
 ---
 ### Number of Competitors
 
-Open (See Page 6: Age/Category)
+Open  
+(See Page 6: Age/Category)
 
 ### Events
 
@@ -19,7 +20,7 @@ Open (See Page 6: Age/Category)
 
 ### Rules
 
-1.  All matches will be conducted in accordance with United States Badminton Association (USBA)\\\* rules, except as modified herein.
+1.  All matches will be conducted in accordance with United States Badminton Association (USBA)\* rules, except as modified herein.
     
 2.  Warm ups will be limited to 10 minutes.
     
@@ -43,4 +44,10 @@ Scoring is based on USBA Rules.
 
 * * *
 
-\\\* United States Badminton Association One Olympic Plaza Colorado Springs, CO 80909-5778 (719) 866-4808 [https://www.usabadminton.org/](https://www.usabadminton.org/)
+\* United States Badminton Association  
+One Olympic Plaza  
+Colorado Springs, CO 80909-5778  
+(719) 866-4808  
+[https://www.usabadminton.org/](https://www.usabadminton.org/)
+
+* * *
