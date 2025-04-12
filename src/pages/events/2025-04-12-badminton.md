@@ -1,7 +1,5 @@
 ---
 title: Badminton
-date: 2025-04-12
-updated: 2025-04-12
 published: true
 ---
 ### Number of Competitors
