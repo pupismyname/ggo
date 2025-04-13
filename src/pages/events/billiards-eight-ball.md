@@ -1,5 +1,5 @@
 ---
-title: Billiards – Eight Ball
+title: Billiards - Eight Ball
 published: true
 ---
 ### Number of Competitors
