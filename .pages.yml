@@ -25,10 +25,13 @@ content:
       - name: tags
         label: Collections
         type: select
-        values: [ "events" ]
-        multiple: true
-        default: [ "events" ]
-        list: true
+        options:
+          multiple: true
+          creatable: true
+          values:
+            - value: events
+              label: Events
+          default: events
       - name: published
         label: Published
         type: boolean
