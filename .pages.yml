@@ -25,6 +25,7 @@ content:
       - name: tags
         label: Collections
         type: select
+        values: [ "events" ]
         multiple: true
         default: [ "events" ]
         list: true
