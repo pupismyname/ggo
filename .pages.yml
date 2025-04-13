@@ -10,7 +10,7 @@ content:
     label: Event Rules
     type: collection
     path: src/pages/events
-    filename: '{primary}.md'
+    filename: "{primary}.md"
     view:
       fields: [ filename, title, published, updated ]
       sort: [ filename, updated ]
