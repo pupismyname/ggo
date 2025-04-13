@@ -22,6 +22,11 @@ content:
       - name: updated
         label: Last Updated
         type: date
+      - name: tags
+        type: string
+        label: Collections
+        default: [ "events" ]
+        list: true
       - name: published
         label: Published
         type: boolean
@@ -29,8 +34,3 @@ content:
       - name: body
         label: Body
         type: rich-text
-      - name: tags
-        label: Collections
-        default: events
-        list: true
-
