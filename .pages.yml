@@ -12,8 +12,8 @@ content:
     path: src/pages/events
     filename: '{primary}.md'
     view:
-      fields: [ title, published, updated ]
-      sort: [ title, updated ]
+      fields: [ filename, title, published, updated ]
+      sort: [ filename, updated ]
     fields:
       - name: title
         label: Title
