@@ -22,6 +22,10 @@ content:
       - name: updated
         label: Last Updated
         type: date
+      - name: published
+        label: Published
+        type: boolean
+        default: true
       - name: body
         label: Body
         type: rich-text
