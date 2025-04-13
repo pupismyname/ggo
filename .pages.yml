@@ -23,8 +23,9 @@ content:
         label: Last Updated
         type: date
       - name: tags
-        type: string
         label: Collections
+        type: select
+        multiple: true
         default: [ "events" ]
         list: true
       - name: published
