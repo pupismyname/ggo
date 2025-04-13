@@ -22,20 +22,6 @@ content:
       - name: updated
         label: Last Updated
         type: date
-      - name: tags
-        label: Collections
-        type: select
-        options:
-          multiple: true
-          creatable: true
-          values:
-            - value: events
-              label: Events
-          default: events
-      - name: published
-        label: Published
-        type: boolean
-        default: true
       - name: body
         label: Body
         type: rich-text
