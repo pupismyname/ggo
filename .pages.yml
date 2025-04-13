@@ -29,4 +29,8 @@ content:
       - name: body
         label: Body
         type: rich-text
+      - name: tags
+        label: Collections
+        default: events
+        list: true
 
