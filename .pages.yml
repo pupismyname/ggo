@@ -10,10 +10,11 @@ content:
     label: Event Rules
     type: collection
     path: src/pages/events
+    primary: title
     filename: "{primary}.md"
     view:
-      fields: [ filename, title, published, updated ]
-      sort: [ filename, updated ]
+      fields: [ primary, title, published, updated ]
+      sort: [ primary, updated ]
     fields:
       - name: title
         label: Title
