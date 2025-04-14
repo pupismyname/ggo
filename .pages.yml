@@ -6,6 +6,19 @@ media:
     input: src/files
     output: src/files
 content:
+  - name: site-notice
+    label: Site-wide Notice
+    type: file
+    path: src/pages/_includes/site-wide-notice.md
+    fields:
+      - name: notice
+        label: Notice
+        type: rich-text
+        description: This notice shows up on every page of the site. Useful for very important information.
+      - name: show
+        label: Show
+        type: boolean
+        description: Turn this off to hide the notice.
   - name: event-rules
     label: Event Rules
     type: collection
