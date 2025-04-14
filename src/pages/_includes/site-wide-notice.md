@@ -3,4 +3,4 @@ show: true
 ---
 With much regret we announce the suspension of the 2025 Georgia Golden Olympics. We know how much this event means to everyone involved, and this decision was not made lightly. We are committed to exploring all avenues for the future and hope to bring the games back to you in 2026 making them even better. We appreciate your understanding and support during this transition.
 
-Many of the surrounding states will be offering the games this year and are open to out of state athletes. If you want to know more or have an interest in attending other state events, please go to \[[nsga.com](http://nsga.com)\]([https://nsga.com/](https://nsga.com/)) to learn dates and locations.
+Many of the surrounding states will be offering the games this year and are open to out of state athletes. If you want to know more or have an interest in attending other state events, please go to [nsga.com](https://nsga.com/) to learn dates and locations.
