@@ -11,7 +11,7 @@ content:
     type: file
     path: src/pages/_includes/site-wide-notice.md
     fields:
-      - name: notice
+      - name: body
         label: Notice
         type: rich-text
         description: This notice shows up on every page of the site. Useful for very important information.
