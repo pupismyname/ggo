@@ -1,4 +1,8 @@
+import { EleventyRenderPlugin } from '@11ty/eleventy';
+
 export default function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyRenderPlugin);
+
   eleventyConfig.setServerOptions({
     port: 8873,
     domDiff: false,

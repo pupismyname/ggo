@@ -5,16 +5,18 @@ title: "Events"
 
 <div class="fg section">
   <div class="fg-12">
-    <h2 class="bg-shiny"><a href="/events/">Events</a><span class="separator"> / </span><a href="{{ page.permalink }}">{{ title }}</a></h2>
+    <div class="bg-shiny breadcrumbs"><a href="/events/">Events</a><span class="separator"> / </span><a href="{{ page.permalink }}">{{ title }}</a></div>
   </div>
   <div class="fg-12">
     <div class="fg wrap-reverse">
       <div class="fg-lg-4 sidebar-lg">
-        <h3>Events</h3>
-        {%- render "events-list.liquid", events: events, currentPage: page.url %}
+        {%- render "events-list.liquid", events: collections.events, currentPage: page.url %}
       </div>
       <div class="fg-lg-8">
-        {{ content }}
+        <h2>{{ title }}</h2>
+        <div class="content">
+          {{ content }}
+        </div>
       </div>
     </div>
   </div>
