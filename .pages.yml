@@ -61,7 +61,7 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location ]
+      fields: [ name, location, date ]
       primary: name
       sort: [ date, name ]      
   - name: event-rules
