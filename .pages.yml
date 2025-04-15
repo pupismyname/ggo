@@ -30,6 +30,7 @@ content:
       - name: location
         label: Location
         type: string
+        description: Usually formatted as `City, ST`, or just `City` if state is GA
       - name: link
         label: Link
         type: string
