@@ -6,6 +6,15 @@ media:
     input: src/files
     output: src/files
 content:
+  - name: site-settings
+    label: Site settings
+    type: file
+    path: src/pages/_data/settings.json
+    fields:
+      - name: show-site-notice
+        label: Show Site-wide notice
+        type: boolean
+        description: This shows a notice at the top of every page. Useful for very important information.
   - name: site-notice
     label: Site-wide Notice
     type: file
@@ -14,11 +23,7 @@ content:
       - name: body
         label: Notice
         type: rich-text
-        description: This notice shows up on every page of the site. Useful for very important information.
-      - name: show
-        label: Show
-        type: boolean
-        description: Turn this off to hide the notice.
+        description: This notice will show up at the top of every page. Enable or disable it in Site settings.
   - name: event-rules
     label: Event Rules
     type: collection
