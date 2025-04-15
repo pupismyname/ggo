@@ -2,8 +2,8 @@
   <ul>
     {%- for event in events %}
       <li>
-        <a href="{{ event.permalink }}"{% if currentPage == event.permalink %} aria-current="page"{% endif %}>
-          {{ event.title }}
+        <a href="{{ event.url }}"{% if currentPage == event.url %} aria-current="page"{% endif %}>
+          {{ event.data.title }}
         </a>
       </li>
     {%- endfor %}

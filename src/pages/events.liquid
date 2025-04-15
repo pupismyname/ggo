@@ -1,5 +1,4 @@
 ---
-layout: layout.liquid
 title: "Events"
 ---
 
@@ -8,6 +7,6 @@ title: "Events"
     <h2 class="bg-shiny"><a href="{{ page.permalink }}">{{ title }}</a></h2>
   </div>
   <div class="fg-12">
-    {%- render "events-list.liquid", events: events, currentPage: page.url %}
+    {%- render "events-list.liquid", events: collections.events, currentPage: page.url %}
   </div>
 </div>

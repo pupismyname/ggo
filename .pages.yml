@@ -1,0 +1,44 @@
+media:
+  - name: Images
+    input: src/images
+    output: src/images
+  - name: Files
+    input: src/files
+    output: src/files
+content:
+  - name: site-configuration
+    label: Site configuration
+    type: file
+    path: src/pages/_data/configuration.json
+    fields:
+      - name: site-notice-enable
+        label: Enable Site-wide notice
+        type: boolean
+        description: Enable or disable the site-wide notice.
+      - name: site-notice-body
+        label: Site-wide notice
+        type: rich-text
+        description: This notice will appears at the top of every page. Useful for very important information.
+  - name: event-rules
+    label: Event Rules
+    type: collection
+    path: src/pages/events
+    primary: title
+    filename: "{primary}.md"
+    view:
+      fields: [ primary, title, published, updated ]
+      sort: [ primary, updated ]
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+      - name: updated
+        label: Last Updated
+        type: date
+      - name: body
+        label: Body
+        type: rich-text

@@ -25,6 +25,17 @@
         </div>
       </header>
       <main>
+        {%- if configuration['site-notice-enable'] == true %}
+          <div class="fg section">
+            <div class="fg-12 fg-lg-10 fg-xl-8 center">
+              <hr>
+              <div class="left">
+                {{ configuration['site-notice-body'] | renderContent: "md" }}
+              </div>
+              <hr>
+            </div>
+          </div>
+        {%- endif %}
         {{ content }}
       </main>
       <footer class="fg">
