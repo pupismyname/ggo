@@ -35,8 +35,8 @@ content:
       - name: link
         label: Link
         type: string
-      - name: logo
-        label: Logo
+      - name: image
+        label: Image
         type: image
       - name: years
         label: Years
