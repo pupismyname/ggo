@@ -19,6 +19,49 @@ content:
         label: Site-wide notice
         type: rich-text
         description: This notice will appears at the top of every page. Useful for very important information.
+  - name: sponsors
+    label: Sponsors
+    type: file
+    path: src/pages/_data/sponsors.json
+    fields:
+      - name: name
+        label: Name
+        type: string
+      - name: link
+        label: Link
+        type: string
+      - name: logo
+        label: Logo
+        type: image
+      - name: sponsorships
+        label: Sponsorships
+        type: object
+        fields:
+          - name: year
+            label: Year
+            type: select
+            options:
+              values: [ 2023, 2024 ]
+              creatable: true
+          - name: tier
+            label: Tier
+            type: select
+            options:
+              values:
+                - value: friends
+                  label: Friends
+                - value: torch
+                  label: Torch Club
+                - value: bronze
+                  label: Bronze
+                - value: silver
+                  label: Silver
+                - value: gold
+                  label: Gold
+                - value: platinum
+                  label: Platinum
+                - value: corporate
+                  label: Corporate
   - name: event-rules
     label: Event Rules
     type: collection
