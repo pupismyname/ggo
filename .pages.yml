@@ -11,7 +11,7 @@ content:
     type: file
     path: src/pages/_data/configuration.json
     fields:
-      - name: enable-site-notice
+      - name: site-notice-enable
         label: Enable Site-wide notice
         type: boolean
         description: Enable or disable the site-wide notice.
