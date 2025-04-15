@@ -1,5 +1,4 @@
 ---
-show: true
 ---
 With much regret we announce the suspension of the 2025 Georgia Golden Olympics. We know how much this event means to everyone involved, and this decision was not made lightly. We are committed to exploring all avenues for the future and hope to bring the games back to you in 2026 making them even better. We appreciate your understanding and support during this transition.
 
