@@ -15,7 +15,7 @@ content:
         label: Enable Site-wide notice
         type: boolean
         description: Enable or disable the site-wide notice.
-      - name: body
+      - name: site-notice-body
         label: Site-wide notice
         type: rich-text
         description: This notice will appears at the top of every page. Useful for very important information.
