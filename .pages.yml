@@ -21,44 +21,44 @@ content:
         description: This notice will appears at the top of every page. Useful for very important information.
   - name: sponsors
     label: Sponsors
-    type: file
-    path: src/pages/_data/sponsors.json
-    format: json
+    type: collection
+    path: src/pages/sponsors
+    filename: "{primary}.md"
     fields:
-      - name: sponsors
-        label: Sponsors
+      - name: name
+        label: Name
+        type: string
+      - name: location
+        label: Location
+        type: string
+        description: Usually formatted as `City, ST`, or just `City` if state is GA
+      - name: link
+        label: Link
+        type: string
+      - name: logo
+        label: Logo
+        type: image
+      - name: years
+        label: Years
         type: object
         list: true
         fields:
-          - name: name
-            label: Name
-            type: string
-          - name: location
-            label: Location
-            type: string
-            description: Usually formatted as `City, ST`, or just `City` if state is GA
-          - name: link
-            label: Link
-            type: string
-          - name: logo
-            label: Logo
-            type: image
-          - name: years
-            label: Years
-            type: object
-            list: true
-            fields:
-              - name: year
-                label: Year
-                type: select
-                options:
-                  values: [ '2023' ]
-                  creatable: true
-              - name: tier
-                label: Tier
-                type: select
-                options:
-                  values: [ 'friends', 'torch', 'bronze', 'silver', 'gold', 'platinum', 'corporate' ]
+          - name: year
+            label: Year
+            type: select
+            options:
+              values: [ '2023' ]
+              creatable: true
+          - name: tier
+            label: Tier
+            type: select
+            options:
+              values: [ 'friends', 'torch', 'bronze', 'silver', 'gold', 'platinum', 'corporate' ]
+      - name: permalink
+        label: Permalink
+        type: boolean
+        default: false
+        hidden: true
   - name: event-rules
     label: Event Rules
     type: collection
