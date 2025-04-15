@@ -38,6 +38,7 @@ content:
       - name: image
         label: Image
         type: image
+        description: For company logos
       - name: years
         label: Years
         type: object
