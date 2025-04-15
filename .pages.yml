@@ -60,6 +60,10 @@ content:
         type: boolean
         default: false
         hidden: true
+    view:
+      fields: [ name ]
+      primary: name
+      sort: [ date, name ]      
   - name: event-rules
     label: Event Rules
     type: collection
