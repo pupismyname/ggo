@@ -21,8 +21,9 @@ content:
         description: This notice will appears at the top of every page. Useful for very important information.
   - name: sponsors
     label: Sponsors
-    type: file
-    path: src/pages/_data/sponsors.json
+    type: collection
+    path: src/pages/_data/sponsors
+    format: json
     fields:
       - name: name
         label: Name
