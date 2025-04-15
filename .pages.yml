@@ -9,7 +9,7 @@ content:
   - name: site-configuration
     label: Site configuration
     type: file
-    path: src/pages/_data/settings.json
+    path: src/pages/_data/configuration.json
     fields:
       - name: enable-site-notice
         label: Enable Site-wide notice
