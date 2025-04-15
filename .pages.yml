@@ -21,23 +21,28 @@ content:
         description: This notice will appears at the top of every page. Useful for very important information.
   - name: sponsors
     label: Sponsors
-    type: collection
-    path: src/pages/_data/sponsors
+    type: file
+    path: src/pages/_data/sponsors.json
     format: json
     fields:
-      - name: name
-        label: Name
-        type: string
-      - name: location
-        label: Location
-        type: string
-        description: Usually formatted as `City, ST`, or just `City` if state is GA
-      - name: link
-        label: Link
-        type: string
-      - name: logo
-        label: Logo
-        type: image
+      - name: sponsors
+        label: Sponsors
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: location
+            label: Location
+            type: string
+            description: Usually formatted as `City, ST`, or just `City` if state is GA
+          - name: link
+            label: Link
+            type: string
+          - name: logo
+            label: Logo
+            type: image          
   - name: event-rules
     label: Event Rules
     type: collection
