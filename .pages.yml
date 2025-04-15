@@ -42,7 +42,23 @@ content:
             type: string
           - name: logo
             label: Logo
-            type: image          
+            type: image
+          - name: years
+            label: Years
+            type: object
+            list: true
+            fields:
+              - name: year
+                label: Year
+                type: select
+                options:
+                  values: [ '2023' ]
+                  creatable: true
+              - name: tier
+                label: Tier
+                type: select
+                options:
+                  values: [ 'friends', 'torch', 'bronze', 'silver', 'gold', 'platinum', 'corporate' ]
   - name: event-rules
     label: Event Rules
     type: collection
