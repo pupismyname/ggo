@@ -6,24 +6,19 @@ media:
     input: src/files
     output: src/files
 content:
-  - name: site-settings
-    label: Site settings
+  - name: site-configuration
+    label: Site configuration
     type: file
     path: src/pages/_data/settings.json
     fields:
-      - name: show-site-notice
-        label: Show Site-wide notice
+      - name: enable-site-notice
+        label: Enable Site-wide notice
         type: boolean
-        description: This shows a notice at the top of every page. Useful for very important information.
-  - name: site-notice
-    label: Site-wide Notice
-    type: file
-    path: src/pages/_includes/site-wide-notice.md
-    fields:
+        description: Enable or disable the site-wide notice.
       - name: body
-        label: Notice
+        label: Site-wide notice
         type: rich-text
-        description: This notice will show up at the top of every page. Enable or disable it in Site settings.
+        description: This notice will appears at the top of every page. Useful for very important information.
   - name: event-rules
     label: Event Rules
     type: collection
