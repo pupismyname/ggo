@@ -68,7 +68,6 @@ content:
     label: Event Rules
     type: collection
     path: src/pages/events
-    primary: title
     filename: "{primary}.md"
     view:
       fields: [ primary, title, published, updated ]
