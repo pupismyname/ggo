@@ -47,6 +47,9 @@ content:
     path: src/pages/sponsors
     filename: "{fields.name}-{fields.location}.md"
     fields:
+      - name: order
+        label: Order
+        type: number
       - name: name
         label: Name
         type: string
