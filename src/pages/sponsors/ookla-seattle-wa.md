@@ -1,5 +1,4 @@
 ---
-ookla-seattle-wa.md
 name: Ookla
 location: Seattle, WA
 link: https://www.ookla.com/

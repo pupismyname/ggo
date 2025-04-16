@@ -1,5 +1,4 @@
 ---
-epic-health-advisors-gray.md
 name: EPIC Health Advisors
 location: Gray
 tier: silver

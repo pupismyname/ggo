@@ -1,5 +1,4 @@
 ---
-senior-medicare-patrol-smp-advise-well-inc.md
 name: Senior Medicare Patrol (SMP)
 location: AdviseWell, Inc
 tier: gold
