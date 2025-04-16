@@ -21,8 +21,6 @@ content:
           - name: body
             label: Notice
             type: rich-text
-            options:
-              placeholder: Critical information
             description: When enabled, this notice appears at the top of every page. It is intended for critical announcements and should only be temporary. For example, use this to announce the games are canceled for that year (2020, 2025).
       - name: sponsorshipTiers
         label: Sponsorship tiers
