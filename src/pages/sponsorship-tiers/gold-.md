@@ -1,7 +1,7 @@
 ---
-name: Gold
+title: Gold
 amount: $2500 – $4999
 order: 3
-identifier: 0682c985-2052-4682-8c6b-54336aa666e8
+identifier: 6e3954ba-de20-47b8-89af-6551b79ed6b7
 permalink: false
 ---
