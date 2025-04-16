@@ -19,35 +19,6 @@ content:
         label: Site-wide notice
         type: rich-text
         description: This notice will appears at the top of every page. Useful for very important information.
-  - name: sponsorships
-    label: Sponsorships
-    type: collection
-    path: src/pages/sponsorships
-    filename: "{primary}.md"
-    fields:
-      - name: sponsor
-        label: Sponsor
-        type: reference
-        options:
-          collection: sponsors
-          value: "{name} - {location}"
-      - name: tier
-        label: Tier
-        type: reference
-        options:
-          collection: sponsorship-tiers
-          value: "{title}"
-      - name: year
-        label: Year
-        type: select
-        options:
-          values: [ "2023" ]
-          creatable: true
-      - name: permalink
-        label: Permalink
-        type: boolean
-        default: false
-        hidden: true
   - name: sponsors
     label: Sponsors
     type: collection
@@ -61,6 +32,25 @@ content:
         label: Location
         type: string
         description: Usually formatted as `City, ST`, or just `City` if state is GA
+      - name: tier
+        label: Sponsorship Tier
+        type: select
+        options:
+          values:
+            - value: friends
+              label: Friends
+            - value: torch
+              label: Torch Club
+            - value: bronze
+              label: Bronze
+            - value: silver
+              label: Silver
+            - value: gold
+              label: Gold
+            - value: platinum
+              label: Platinum
+            - value: corporate
+              label: Corporate
       - name: link
         label: Link
         type: string
