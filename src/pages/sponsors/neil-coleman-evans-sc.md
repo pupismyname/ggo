@@ -4,5 +4,7 @@ location: Evans, SC
 years:
   - year: "2023"
     tier: friends
+  - year: "2024"
+    tier: silver
 permalink: false
 ---
