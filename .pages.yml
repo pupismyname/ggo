@@ -18,7 +18,6 @@ content:
           - name: enable
             label: Enable
             type: boolean
-            description: Enable or disable the site-wide notice.
           - name: body
             label: Notice
             type: rich-text
