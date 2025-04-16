@@ -66,9 +66,9 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location, tier.label, link, image ]
+      fields: [ name, location, "tier[0].label", link, image ]
       primary: name
-      sort: [ name, tier.value, location ]
+      sort: [ name, "tier[0].value", location ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
     type: collection
