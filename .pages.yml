@@ -39,10 +39,6 @@ content:
         label: Image
         type: image
         description: For company logos
-      - name: identifier
-        label: Identifier
-        type: uuid
-        hidden: true
       - name: permalink
         label: Permalink
         type: boolean
@@ -50,7 +46,7 @@ content:
         hidden: true
     view:
       fields: [ name, location, link, image ]
-      primary: identifier
+      primary: name
       sort: [ name ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
@@ -67,19 +63,17 @@ content:
       - name: order
         label: Order
         type: number
-      - name: identifier
-        label: Identifier
-        type: uuid
-        hidden: true
       - name: permalink
         label: Permalink
         type: boolean
         default: false
         hidden: true
     view:
-      fields: [ title, order, amount ]
-      primary: identifier
+      fields: [ order, title, amount ]
+      primary: title
       sort: [ order, title ]
+      default:
+        order: "asc"
   - name: event-rules
     label: Event Rules
     type: collection
