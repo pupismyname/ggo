@@ -16,7 +16,7 @@ content:
         type: object
         fields:
           - name: enabled
-            label: Enabled
+            label: Enable
             type: boolean
           - name: body
             label: Notice
