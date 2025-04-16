@@ -1,10 +1,10 @@
 media:
   - name: Images
     input: src/images
-    output: src/images
+    output: /images
   - name: Files
     input: src/files
-    output: src/files
+    output: /files
 content:
   - name: site-configuration
     label: Site configuration
