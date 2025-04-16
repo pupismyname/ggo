@@ -6,17 +6,17 @@ https://www.notion.so/718fe32638324c308e83ce3e9e881735?v=96f3538ef9954c0abed345b
 More information is on the GGO page:
 https://www.notion.so/GGO-43af25afc3e4420c8b88aa087a2767c8
 
-To move to a new year of sponsors on the website, change `year` in `src/pages/_data/sponsors.js`.
+To move to a new year of sponsors on the website, change `year` in `src/pages/_data/notionSponsors.js`.
 
 {% endcomment %}
 
 <div class="fg section sponsors">
   <div class="fg-12">
-    <h2 class="bg-shiny">{{ sponsors.year }} Sponsors</h2>
+    <h2 class="bg-shiny">{{ notionSponsors.year }} Sponsors</h2>
     <p>Want to be a sponsor? <a href="https://www.georgiagoldolympics.com/forms/donations/ggodonation.php">Make a donation online!</a></p>
   </div>
-  {% for slug in sponsors.order -%}
-    {% assign category = sponsors.categories[slug] -%}
+  {% for slug in notionSponsors.order -%}
+    {% assign category = notionSponsors.categories[slug] -%}
     {% if forloop.index < 3 -%}
       {% assign classes = "fg-12 fg-lg-6" -%}
     {% elsif forloop.index < 6 -%}

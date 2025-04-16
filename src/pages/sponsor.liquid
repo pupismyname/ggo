@@ -10,8 +10,8 @@ title: "Sponsor"
     <h3>Levels of Contribution</h3>
     <p>The Georgia Golden Olympics, (Georgia Golden Games, Inc.) is actively seeking long-range funding and support in order to improve the quality and quantity of events and services, and to increase participation through expanded promotion of the event. There are several levels of contribution with increasing benefits at each level. These contribution levels are as follow:</p>
     <table>
-      {% for slug in sponsors.order -%}
-        {% assign category = sponsors.categories[slug] -%}
+      {% for slug in notionSponsors.order -%}
+        {% assign category = notionSponsors.categories[slug] -%}
         <tr>
           <th class="color-{{ slug }}">{{ category.title }}</th>
           <td>{{ category.amount }}</td>
@@ -36,4 +36,4 @@ title: "Sponsor"
   </div>
 </div>
 
-{%- render "sponsors.liquid", sponsors: sponsors %}
+{%- render "sponsors.liquid", notionSponsors: notionSponsors %}
