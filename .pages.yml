@@ -57,8 +57,8 @@ content:
       - name: title
         label: Title
         type: string
-      - name: full-name
-        label: Full name
+      - name: full-title
+        label: Full title
         type: string
       - name: amount
         label: Amount
@@ -72,9 +72,9 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ order, title, amount, full-name ]
+      fields: [ order, title, full-title, amount ]
       primary: title
-      sort: [ order, title, full-name ]
+      sort: [ order, title, full-title ]
       default:
         sort: order
         order: asc
