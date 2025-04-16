@@ -23,7 +23,7 @@ content:
     label: Sponsors
     type: collection
     path: src/pages/sponsors
-    filename: "{fields.name}-{fields.id}.md"
+    filename: "{fields.name}-{fields.identifier}.md"
     fields:
       - name: name
         label: Name
@@ -52,13 +52,13 @@ content:
           editable: false
     view:
       fields: [ name, location, link, image ]
-      primary: id
+      primary: identifier
       sort: [ name ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
     type: collection
     path: src/pages/sponsorship-tiers
-    filename: "{fields.name}-{primary}.md"
+    filename: "{fields.name}-{fields.identifier}.md"
     fields:
       - name: name
         label: Name
@@ -82,7 +82,7 @@ content:
           editable: false
     view:
       fields: [ name, order, amount ]
-      primary: id
+      primary: identifier
       sort: [ order, name ]
   - name: event-rules
     label: Event Rules
