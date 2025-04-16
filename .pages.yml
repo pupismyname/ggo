@@ -11,12 +11,16 @@ content:
     type: file
     path: src/pages/_data/configuration.json
     fields:
-      - name: currentYear
-        label: Current year
-        type: string
-      - name: previousYear
-        label: Previous year
-        type: string
+      - name: years
+        label: Years
+        type: object
+        fields:
+          - name: currentYear
+            label: Current year
+            type: string
+          - name: previousYear
+            label: Previous year
+            type: string
       - name: siteNotice
         label: Site notice
         type: object
