@@ -79,34 +79,24 @@ content:
       sort: [ name ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
-    type: collection
-    path: src/pages/sponsorship-tiers
+    type: file
+    path: src/pages/_data/sponsorshipTiers.json
     filename: "{fields.slug}.md"
     fields:
-      - name: order
-        label: Order
-        type: number
-      - name: title
-        label: Title
-        type: string
-      - name: slug
-        label: Slug
-        type: string
-      - name: amount
-        label: Amount
-        type: string
-      - name: permalink
-        label: Permalink
-        type: boolean
-        default: false
-        hidden: true
-    view:
-      fields: [ order, title, slug, amount ]
-      primary: title
-      sort: [ order, title, slug ]
-      default:
-        sort: order
-        order: asc
+      - name: tiers
+        label: Tiers
+        type: object
+        list: true
+        fields:
+        - name: title
+          label: Title
+          type: string
+        - name: slug
+          label: Slug
+          type: string
+        - name: amount
+          label: Amount
+          type: string
   - name: event-rules
     label: Event Rules
     type: collection
