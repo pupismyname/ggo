@@ -48,7 +48,7 @@ content:
             type: date
           - name: registrationLink
             label: Online registration
-            type: text
+            type: string
             description: Link to the online registration form
       - name: siteNotice
         label: Site notice
