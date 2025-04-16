@@ -91,7 +91,7 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location, tier, link, image ]
+      fields: [ order, name, location, tier, link, image ]
       primary: name
       sort: [ name, tier, location ]
   - name: event-rules
