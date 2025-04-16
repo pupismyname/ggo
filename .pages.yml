@@ -50,7 +50,7 @@ content:
         hidden: true
     view:
       fields: [ name, location, link, image ]
-      primary: name
+      primary: id
       sort: [ name ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
@@ -78,7 +78,7 @@ content:
         hidden: true
     view:
       fields: [ name, order, amount ]
-      primary: name
+      primary: id
       sort: [ order, name ]
   - name: event-rules
     label: Event Rules
