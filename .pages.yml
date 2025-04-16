@@ -35,6 +35,7 @@ content:
       - name: tier
         label: Sponsorship Tier
         type: select
+        description: Delete the tier to remove the sponsor from the listing.
         options:
           values:
             - value: friends
