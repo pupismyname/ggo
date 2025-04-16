@@ -52,7 +52,7 @@ content:
     label: Sponsorship Tiers
     type: collection
     path: src/pages/sponsorship-tiers
-    filename: "{primary}.md"
+    filename: "{fields.slug}.md"
     fields:
       - name: order
         label: Order
