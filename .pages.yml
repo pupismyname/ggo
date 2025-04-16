@@ -48,7 +48,8 @@ content:
         label: Permalink
         type: boolean
         default: false
-        editable: false
+        options:
+          editable: false
     view:
       fields: [ name, location, link, image ]
       primary: id
