@@ -57,6 +57,9 @@ content:
       - name: title
         label: Title
         type: string
+      - name: full-name
+        label: Full name
+        type: string
       - name: amount
         label: Amount
         type: string
