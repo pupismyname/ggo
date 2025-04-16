@@ -54,27 +54,27 @@ content:
     path: src/pages/sponsorship-tiers
     filename: "{primary}.md"
     fields:
+      - name: order
+        label: Order
+        type: number
       - name: title
         label: Title
         type: string
-      - name: full-title
-        label: Full title
+      - name: slug
+        label: Slug
         type: string
       - name: amount
         label: Amount
         type: string
-      - name: order
-        label: Order
-        type: number
       - name: permalink
         label: Permalink
         type: boolean
         default: false
         hidden: true
     view:
-      fields: [ order, title, full-title, amount ]
+      fields: [ order, title, slug, amount ]
       primary: title
-      sort: [ order, title, full-title ]
+      sort: [ order, title, slug ]
       default:
         sort: order
         order: asc
