@@ -1,7 +1,7 @@
 ---
-title: Torch Club
-full-title: Torch Club
-amount: $100 – $499
 order: 6
+title: Torch Club
+slug: torch
+amount: $100 – $499
 permalink: false
 ---

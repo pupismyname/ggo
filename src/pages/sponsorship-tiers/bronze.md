@@ -1,7 +1,7 @@
 ---
-title: Bronze
-full-title: Bronze Sponsors
-amount: $500 – $999
 order: 5
+title: Bronze Sponsors
+slug: bronze
+amount: $500 – $999
 permalink: false
 ---
