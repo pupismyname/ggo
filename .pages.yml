@@ -50,6 +50,7 @@ content:
       - name: order
         label: Order
         type: number
+        description: Positive numbers indicate this entry's position from the top of the list. Negative numbers indicate this entry's position from the bottom of the list.
       - name: name
         label: Name
         type: string
