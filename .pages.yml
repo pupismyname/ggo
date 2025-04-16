@@ -46,6 +46,14 @@ content:
           - name: registrationDeadline
             label: Registration deadline
             type: date
+          - name: registrationOpen
+            label: Is registration open?
+            type: boolean
+            description: Hide registration form and online registration links until registration officially opens.
+          - name: registrationForm
+            label: Registration form
+            type: file
+            description: Link to the online registration form
           - name: registrationLink
             label: Online registration
             type: string
