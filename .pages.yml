@@ -56,8 +56,10 @@ content:
             description: Hide registration form and online registration links until registration officially opens.
           - name: registrationForm
             label: Registration form
-            type: file
+            type: image
             description: Link to the online registration form
+            options:
+              media: files
           - name: registrationLink
             label: Online registration
             type: string
