@@ -22,6 +22,7 @@ content:
   - name: sponsors
     label: Sponsors
     type: collection
+    description: Delete the sponsor's tier to remove them from the listing. Do not delete the entire entry.
     path: src/pages/sponsors
     filename: "{fields.name}-{fields.location}.md"
     fields:
