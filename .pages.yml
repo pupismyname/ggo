@@ -56,10 +56,10 @@ content:
     label: Sponsorship Tiers
     type: collection
     path: src/pages/sponsorship-tiers
-    filename: "{fields.name}-{primary}.md"
+    filename: "{primary}.md"
     fields:
-      - name: name
-        label: Name
+      - name: title
+        label: title
         type: string
       - name: amount
         label: Amount
@@ -77,9 +77,9 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, order, amount ]
+      fields: [ title, order, amount ]
       primary: identifier
-      sort: [ order, name ]
+      sort: [ order, title ]
   - name: event-rules
     label: Event Rules
     type: collection
