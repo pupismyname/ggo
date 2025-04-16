@@ -46,6 +46,7 @@ content:
     description: Delete the sponsor's tier to remove them from the listing. Do not delete the entire entry.
     path: src/pages/sponsors
     filename: "{fields.name}-{fields.location}.md"
+    exclude: [ sponsors.11tydata.json ]
     fields:
       - name: order
         label: Order
@@ -85,11 +86,6 @@ content:
         label: Image
         type: image
         description: Usually for company logos
-      - name: permalink
-        label: Permalink
-        type: boolean
-        default: false
-        hidden: true
     view:
       fields: [ order, name, location, tier, link, image ]
       primary: name
@@ -99,6 +95,7 @@ content:
     type: collection
     path: src/pages/events
     filename: "{primary}.md"
+    exclude: [ events.11tydata.json ]
     view:
       fields: [ title, published, updated ]
       primary: title
