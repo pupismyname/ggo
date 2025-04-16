@@ -55,7 +55,7 @@ content:
     filename: "{primary}.md"
     fields:
       - name: title
-        label: title
+        label: Title
         type: string
       - name: amount
         label: Amount
