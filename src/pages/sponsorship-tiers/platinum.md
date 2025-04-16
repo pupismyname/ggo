@@ -1,7 +1,7 @@
 ---
-title: Platinum
-full-title: Platinum Sponsors
-amount: $5000 – $9999
 order: 2
+title: Platinum Sponsors
+slug: platinum
+amount: $5000 – $9999
 permalink: false
 ---
