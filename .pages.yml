@@ -23,7 +23,7 @@ content:
     label: Sponsors
     type: collection
     path: src/pages/sponsors
-    filename: "{fields.name}-{location}.md"
+    filename: "{fields.name}-{fields.location}.md"
     fields:
       - name: name
         label: Name
