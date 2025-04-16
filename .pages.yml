@@ -32,13 +32,6 @@ content:
         label: Location
         type: string
         description: Usually formatted as `City, ST`, or just `City` if state is GA
-      - name: link
-        label: Link
-        type: string
-      - name: image
-        label: Image
-        type: image
-        description: For company logos
       - name: years
         label: Years
         type: object
@@ -55,6 +48,13 @@ content:
             type: select
             options:
               values: [ 'friends', 'torch', 'bronze', 'silver', 'gold', 'platinum', 'corporate' ]
+      - name: link
+        label: Link
+        type: string
+      - name: image
+        label: Image
+        type: image
+        description: For company logos
       - name: permalink
         label: Permalink
         type: boolean
