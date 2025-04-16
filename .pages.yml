@@ -64,13 +64,13 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location, link, image ]
+      fields: [ name, location, tier, link, image ]
       primary: name
-      sort: [ name ]
+      sort: [ name, tier, location ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
-    type: file
-    path: src/pages/_data/sponsorshipTiers.json
+    type: collection
+    path: src/pages/sponsorship-tiers
     filename: "{fields.slug}.md"
     fields:
       - name: tiers
