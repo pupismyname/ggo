@@ -1,22 +1,9 @@
-{% comment %}
-
-Sponsors are stored in Notion in the Sponsorships table:
-https://www.notion.so/718fe32638324c308e83ce3e9e881735?v=96f3538ef9954c0abed345bda5db7f5e
-
-More information is on the GGO page:
-https://www.notion.so/GGO-43af25afc3e4420c8b88aa087a2767c8
-
-To move to a new year of sponsors on the website, change `year` in `src/pages/_data/notionSponsors.js`.
-
-{% endcomment %}
-
 <div class="fg section sponsors">
   <div class="fg-12">
-    <h2 class="bg-shiny">{{ notionSponsors.year }} Sponsors</h2>
+    <h2 class="bg-shiny">{{ configuration.year }} Sponsors</h2>
     <p>Want to be a sponsor? <a href="https://www.georgiagoldolympics.com/forms/donations/ggodonation.php">Make a donation online!</a></p>
   </div>
-  {% for slug in notionSponsors.order -%}
-    {% assign category = notionSponsors.categories[slug] -%}
+  {% for tier in configuration.sponsorshipTiers.tiers -%}
     {% if forloop.index < 3 -%}
       {% assign classes = "fg-12 fg-lg-6" -%}
     {% elsif forloop.index < 6 -%}
@@ -24,38 +11,39 @@ To move to a new year of sponsors on the website, change `year` in `src/pages/_d
     {% else -%}
       {% assign classes = "fg-12 fg-lg-6 sponsors-wrap" -%}
     {% endif -%}
-
-    <div class="{{ classes }} sponsor-list sponsors-{{ slug }}">
-      <h4 class="sponsor-bg bg-{{ slug }} bg-shiny">{{ category.title }}</h4>
-      <h5>{{ category.amount }}</h5>
+    <div class="{{ classes }} sponsor-list sponsors-{{ tier.slug }}">
+      <h4 class="sponsor-bg bg-{{ tier.slug }} bg-shiny">{{ tier.title }}</h4>
+      <h5>{{ tier.amount }}</h5>
       <ul>
-        {% for sponsor in category.sponsors -%}
-          <li>
+        {% for sponsor in collections.sponsors -%}
+          {% if sponsor.data.tier == tier.slug -%}
+            <li>
 
-            {% if sponsor.url and sponsor.image -%}
-              <a href="{{ sponsor.url }}">
-            {% endif -%}
-            {% if sponsor.image -%}
-              <img class="sponsor-img" src="{{ sponsor.image }}" alt="{{ sponsor.name }}">
-            {% endif -%}
-            {% if sponsor.url and sponsor.image -%}
-              </a>
-            {% endif -%}
+              {% if sponsor.data.link and sponsor.data.image -%}
+                <a href="{{ sponsor.data.link }}">
+              {% endif -%}
+              {% if sponsor.data.image -%}
+                <img class="sponsor-img" src="{{ sponsor.data.image }}" alt="{{ sponsor.data.name }}">
+              {% endif -%}
+              {% if sponsor.data.link and sponsor.data.image -%}
+                </a>
+              {% endif -%}
 
-            {% if sponsor.url -%}
-              <a href="{{ sponsor.url }}">
-            {%- endif -%}
-            <span class="sponsor-name">{{ sponsor.name }}</span>
-            {%- if sponsor.url -%}
-              </a>
-            {%- endif -%}
+              {% if sponsor.data.link -%}
+                <a href="{{ sponsor.data.link }}">
+              {%- endif -%}
+              <span class="sponsor-name">{{ sponsor.data.name }}</span>
+              {%- if sponsor.data.link -%}
+                </a>
+              {%- endif -%}
 
-            {%- if sponsor.location -%}
-              <span class="sponsor-separator"> - </span>
-              <span class="sponsor-location">{{ sponsor.location }}</span>
-            {% endif -%}
+              {%- if sponsor.data.location -%}
+                <span class="sponsor-separator"> - </span>
+                <span class="sponsor-location">{{ sponsor.data.location }}</span>
+              {% endif -%}
 
-          </li>
+            </li>
+          {% endif -%}
         {% endfor -%}
       </ul>
     </div>
