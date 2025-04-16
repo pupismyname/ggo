@@ -61,7 +61,7 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location, "years.year.value", link, image ]
+      fields: [ name, location, "years.year.name", link, image ]
       primary: name
       sort: [ name ]
   - name: event-rules
