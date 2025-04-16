@@ -32,22 +32,6 @@ content:
         label: Location
         type: string
         description: Usually formatted as `City, ST`, or just `City` if state is GA
-      - name: years
-        label: Years
-        type: object
-        list: true
-        fields:
-          - name: year
-            label: Year
-            type: select
-            options:
-              values: [ '2023' ]
-              creatable: true
-          - name: tier
-            label: Tier
-            type: select
-            options:
-              values: [ 'friends', 'torch', 'bronze', 'silver', 'gold', 'platinum', 'corporate' ]
       - name: link
         label: Link
         type: string
@@ -61,7 +45,7 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location, "years.year.name", "years.tier.name", link, image ]
+      fields: [ name, location, link, image ]
       primary: name
       sort: [ name ]
   - name: event-rules
