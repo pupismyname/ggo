@@ -73,16 +73,16 @@ content:
       primary: title
       sort: [ order, title ]
       default:
-        order: "asc"
+        order: asc
   - name: event-rules
     label: Event Rules
     type: collection
     path: src/pages/events
     filename: "{primary}.md"
     view:
-      fields: [ primary, published, updated ]
+      fields: [ title, published, updated ]
       primary: title
-      sort: [ primary, updated ]
+      sort: [ title, updated ]
     fields:
       - name: title
         label: Title
