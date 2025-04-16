@@ -15,8 +15,8 @@ content:
         label: Site notice
         type: object
         fields:
-          - name: enable
-            label: Enable
+          - name: enabled
+            label: Enabled
             type: boolean
           - name: body
             label: Notice
