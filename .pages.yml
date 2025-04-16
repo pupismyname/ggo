@@ -42,14 +42,12 @@ content:
       - name: identifier
         label: Identifier
         type: uuid
-        options:
-          editable: false
+        hidden: true
       - name: permalink
         label: Permalink
         type: boolean
         default: false
-        options:
-          editable: false
+        hidden: true
     view:
       fields: [ name, location, link, image ]
       primary: identifier
@@ -72,14 +70,12 @@ content:
       - name: identifier
         label: Identifier
         type: uuid
-        options:
-          editable: false
+        hidden: true
       - name: permalink
         label: Permalink
         type: boolean
         default: false
-        options:
-          editable: false
+        hidden: true
     view:
       fields: [ name, order, amount ]
       primary: identifier
