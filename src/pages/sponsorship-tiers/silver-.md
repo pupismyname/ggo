@@ -1,7 +1,7 @@
 ---
-name: Silver
+title: Silver
 amount: $1000 – $2499
 order: 4
-identifier: 00c5b442-7cbe-4759-aad0-3f7434bcd678
+identifier: 5b36a0ed-3fe8-450e-9438-846ad5bcbc23
 permalink: false
 ---
