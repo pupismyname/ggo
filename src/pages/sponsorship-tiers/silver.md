@@ -1,6 +1,6 @@
 ---
 title: Silver
-full-name: Silver Sponsors
+full-title: Silver Sponsors
 amount: $1000 – $2499
 order: 4
 permalink: false
