@@ -73,6 +73,7 @@ content:
       primary: title
       sort: [ order, title ]
       default:
+        sort: order
         order: asc
   - name: event-rules
     label: Event Rules
