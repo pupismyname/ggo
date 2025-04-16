@@ -39,15 +39,16 @@ content:
         label: Image
         type: image
         description: For company logos
-      - name: id
-        label: ID
+      - name: identifier
+        label: Identifier
         type: uuid
-        hidden: true
+        options:
+          editable: false
       - name: permalink
         label: Permalink
         type: boolean
         default: false
-        hidden: true
+        editable: false
     view:
       fields: [ name, location, link, image ]
       primary: id
@@ -67,15 +68,17 @@ content:
       - name: order
         label: Order
         type: number
-      - name: id
-        label: ID
+      - name: identifier
+        label: Identifier
         type: uuid
-        hidden: true
+        options:
+          editable: false
       - name: permalink
         label: Permalink
         type: boolean
         default: false
-        hidden: true
+        options:
+          editable: false
     view:
       fields: [ name, order, amount ]
       primary: id
