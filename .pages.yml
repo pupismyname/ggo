@@ -30,11 +30,13 @@ content:
         type: reference
         options:
           collection: sponsors
+          value: "{name} - {location}"
       - name: tier
         label: Tier
         type: reference
         options:
           collection: sponsorship-tiers
+          value: "{title}"
       - name: year
         label: Year
         type: select
