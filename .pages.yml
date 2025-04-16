@@ -11,16 +11,35 @@ content:
     type: file
     path: src/pages/_data/configuration.json
     fields:
-      - name: years
-        label: Years
+      - name: ggoInfo
+        label: GGO Information
         type: object
         fields:
-          - name: currentYear
-            label: Current year
+          - name: year
+            label: Year
             type: string
-          - name: previousYear
-            label: Previous year
-            type: string
+            description: The year for the current iteration of the games.
+          - name: status
+            label: Status
+            type: select
+            description: Change some of the phrasing on the site depending on whether the games are upcoming, ongoing, or in the past.
+            options:
+              values:
+                - value: past
+                  label: Past
+                - value: present
+                  label: Present
+                - value: future
+                  label: Future
+          - name: startDate
+            label: Start date
+            type: date
+          - name: endDate
+            label: End date
+            type: date
+          - name: registrationDeadline
+            label: Registration deadline
+            type: date
       - name: siteNotice
         label: Site notice
         type: object
