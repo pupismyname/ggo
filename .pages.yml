@@ -61,9 +61,9 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ name, location, "years[0].year", link, image ]
+      fields: [ name, location, "years.year", link, image ]
       primary: name
-      sort: [ name, "years[0].year" ]      
+      sort: [ name ]
   - name: event-rules
     label: Event Rules
     type: collection
