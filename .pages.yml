@@ -72,9 +72,9 @@ content:
         default: false
         hidden: true
     view:
-      fields: [ order, title, amount ]
+      fields: [ order, title, amount, full-name ]
       primary: title
-      sort: [ order, title ]
+      sort: [ order, title, full-name ]
       default:
         sort: order
         order: asc
