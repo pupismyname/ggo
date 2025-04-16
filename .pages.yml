@@ -56,7 +56,7 @@ content:
     label: Sponsorship Tiers
     type: collection
     path: src/pages/sponsorship-tiers
-    filename: "{fields.name}-{fields.identifier}.md"
+    filename: "{fields.name}-{primary}.md"
     fields:
       - name: name
         label: Name
