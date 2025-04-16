@@ -16,11 +16,11 @@ content:
         type: object
         fields:
           - name: enable
-            label: Enable Site-wide notice
+            label: Enable
             type: boolean
             description: Enable or disable the site-wide notice.
           - name: body
-            label: Site-wide notice
+            label: Notice
             type: rich-text
             description: When enabled, this notice appears at the top of every page. It is intended for critical announcements and should only be temporary. For example, use this to announce the games are canceled for that year (2020, 2025).
       - name: sponsorshipTiers
