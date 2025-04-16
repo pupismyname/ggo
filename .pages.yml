@@ -37,9 +37,19 @@ content:
           - name: endDate
             label: End date
             type: date
+          - name: registrationOpens
+            label: Registration opens
+            type: date
+          - name: earlyRegistrationDeadline
+            label: Early registration deadline
+            type: date
           - name: registrationDeadline
             label: Registration deadline
             type: date
+          - name: registrationLink
+            label: Online registration
+            type: text
+            description: Link to the online registration form
       - name: siteNotice
         label: Site notice
         type: object
