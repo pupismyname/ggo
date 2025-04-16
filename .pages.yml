@@ -59,16 +59,16 @@ content:
       - name: image
         label: Image
         type: image
-        description: For company logos
+        description: Usually for company logos
       - name: permalink
         label: Permalink
         type: boolean
         default: false
         hidden: true
     view:
-      fields: [ name, location, "tier[0].label", link, image ]
+      fields: [ name, location, tier, link, image ]
       primary: name
-      sort: [ name, "tier[0].value", location ]
+      sort: [ name, tier, location ]
   - name: sponsorship-tiers
     label: Sponsorship Tiers
     type: collection
