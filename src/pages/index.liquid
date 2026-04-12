@@ -4,55 +4,62 @@ title: "Home"
 
 <div class="fg section">
 
-  <div class="fg-md-5 fg-lg-7 fg-xl-6">
-
-    <div class="fg hero bg-shiny bg-shiny-cover">
-
-      <div class="fg-sm-6 fg-md-12 fg-lg-6">
-        <h2>Sept 17–21, 2024</h2>
-        <h3>Warner Robins, GA</h3>
-        <p><a class="bg-shiny bg-shiny-cover button-shiny bg-gold" href="/files/Results for Web 12-27-24.pdf">2024 Results</a></p>
-        {% comment %} <p><a class="bg-shiny bg-shiny-cover button-shiny bg-gold" href="/files/Registration 2024-final.pdf">2024 Registration</a></p> {% endcomment %}
+  <div class="fg-lg-5">
+    <div class="hero-collage">
+      <div class="hero-collage-item">
+        <img class="hero-collage-img" src="/images/photos/woman-jumping.jpg" alt="A woman jumping in a track and field event.">
+        <img class="hero-collage-img" src="/images/photos/man-jumping.jpg" alt="A man running in a track and field event.">
       </div>
+      <div class="hero-collage-item">
+        <img class="hero-collage-img" src="/images/photos/man-running.jpg" alt="A man jumping in a track and field event as spectators look on.">
+        <img class="hero-collage-img" src="/images/photos/ladies-basketball.jpg" alt="A group of women show off the medals they won in the basketball event.">
+      </div>
+    </div>
+  </div>
 
-      <div class="fg-sm-6 fg-md-12 fg-lg-6">
+  <div class="fg-0 fg-xl-1"></div>
+
+  <div class="fg-lg-7 fg-xl-6">
+
+    <div class="fg hero bg-shiny">
+      <div class="fg-sm-6">
+        <h2>Sept 22–26, 2026</h2>
+        <h3>Clayton and Henry counties, GA</h3>
+        <p><a class="bg-shiny button-shiny bg-gold" href="/files/Results for Web 12-27-24.pdf">2024 Results</a></p>
+        {% comment %} <p><a class="bg-shiny button-shiny bg-gold" href="/files/Registration 2024-final.pdf">2024 Registration</a></p> {% endcomment %}
+      </div>
+      <div class="fg-sm-6 fg-lg-6">
         <ul>
           {% comment %} <li><strong><a href="https://www.georgiagoldolympics.com/forms/ggoregistrationform1.php">2024 Online Registration</a></strong></li> {% endcomment %}
           <li><a href="/files/Rule Book 2024-Final.pdf">2024 Event List & Rules</a></li>
           <li><a href="/files/Flyer 1 2024.pdf">2024 Flyer</a></li>
           <li><a href="/files/results 9-29-23.pdf">2023 Results</a></li>
         </ul>
-        <p><strong>Event schedule is at the bottom of the <a href="/files/Registration 2024-final.pdf">registration form</a>.</strong></p>
+        <p><strong>Registration opens May 1, 2026.</strong></p>
       </div>
-
     </div>
 
+    <br>
+
+    <div class="bg-shiny bg-friends-subdued">
+      <p>The Georgia Golden Olympics is a statewide event for adults 50 years of age or older. A variety of activities are held to make it possible for participation regardless of an individual's age or physical ability.</p>
+      <p><a href="/about/">Learn more about us!</a></p>
+    </div>
+
+  </div>
+
+  <div class="fg-md-7 fg-xl-6">
+    {%- render "games-description-2026-before.liquid" %}
   </div>
 
   <div class="fg-0 fg-xl-1"></div>
 
-  <div class="fg-md-7 fg-lg-5">
-    <div class="bg-shiny bg-shiny-cover bg-friends-subdued">
-      <p>The Georgia Golden Olympics is a statewide event for adults 50 years of age or older. A variety of activities are held to make it possible for participation regardless of an individual's age or physical ability.</p>
-      <p><a href="/about/">Learn more about us!</a></p>
-    </div>
-  </div>
-
-  <div class="fg-md-6 fg-lg-7">
-    {%- render "games-description-2024-after.liquid" %}
-    {% comment %} <p><strong>Registration is open!</strong></p> {% endcomment %}
-    {% comment %} <p>If you have competed in the Georgia event in prior years, you may <a href="https://www.georgiagoldolympics.com/forms/ggoregistrationform1.php">register online</a>. If not, please print the form from the website and mail with age verification to the address listed in the form.</p> {% endcomment %}
+  <div class="fg-md-5">
+    {%- render "ngsa-2027-future.liquid", float: true %}
     <br>
     {%- render "follow-ggo.liquid" %}
   </div>
 
-  <div class="fg-0 fg-md-1"></div>
-
-  <div class="fg-md-5 fg-lg-4">
-    {%- render "ngsa-2025-future.liquid", float: true %}
-    {% comment %} <br> {% endcomment %}
-    {% comment %} {%- render "follow-ggo.liquid" %} {% endcomment %}
-  </div>
 
 </div>
 
