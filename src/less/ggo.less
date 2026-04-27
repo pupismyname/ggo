@@ -113,14 +113,13 @@ h1, h2, h3, h4, h5, h6 {
 .site {
   display: grid;
   grid-template-columns: 0 1fr 0;
-  gap: 2rem 1rem;
-  @media @mq-xs {
-    grid-template-columns: 1fr min(@breakpoint-xxl, 100%) 1fr;
-  }
+  gap: 2rem 0;
+  grid-template-columns: 1fr min(@breakpoint-xxl, 100%) 1fr;
 }
 
 .site > * {
   grid-column: 2;
+  padding-inline: 1rem;
 }
 
 .section {
@@ -515,31 +514,24 @@ footer {
 }
 
 .hero-collage-inner {
+  display: grid;
   margin: 0 auto;
   max-width: min(@breakpoint-xxl, 100%);
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 2rem;
-  padding: 2rem 1rem;
-  @media @mq-md {
-    grid-template-columns: repeat(4, auto);
-  }
-  @media @mq-xxl {
-    padding: 2rem 0;
-  }
+  gap: min(2rem, 4vmin);
+  padding: min(3rem, 6vmin) min(2rem, 4vmin);
+  grid-auto-flow: column;
 }
 
 .hero-collage-img {
   display: block;
-  max-height: 17.8rem; // magic number based on the aspect ratio of the 4 images in the collage
+  max-height: min(16.1rem, 30vmin); // magic number based on the aspect ratio of the 4 images in the collage
   max-width: 100%;
-  border: 0.5rem solid @more-subdued-banner;
-  padding: 0;
+  border: min(0.5rem, 1vmin) solid @light;
   place-self: center center;
-  box-shadow: 0 0.5rem 1rem fade(@banner, 50%);
-  &:nth-child(1) { transform: rotate(2deg); }
-  &:nth-child(2) { transform: rotate(-1deg); }
-  &:nth-child(3) { transform: rotate(1deg); }
-  &:nth-child(4) { transform: rotate(-2deg); }
+  box-shadow: 0 0.5rem 1rem fade(@dark, 50%);
+  &:nth-child(1) { transform: scale(1.25) rotate(2deg); }
+  &:nth-child(2) { transform: scale(1.25) rotate(-1deg); }
+  &:nth-child(3) { transform: scale(1.25) rotate(1deg); }
+  &:nth-child(4) { transform: scale(1.25) rotate(-2deg); }
 }
