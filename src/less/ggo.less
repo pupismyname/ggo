@@ -15,7 +15,7 @@
 @mq-xl:  ~"screen and (min-width: @{breakpoint-xl})";
 @mq-xxl: ~"screen and (min-width: @{breakpoint-xxl})";
 
-@c-base:  #334;
+@c-base: #393443;
 @c-base-0:  lighten(@c-base, (32% * 0), relative);
 @c-base-1:  lighten(@c-base, (32% * 1), relative);
 @c-base-2:  lighten(@c-base, (32% * 2), relative);
@@ -42,6 +42,8 @@
 @bronze:      #cb9254;
 @torch:       #e4686a;
 @friends:     #1679f3;
+// @banner:      #5e17eb;
+@banner:      #7538ee;
 @subdued-corporate:      mix(@corporate, #fff, 33%);
 @subdued-platinum:       mix(@platinum,  #fff, 33%);
 @subdued-gold:           mix(@gold,      #fff, 33%);
@@ -49,6 +51,7 @@
 @subdued-bronze:         mix(@bronze,    #fff, 33%);
 @subdued-torch:          mix(@torch,     #fff, 33%);
 @subdued-friends:        mix(@friends,   #fff, 33%);
+@subdued-banner:         mix(@banner,    #fff, 33%);
 @more-subdued-corporate: mix(@corporate, #fff, 16%);
 @more-subdued-platinum:  mix(@platinum,  #fff, 16%);
 @more-subdued-gold:      mix(@gold,      #fff, 16%);
@@ -56,6 +59,7 @@
 @more-subdued-bronze:    mix(@bronze,    #fff, 16%);
 @more-subdued-torch:     mix(@torch,     #fff, 16%);
 @more-subdued-friends:   mix(@friends,   #fff, 16%);
+@more-subdued-banner:    mix(@banner,    #fff, 16%);
 
 @shiny-highlight: fade(#fff, 50%);
 @shiny-lowlight:  fade(#000, 50%);
@@ -107,12 +111,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site {
-  max-width: @breakpoint-xxl;
-  padding: 2rem 1rem;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem; // same as padding-block
+  display: grid;
+  grid-template-columns: 0 1fr 0;
+  gap: 2rem 1rem;
+  @media @mq-xs {
+    grid-template-columns: 1fr min(@breakpoint-xxl, 100%) 1fr;
+  }
+}
+
+.site > * {
+  grid-column: 2;
 }
 
 .section {
@@ -389,6 +397,28 @@ header nav {
   }
 }
 
+h1.bg-shiny,
+h2.bg-shiny,
+h3.bg-shiny,
+h4.bg-shiny,
+h5.bg-shiny,
+h6.bg-shiny {
+  padding-block: 1em;
+}
+
+h1.bg-shiny,
+h2.bg-shiny,
+h3.bg-shiny,
+h4.bg-shiny,
+h5.bg-shiny,
+h6.bg-shiny {
+  a:first-child:last-child {
+    display: block;
+    margin: -1em -1rem;
+    padding: 1em 1rem;
+  }
+}
+
 .color-corporate { color: @corporate; }
 .color-platinum  { color: @platinum; }
 .color-gold      { color: @gold; }
@@ -396,6 +426,7 @@ header nav {
 .color-bronze    { color: @bronze; }
 .color-torch     { color: @torch; }
 .color-friends   { color: @friends; }
+.color-banner    { color: @banner; }
 
 .bg-shiny.bg-subdued:before   { border-color: @subdued-light; background-color: @light; }
 
@@ -406,6 +437,7 @@ header nav {
 .bg-shiny.bg-bronze:before    { border-color: @bronze;    background-color: @subdued-bronze; }
 .bg-shiny.bg-torch:before     { border-color: @torch;     background-color: @subdued-torch; }
 .bg-shiny.bg-friends:before   { border-color: @friends;   background-color: @subdued-friends; }
+.bg-shiny.bg-banner:before    { border-color: @banner;    background-color: @subdued-banner; }
 
 .bg-shiny.bg-corporate-subdued:before { border-color: @subdued-corporate; background-color: @more-subdued-corporate; }
 .bg-shiny.bg-platinum-subdued:before  { border-color: @subdued-platinum;  background-color: @more-subdued-platinum; }
@@ -414,6 +446,7 @@ header nav {
 .bg-shiny.bg-bronze-subdued:before    { border-color: @subdued-bronze;    background-color: @more-subdued-bronze; }
 .bg-shiny.bg-torch-subdued:before     { border-color: @subdued-torch;     background-color: @more-subdued-torch; }
 .bg-shiny.bg-friends-subdued:before   { border-color: @subdued-friends;   background-color: @more-subdued-friends; }
+.bg-shiny.bg-banner-subdued:before    { border-color: @subdued-banner;    background-color: @more-subdued-banner; }
 
 .hero {
   padding: 1rem;
@@ -447,6 +480,7 @@ a.button-shiny {
 }
 
 header {
+  padding-top: 2rem;
   h1 {
     margin: 0;
   }
@@ -458,6 +492,7 @@ header {
 footer {
   border-top: 1px solid @subdued-light;
   font-size: 0.8rem;
+  padding-bottom: 2rem;
 }
 
 .float-right {
@@ -471,35 +506,40 @@ footer {
 }
 
 .hero-collage {
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: 1fr 1fr;
+  grid-column: 1 / 4;
+  padding: 0;
+  &::before, &::after {
+    border-radius: 0;
+    border-inline: none;
+  }
 }
 
-.hero-collage-item {
+.hero-collage-inner {
+  margin: 0 auto;
+  max-width: min(@breakpoint-xxl, 100%);
+  width: 100%;
   display: grid;
-  gap: 0.5rem;
-  place-self: center center;
-  @media @mq-sm {
-    grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, auto);
+  gap: 2rem;
+  padding: 2rem 1rem;
+  @media @mq-md {
+    grid-template-columns: repeat(4, auto);
   }
-  @media @mq-lg {
-    grid-template-columns: auto;
+  @media @mq-xxl {
+    padding: 2rem 0;
   }
 }
 
 .hero-collage-img {
   display: block;
+  max-height: 17.8rem; // magic number based on the aspect ratio of the 4 images in the collage
   max-width: 100%;
-  width: auto;
-  height: auto;
-  border-radius: 0.5rem;
-  border: 1px solid @c-base-7;
+  border: 0.5rem solid @more-subdued-banner;
   padding: 0;
-  &::before, &::after {
-    z-index: 1;
-  }
-  @media @mq-sm {
-    place-self: center center;
-  }
+  place-self: center center;
+  box-shadow: 0 0.5rem 1rem fade(@banner, 50%);
+  &:nth-child(1) { transform: rotate(2deg); }
+  &:nth-child(2) { transform: rotate(-1deg); }
+  &:nth-child(3) { transform: rotate(1deg); }
+  &:nth-child(4) { transform: rotate(-2deg); }
 }

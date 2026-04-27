@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="site">
+
       <header class="fg">
         <div class="fg-sm-5 fg-md-4 fg-xl-6">
           <h1><a href="/"><img src="/images/ggo.gif" alt="Georgia Golden Olympics"></a></h1>
@@ -24,6 +25,16 @@
           </nav>
         </div>
       </header>
+
+      <div class="hero-collage bg-shiny bg-banner">
+        <div class="hero-collage-inner">
+          <img class="hero-collage-img" src="/images/photos/woman-jumping.jpg" alt="A woman jumping in a track and field event.">
+          <img class="hero-collage-img" src="/images/photos/man-jumping.jpg" alt="A man running in a track and field event.">
+          <img class="hero-collage-img" src="/images/photos/man-running.jpg" alt="A man jumping in a track and field event as spectators look on.">
+          <img class="hero-collage-img" src="/images/photos/ladies-basketball.jpg" alt="A group of women show off the medals they won in the basketball event.">
+        </div>
+      </div>
+
       <main>
         {%- if configuration['site-notice-enable'] == true %}
           <div class="fg section">
@@ -38,6 +49,7 @@
         {%- endif %}
         {{ content }}
       </main>
+
       <footer class="fg">
         <div class="fg-md-7">
           <p>Contact GGO Coordinator <a href="mailto:vcpilgrim@gmail.com">Vicki Pilgrim</a> at 770-867-3603</p>
@@ -46,6 +58,7 @@
           <p>&copy; {{ "now" | date: "%Y" }} <a href="https://georgiagoldenolympics.org/">Georgia Golden Olympics</a></p>
         </div>
       </footer>
-    </div>
+
+      </div>
   </body>
 </html>

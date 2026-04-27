@@ -4,21 +4,6 @@ title: "Home"
 
 <div class="fg section">
 
-  <div class="fg-lg-5">
-    <div class="hero-collage">
-      <div class="hero-collage-item">
-        <img class="hero-collage-img" src="/images/photos/woman-jumping.jpg" alt="A woman jumping in a track and field event.">
-        <img class="hero-collage-img" src="/images/photos/man-jumping.jpg" alt="A man running in a track and field event.">
-      </div>
-      <div class="hero-collage-item">
-        <img class="hero-collage-img" src="/images/photos/man-running.jpg" alt="A man jumping in a track and field event as spectators look on.">
-        <img class="hero-collage-img" src="/images/photos/ladies-basketball.jpg" alt="A group of women show off the medals they won in the basketball event.">
-      </div>
-    </div>
-  </div>
-
-  <div class="fg-0 fg-xl-1"></div>
-
   <div class="fg-lg-7 fg-xl-6">
 
     <div class="fg hero bg-shiny">
@@ -40,25 +25,21 @@ title: "Home"
 
     <br>
 
-    <div class="bg-shiny bg-friends-subdued">
+    {%- render "games-description-2026-before.liquid" %}
+    {%- render "follow-ggo.liquid" %}
+
+  </div>
+
+  <div class="fg-xl-1"></div>
+
+  <div class="fg-md-7 fg-xl-5">
+    <div class="bg-shiny bg-banner-subdued">
       <p>The Georgia Golden Olympics is a statewide event for adults 50 years of age or older. A variety of activities are held to make it possible for participation regardless of an individual's age or physical ability.</p>
       <p><a href="/about/">Learn more about us!</a></p>
     </div>
-
-  </div>
-
-  <div class="fg-md-7 fg-xl-6">
-    {%- render "games-description-2026-before.liquid" %}
-  </div>
-
-  <div class="fg-0 fg-xl-1"></div>
-
-  <div class="fg-md-5">
-    {%- render "ngsa-2027-future.liquid", float: true %}
     <br>
-    {%- render "follow-ggo.liquid" %}
+    {%- render "ngsa-2027-future.liquid", float: true %}
   </div>
-
 
 </div>
 
