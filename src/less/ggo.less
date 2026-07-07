@@ -6,8 +6,6 @@
 @breakpoint-xl:  64rem;
 @breakpoint-xxl: 75rem;
 
-// only use @mq-xxs for special cases
-@mq-xxs: ~"screen and (max-width: @{breakpoint-xxs})";
 @mq-xs:  ~"screen and (min-width: @{breakpoint-xs})";
 @mq-sm:  ~"screen and (min-width: @{breakpoint-sm})";
 @mq-md:  ~"screen and (min-width: @{breakpoint-md})";
@@ -42,8 +40,8 @@
 @bronze:      #cb9254;
 @torch:       #e4686a;
 @friends:     #1679f3;
-// @banner:      #5e17eb;
-@banner:      #7538ee;
+// @spirit:      #5e17eb;
+@spirit:      #9578ee;
 @subdued-corporate:      mix(@corporate, #fff, 33%);
 @subdued-platinum:       mix(@platinum,  #fff, 33%);
 @subdued-gold:           mix(@gold,      #fff, 33%);
@@ -51,7 +49,7 @@
 @subdued-bronze:         mix(@bronze,    #fff, 33%);
 @subdued-torch:          mix(@torch,     #fff, 33%);
 @subdued-friends:        mix(@friends,   #fff, 33%);
-@subdued-banner:         mix(@banner,    #fff, 33%);
+@subdued-spirit:         mix(@spirit,    #fff, 33%);
 @more-subdued-corporate: mix(@corporate, #fff, 16%);
 @more-subdued-platinum:  mix(@platinum,  #fff, 16%);
 @more-subdued-gold:      mix(@gold,      #fff, 16%);
@@ -59,7 +57,7 @@
 @more-subdued-bronze:    mix(@bronze,    #fff, 16%);
 @more-subdued-torch:     mix(@torch,     #fff, 16%);
 @more-subdued-friends:   mix(@friends,   #fff, 16%);
-@more-subdued-banner:    mix(@banner,    #fff, 16%);
+@more-subdued-spirit:    mix(@spirit,    #fff, 16%);
 
 @shiny-highlight: fade(#fff, 50%);
 @shiny-lowlight:  fade(#000, 50%);
@@ -325,8 +323,6 @@ header nav {
 .sponsor-img {
   max-width: 6em;
   max-height: 3em;
-  float: right;
-  margin: 0 0.5rem 0.5rem;
   border: 1px solid @subdued-light;
   padding: 0.5em;
   box-sizing: content-box;
@@ -344,21 +340,34 @@ header nav {
 }
 
 .sponsors-wrap {
-  @media @mq-xl {
-    ul {
-      column-count: 2;
-    }
-    li {
-      margin: 0;
-      padding: 0.2rem 0;
-    }
+  --column-count: 1;
+  @media @mq-sm { --column-count: 2; }
+  ul {
+    column-count: var(--column-count);
   }
-  .sponsor-location {
-    white-space: nowrap;
+  li {
+    margin: 0;
+    padding: 0.2rem 0;
+    break-inside: avoid;
   }
 }
 
-.sponsor-separator,
+.sponsors-wrap-wide {
+  @media @mq-lg { --column-count: 3; }
+  @media @mq-xl { --column-count: 4; }
+}
+
+.sponsor-location,
+.sponsor-name,
+.sponsor-img-link,
+.sponsor-img {
+  display: block;
+}
+
+.sponsor-separator {
+  display: none;
+}
+
 .separator {
   color: @mid;
 }
@@ -427,7 +436,7 @@ h6.bg-shiny {
 .color-bronze    { color: @bronze; }
 .color-torch     { color: @torch; }
 .color-friends   { color: @friends; }
-.color-banner    { color: @banner; }
+.color-spirit    { color: @spirit; }
 
 .bg-shiny.bg-subdued:before   { border-color: @subdued-light; background-color: @light; }
 
@@ -438,7 +447,7 @@ h6.bg-shiny {
 .bg-shiny.bg-bronze:before    { border-color: @bronze;    background-color: @subdued-bronze; }
 .bg-shiny.bg-torch:before     { border-color: @torch;     background-color: @subdued-torch; }
 .bg-shiny.bg-friends:before   { border-color: @friends;   background-color: @subdued-friends; }
-.bg-shiny.bg-banner:before    { border-color: @banner;    background-color: @subdued-banner; }
+.bg-shiny.bg-spirit:before    { border-color: @spirit;    background-color: @subdued-spirit; }
 
 .bg-shiny.bg-corporate-subdued:before { border-color: @subdued-corporate; background-color: @more-subdued-corporate; }
 .bg-shiny.bg-platinum-subdued:before  { border-color: @subdued-platinum;  background-color: @more-subdued-platinum; }
@@ -447,7 +456,7 @@ h6.bg-shiny {
 .bg-shiny.bg-bronze-subdued:before    { border-color: @subdued-bronze;    background-color: @more-subdued-bronze; }
 .bg-shiny.bg-torch-subdued:before     { border-color: @subdued-torch;     background-color: @more-subdued-torch; }
 .bg-shiny.bg-friends-subdued:before   { border-color: @subdued-friends;   background-color: @more-subdued-friends; }
-.bg-shiny.bg-banner-subdued:before    { border-color: @subdued-banner;    background-color: @more-subdued-banner; }
+.bg-shiny.bg-spirit-subdued:before    { border-color: @subdued-spirit;    background-color: @more-subdued-spirit; }
 
 .hero {
   padding: 1rem;
@@ -477,6 +486,9 @@ a.button-shiny {
   &:active:after,
   &:focus:after {
     background-color: @shiny-lowlight;
+  }
+  & + & {
+    margin-left: 1rem;
   }
 }
 

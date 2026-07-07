@@ -9,27 +9,26 @@ description: Help support the Georgia Golden Olympics.
   </div>
   <div class="fg-md-6">
     <h3>Levels of Contribution</h3>
-    <p>The Georgia Golden Olympics, (Georgia Golden Games, Inc.) is actively seeking long-range funding and support in order to improve the quality and quantity of events and services, and to increase participation through expanded promotion of the event. There are several levels of contribution with increasing benefits at each level. These contribution levels are as follow:</p>
+    <p>The Georgia Golden Olympics, (Georgia Golden Games, Inc.) is actively seeking long-range funding and support in order to improve the quality and quantity of events and services, and to increase participation through expanded promotion of the event. There are several levels of contribution with increasing benefits at each level. These contribution levels are as follows:</p>
     <table>
-      {% for slug in sponsors.order -%}
-        {% assign category = sponsors.categories[slug] -%}
+      {% assign data = sponsors.years | where: "year", sponsors.year %}
+      {% for category in data[0].categories %}
         <tr>
-          <th class="color-{{ slug }}">{{ category.title }}</th>
-          <td>{{ category.amount }}</td>
+          <th class="color-{{ category.key }}">{{ category.title }}</th>
+          <td>{{ category.description }}</td>
         </tr>
       {% endfor -%}
     </table>
     {% comment %} <p>Vendors must complete an <a href="/files/ggofundbro-2024.pdf">information form</a> and contribute at the Bronze level or higher.</p> {% endcomment %}
-    {% comment %} <p>Benefits offered at each level are detailed in the <a href="/files/ggofundbro-2024.pdf">Sponsorship Brochure</a>.</p> {% endcomment %}
+    <p>Benefits offered at each level are detailed in the <a href="/files/Corporate Event Sponsorship Package Flyer 2026.pdf (6).pdf">Sponsorship Packet</a>.</p>
+    <p><a class="bg-shiny button-shiny bg-friends" href="Corporate Event Sponsorship Package Flyer 2026.pdf (6).pdf">Sponsorship Packet</a></p>
   </div>
   <div class="fg-0 fg-md-1"></div>
   <div class="fg-md-5">
     <h3>Become a Sponsor</h3>
     <p>Georgia Golden Games, Inc. is a 501(c)(3) and is funded by in-kind contributions from the coordinating organizations and by contributions from corporations, community groups and individual friends and supporters interested in improving the health and well being of older adults. Your support is greatly appreciated.</p>
-    <p>If you'd like to be a sponsor, you can donate online at the following link:</p>
-    <ul>
-      <li><a href="https://www.zeffy.com/en-US/donation-form/donate-to-change-lives-13149">Donate Online</a></li>
-    </ul>
+    <p>If you'd like to be a sponsor, you can <a href="https://www.zeffy.com/en-US/ticketing/georgia-golden-olympics-sponsorship">donate online</a>.</p>
+    <p><a class="bg-shiny button-shiny bg-friends" href="https://www.zeffy.com/en-US/ticketing/georgia-golden-olympics-sponsorship">Donate Online</a></p>
     {% comment %}
     <p>You can also print and fill out the following form:</p>
     <ul>

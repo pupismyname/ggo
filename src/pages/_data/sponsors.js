@@ -1,76 +1,182 @@
-import 'dotenv/config';
-import { Client } from '@notionhq/client';
-import slugify from '@sindresorhus/slugify';
-import Fetch from '@11ty/eleventy-fetch';
-
-const year = '2024';
-
-const notion = new Client({
-  auth: process.env.NOTION_SECRET,
-});
-
-export default async () => {
-  console.log('Getting sponsors from Notion');
-  const now = Date.now();
-  const sponsors = await Fetch(async () => {
-    const sponsorships = await notion.databases.query({
-      database_id: 'ac4bb5ff14da44b9b7dd43dea82c9d53',
-      page_size: 1000,
-      filter: { and: [ { property: 'Year', title: { equals: year } } ] },
-    });
-    const sponsors = {
-      year,
-      order: [ 'corporate', 'platinum', 'gold', 'silver', 'bronze', 'torch', 'friends' ],
-      categories: {
-        corporate: { sponsors: [], title: 'Corporate Sponsors', amount: '$10,000 or more' },
-        platinum:  { sponsors: [], title:  'Platinum Sponsors', amount:   '$5000 – $9999' },
-        gold:      { sponsors: [], title:      'Gold Sponsors', amount:   '$2500 – $4999' },
-        silver:    { sponsors: [], title:    'Silver Sponsors', amount:   '$1000 – $2499' },
-        bronze:    { sponsors: [], title:    'Bronze Sponsors', amount:     '$500 – $999' },
-        torch:     { sponsors: [], title:         'Torch Club', amount:     '$100 – $499' },
-        friends:   { sponsors: [], title:            'Friends', amount:       '$25 – $99' },
-      },
-    };
-    sponsorships.results.reverse().forEach((sponsorship) => {
-      const props = sponsorship?.properties;
-      if (!props.Level?.select?.name) return;
-      const slug = slugify(sponsorship.properties.Level.select.name, { lower: true });
-      if (!slug || !sponsors.categories[slug]) return;
-      sponsors.categories[slug].sponsors.push({
-        order: props.Order?.number,
-        name: props.Name?.rollup?.array[0]?.title[0].plain_text,
-        location: props.Location?.rollup?.array[0]?.rich_text[0]?.plain_text,
-        url: props.URL?.rollup?.array[0]?.url,
-        image: props.Image?.rollup?.array[0]?.rich_text[0]?.plain_text,
-      });
-    });
-    Object.keys(sponsors.categories).forEach((categoryName) => {
-      const category = sponsors.categories[categoryName];
-      // The default order from Notion doesn't respect drag-and-drop ordering in the table view. I'm
-      // actually not sure what determines the default sort. Because of this I've added an "Order"
-      // field that allows you to move items to the beginning or end of the list.
-      // ---
-      // - Positive order values come first, smallest to largest (1, 2, 300),
-      //   basically counting forwards from the top of the list
-      // - Order values of null or 0 keep default order
-      // - Negative order values come last, largest to smallest (-300, -2, -1),
-      //   basically counting backwards from the end of the list
-      // Example: [ 1, 2, 300, null, null, null, -300, -2, -1 ]
-      category.sponsors = category.sponsors.sort((a, b) => {
-        const sideA = +a.order; // coerce null to 0
-        const sideB = +b.order; // coerce null to 0
-        if (sideA > 0 && sideB > 0 || sideA < 0 && sideB < 0) {
-          return sideA - sideB;
-        } else {
-          return sideB - sideA;
-        }
-      });
-    });
-    return sponsors;
-  }, {
-    duration: '1w',
-    type: 'json',
-	});
-  console.log(`Finished getting sponsors from Notion (${Date.now() - now}ms)`);
-  return sponsors;
+export default {
+  year: 2026,
+  years: [
+    {
+      year: 2026,
+      categories: [
+        { key: "corporate", title: "Corporate", description: "$10,000 or more" },
+        { key: "platinum", title: "Platinum Sponsors", description: "$7,500" },
+        { key: "gold", title: "Gold Sponsors", description: "$5,000" },
+        { key: "silver", title: "Silver Sponsors", description: "$2,500" },
+        { key: "bronze", title: "Bronze Sponsors", description: "$1,000" },
+        { key: "spirit", title: "Spirit Contributors", description: "$500" },
+        { key: "torch", title: "Torch Club", description: "$100" },
+        { key: "friends", title: "Friend Contributors", description: "$25" },
+      ],
+      sponsors: [
+      ],
+    },
+    {
+      year: 2024,
+      categories: [
+        { key: "corporate", title: "Corporate", description: "$10,000 or more" },
+        { key: "platinum", title: "Platinum Sponsors", description: "$5000 – $9999" },
+        { key: "gold", title: "Gold Sponsors", description: "$2500 – $4999" },
+        { key: "silver", title: "Silver Sponsors", description: "$1000 – $2499" },
+        { key: "bronze", title: "Bronze Sponsors", description: "$500 – $999" },
+        { key: "torch", title: "Torch Club", description: "$100 – $499" },
+        { key: "friends", title: "Friend Contributors", description: "$25 – $99" },
+      ],
+      sponsors: [
+        { level: "platinum", name: "Warner Robins Parks & Recreation Department", location: "Host Agency", url: null, image: "WRPR-High-Res-2x.png" },
+        { level: "gold", name: "Senior Medicare Patrol (SMP)", location: "AdviseWell, Inc", url: null, image: "smp-senior-medical-patrol.png" },
+        { level: "gold", name: "The Miles Group", location: "Loganville", url: null, image: null },
+        { level: "silver", name: "Houston Healthcare", location: null, url: "https://www.hhc.org/", image: "HHC-new-logo-2016_resized.png" },
+        { level: "silver", name: "EPIC Health Advisors", location: "Gray", url: "https://epichealthadvisors.com/", image: "epic-health-logo_resized.png" },
+        { level: "silver", name: "Georgia Health Care Association", location: null, url: null, image: null },
+        { level: "bronze", name: "Comfort Inn and Suites Hwy 247", location: "Warner Robins", url: null, image: null },
+        { level: "bronze", name: "Tom Gill", location: "Madison, AL", url: null, image: null },
+        { level: "bronze", name: "Grovania United Methodist Church", location: null, url: null, image: null },
+        { level: "bronze", name: "LaQuinta Inn & Suites", location: "Warner Robins", url: null, image: null },
+        { level: "bronze", name: "Jacuzzi Bath Remodels of Middle GA", location: "Dublin", url: null, image: null },
+        { level: "torch", name: "Robert & Faye Buckham", location: "Woodstock", url: null, image: null },
+        { level: "torch", name: "Jewel Crews", location: "Waycross", url: null, image: null },
+        { level: "torch", name: "Lester Culver", location: "Ludowici", url: null, image: null },
+        { level: "torch", name: "Rebecca Hamilton", location: "Byron", url: null, image: null },
+        { level: "torch", name: "Nancy Lewis", location: "Greensboro", url: null, image: null },
+        { level: "torch", name: "Gladys Mixon", location: "Rome", url: null, image: null },
+        { level: "torch", name: "George & Charlotte Zubowicz", location: "Warm Springs", url: null, image: null },
+        { level: "torch", name: "Weiland A. Henry, III", location: "Seale, AL", url: null, image: null },
+        { level: "torch", name: "Terrill Parker", location: "Atlanta", url: null, image: null },
+        { level: "torch", name: "Bonnie Romines", location: "Warner Robins", url: null, image: null },
+        { level: "torch", name: "Woody Hayes", location: "Marietta", url: null, image: null },
+        { level: "torch", name: "Harry Lowe", location: "Canton", url: null, image: null },
+        { level: "torch", name: "Linda Lowery", location: "Smyrna", url: null, image: null },
+        { level: "torch", name: "George W Marlow III", location: "Lawrenceville", url: null, image: null },
+        { level: "torch", name: "Don Tate", location: "Bonaire", url: null, image: null },
+        { level: "torch", name: "Carol Waddell", location: "Rome", url: null, image: null },
+        { level: "torch", name: "Judy Britt", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Robert Jackson", location: "Hoschton", url: null, image: null },
+        { level: "friends", name: "Allan & Judy Johnson", location: "Lawrenceville", url: null, image: null },
+        { level: "friends", name: "Vincent Marchionna", location: "St Simons", url: null, image: null },
+        { level: "friends", name: "Alan Griswold", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Bill Bonbrake", location: "Macon", url: null, image: null },
+        { level: "friends", name: "Ellen Briggs", location: "Demorest", url: null, image: null },
+        { level: "friends", name: "Neil Coleman", location: "Evans", url: null, image: null },
+        { level: "friends", name: "Richard Cook", location: "Macon", url: null, image: null },
+        { level: "friends", name: "Judy & Mike Cox", location: "Carrollton", url: null, image: null },
+        { level: "friends", name: "Ed & Karen Brown", location: "Colbert", url: null, image: null },
+        { level: "friends", name: "Stacy Fox", location: "Marietta", url: null, image: null },
+        { level: "friends", name: "Korky Greco", location: "Eatonton", url: null, image: null },
+        { level: "friends", name: "Scotty Linder", location: "Evans", url: null, image: null },
+        { level: "friends", name: "Felicia Mayfield", location: "Lithonia", url: null, image: null },
+        { level: "friends", name: "Angie Olds", location: "Florida", url: null, image: null },
+        { level: "friends", name: "Virginia Patterson", location: "Rincon", url: null, image: null },
+        { level: "friends", name: "Broward Sapp", location: "Florida", url: null, image: null },
+        { level: "friends", name: "Ahmad Shabazz", location: "Starr, SC", url: null, image: null },
+        { level: "friends", name: "Amy Tonsits", location: "Thomasville", url: null, image: null },
+        { level: "friends", name: "Rob Walker", location: "Florida", url: null, image: null },
+        { level: "friends", name: "Joyce White", location: "Oxford", url: null, image: null },
+        { level: "friends", name: "Peter Wicker", location: "Hapeville", url: null, image: null },
+        { level: "friends", name: "Mohamed Ali", location: "Fayetteville", url: null, image: null },
+        { level: "friends", name: "Don Albino", location: "Johns Creek", url: null, image: null },
+        { level: "friends", name: "Ann M Beardsley", location: "Townsend", url: null, image: null },
+        { level: "friends", name: "Ann Carter", location: "South Carolina", url: null, image: null },
+        { level: "friends", name: "James Hodges", location: "Tennessee", url: null, image: null },
+        { level: "friends", name: "Peggy & Terry Moyer", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Robert Lyford", location: "Loganville", url: null, image: null },
+        { level: "friends", name: "Steven Hancock", location: "Statesboro", url: null, image: null },
+        { level: "friends", name: "Barbara Reddick", location: "Remlap, AL", url: null, image: null },
+        { level: "friends", name: "Patricia Murphy", location: "Moultrie", url: null, image: null },
+        { level: "friends", name: "Randall Neff", location: "Byron", url: null, image: null },
+        { level: "friends", name: "Kenneth Rosskopf", location: "Decatur", url: null, image: null },
+        { level: "friends", name: "Peter Wimberg", location: "Ohio", url: null, image: null },
+        { level: "friends", name: "Ralph Swiger", location: "Virginia", url: null, image: null },
+        { level: "friends", name: "Katherine Graham", location: "Rockmart", url: null, image: null },
+        { level: "friends", name: "Maura Kalafut", location: "Cohutta", url: null, image: null },
+        { level: "friends", name: "Keevan Morgan", location: "Sarasota, FL", url: null, image: null },
+      ],
+    },
+    {
+      year: 2023,
+      categories: [
+        { key: "corporate", title: "Corporate", description: "$10,000 or more" },
+        { key: "platinum", title: "Platinum Sponsors", description: "$5000 – $9999" },
+        { key: "gold", title: "Gold Sponsors", description: "$2500 – $4999" },
+        { key: "silver", title: "Silver Sponsors", description: "$1000 – $2499" },
+        { key: "bronze", title: "Bronze Sponsors", description: "$500 – $999" },
+        { key: "torch", title: "Torch Club", description: "$100 – $499" },
+        { key: "friends", title: "Friend Contributors", description: "$25 – $99" },
+      ],
+      sponsors: [
+        { level: "platinum", name: "Warner Robins Parks & Recreation Department", location: "Host Agency", url: null, image: "WRPR-High-Res-2x.png" },
+        { level: "gold",name: "The Miles Group", location: "Loganville", url: null, image: null },
+        { level: "gold", name: "First Christian Church", location: "Winder", url: null, image: null },
+        { level: "gold", name: "Houston Healthcare", location: null, url: "https://www.hhc.org/", image: "HHC-new-logo-2016_resized.png" },
+        { level: "gold", name: "EPIC Health Advisors", location: "Gray", url: "https://epichealthadvisors.com/", image: "epic-health-logo_resized.png" },
+        { level: "silver", name: "Georgia Health Care Association", location: null, url: null, image: null },
+        { level: "silver", name: "Tori & David Stivers (In memory of Pinkie Henry)", location: "Peachtree City", url: null, image: null },
+        { level: "silver", name: "Clover Health, LLC", location: "Atlanta", url: null, image: null },
+        { level: "bronze", name: "Comfort Inn and Suites Hwy 247", location: "Warner Robins", url: null, image: null },
+        { level: "bronze", name: "Tom Gill", location: "Madison, AL", url: null, image: null },
+        { level: "bronze", name: "Jacuzzi Bath Remodels of Middle GA", location: "Dublin", url: null, image: null },
+        { level: "bronze", name: "Grovania United Methodist Church", location: null, url: null, image: null },
+        { level: "bronze", name: "Ookla", location: "Seattle, WA", url: "https://www.ookla.com/", image: "ookla-logo.png" },
+        { level: "torch", name: "Linda Lowery", location: "Smyrna", url: null, image: null },
+        { level: "torch", name: "Robert & Faye Buckham", location: "Woodstock", url: null, image: null },
+        { level: "torch", name: "Jewel Crews", location: "Waycross", url: null, image: null },
+        { level: "torch", name: "Rebecca Hamilton", location: "Byron", url: null, image: null },
+        { level: "torch", name: "Ed Freeman", location: "Virginia", url: null, image: null },
+        { level: "torch", name: "Gladys Mixon", location: "Rome", url: null, image: null },
+        { level: "torch", name: "Jim & Miriam Novak", location: "Bainbridge", url: null, image: null },
+        { level: "torch", name: "Carol Waddell", location: "Rome", url: null, image: null },
+        { level: "torch", name: "Bonnie Romines", location: "Warner Robins", url: null, image: null },
+        { level: "torch", name: "Weiland A. Henry, III", location: "Seale, AL", url: null, image: null },
+        { level: "torch", name: "Atlanta Promo - A Group Atlanta Company", location: "Roswell", url: null, image: null },
+        { level: "torch", name: "George & Charlotte Zubowicz", location: "Warm Springs", url: null, image: null },
+        { level: "torch", name: "George W Marlow III", location: "Lawrenceville", url: null, image: null },
+        { level: "torch", name: "Marshall Martin", location: "Lady Lake, FL", url: null, image: null },
+        { level: "torch", name: "Don Tate", location: "Bonaire", url: null, image: null },
+        { level: "torch", name: "Legacy Legal, LLC", location: "Tucker", url: null, image: null },
+        { level: "friends", name: "Mike Jewell", location: "Loganville", url: null, image: null },
+        { level: "friends", name: "Neil Coleman", location: "Evans", url: null, image: null },
+        { level: "friends", name: "Richard Cook", location: "Macon", url: null, image: null },
+        { level: "friends", name: "Barbara Reddick", location: "Remlap, AL", url: null, image: null },
+        { level: "friends", name: "Roscoe Googe", location: "Marietta", url: null, image: null },
+        { level: "friends", name: "Vincent Marchionna", location: "St Simons", url: null, image: null },
+        { level: "friends", name: "B & W Recreation Center", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Cherry Stephens", location: "Winder", url: null, image: null },
+        { level: "friends", name: "Toni Pomerene", location: "Athens", url: null, image: null },
+        { level: "friends", name: "William Astary", location: "Tybee Island", url: null, image: null },
+        { level: "friends", name: "Robert Jackson", location: "Hoschton", url: null, image: null },
+        { level: "friends", name: "Ed & Karen Brown", location: "Colbert", url: null, image: null },
+        { level: "friends", name: "Ray Cipollini", location: "Bluffton, SC", url: null, image: null },
+        { level: "friends", name: "Robert Cresswell", location: "Greensboro", url: null, image: null },
+        { level: "friends", name: "Mary Ealer", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Dennis Evans", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "David Jones", location: "Stone Mountain", url: null, image: null },
+        { level: "friends", name: "Nancy Lewis", location: "Greensboro", url: null, image: null },
+        { level: "friends", name: "Stanley Manous", location: "Griffin", url: null, image: null },
+        { level: "friends", name: "Bob McCoid", location: "West Alexander, PA", url: null, image: null },
+        { level: "friends", name: "Randall Neff", location: "Byron", url: null, image: null },
+        { level: "friends", name: "Jim Powell", location: "Pratville, AL", url: null, image: null },
+        { level: "friends", name: "Warren Griffin", location: "Macon", url: null, image: null },
+        { level: "friends", name: "Felicia Mayfield", location: "Lithonia", url: null, image: null },
+        { level: "friends", name: "Dennis Meinert", location: "Chattanooga, TN", url: null, image: null },
+        { level: "friends", name: "Mary S Newton", location: "Tucker", url: null, image: null },
+        { level: "friends", name: "Vermel Thomas", location: "Dublin", url: null, image: null },
+        { level: "friends", name: "Amy Tonsits", location: "Thomasville", url: null, image: null },
+        { level: "friends", name: "Don Albino", location: "Johns Creek", url: null, image: null },
+        { level: "friends", name: "Mohamed Ali", location: "Fayetteville", url: null, image: null },
+        { level: "friends", name: "Jonathan Bortner", location: "Mt Pleasant, SC", url: null, image: null },
+        { level: "friends", name: "Ahmad Shabazz", location: "Starr, SC", url: null, image: null },
+        { level: "friends", name: "Glenda Davis", location: "Cochran", url: null, image: null },
+        { level: "friends", name: "AAB Human Resources Services, LLC", location: "Marietta", url: null, image: null },
+        { level: "friends", name: "Alan Griswold", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Steven Hancock", location: "Statesboro", url: null, image: null },
+        { level: "friends", name: "Ned Sanders", location: "Warner Robins", url: null, image: null },
+        { level: "friends", name: "Frank F Faulk", location: "Marietta", url: null, image: null },
+      ],
+    },
+  ],
 };
